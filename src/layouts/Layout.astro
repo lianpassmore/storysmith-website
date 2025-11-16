@@ -1,0 +1,25 @@
+<!-- src/layouts/Layout.astro -->
+
+---
+// The import now lives INSIDE the code fence, where it will be executed.
+import '../styles/global.css';
+---
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="StorySmith: We transform wisdom into a sacred, lasting asset." />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <title>StorySmith</title>
+
+        <!-- Google Fonts Import -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+    <body class="bg-warm-parchment text-brand-black font-open-sauce">
+        <slot />
+    </body>
+</html>

@@ -1,16 +1,105 @@
----
+<!-- src/pages/index.astro -->
 
 ---
+import Layout from '../layouts/Layout.astro';
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+export const prerender = true;
+---
+
+<Layout>
+  <!-- Hero Section -->
+  <section class="min-h-screen flex items-center justify-center text-center px-6 py-20">
+    <div class="max-w-4xl">
+      <h1 class="text-5xl md:text-7xl font-migra text-brand-black mb-4">
+        Your Wisdom is a Sacred, Lasting Asset.
+      </h1>
+      <p class="text-xl md:text-2xl font-open-sauce mb-8">
+        StorySmith is the strategic partner for leaders and families who believe their story is worth preserving with integrity. We transform your voice and vision into a legacy that lasts for seven generations.
+      </p>
+      <a href="/contact" class="inline-block bg-brand-navy text-warm-parchment font-open-sauce uppercase tracking-wider py-4 px-8 hover:bg-opacity-90 transition-all duration-300">
+        Begin The Journey
+      </a>
+    </div>
+  </section>
+
+  <!-- Brand Pillars Section -->
+  <section class="bg-brand-navy text-warm-parchment py-20 md:py-32">
+    <div class="container mx-auto px-6">
+      <h2 class="text-center font-roboto-mono uppercase tracking-widest text-lg mb-12">The StorySmith Charter</h2>
+      <div class="grid md:grid-cols-3 gap-12 text-center max-w-6xl mx-auto">
+        <div class="pillar">
+          <h3 class="text-3xl font-migra mb-4">Cultural Integrity First</h3>
+          <p class="font-open-sauce leading-relaxed">
+            We begin with relationship and deep listening, honoring the tikanga of your story's origin, <strong>so that</strong> your narrative is preserved with the respect and authenticity it deserves.
+          </p>
+        </div>
+        <div class="pillar">
+          <h3 class="text-3xl font-migra mb-4">Strategic Narrative Craft</h3>
+          <p class="font-open-sauce leading-relaxed">
+            We distill your complexity into a powerful, clear narrative, shaping it for maximum impact, <strong>so that</strong> your core message resonates across any medium, from a podcast to a family heirloom.
+          </p>
+        </div>
+        <div class="pillar">
+          <h3 class="text-3xl font-migra mb-4">Ethical Preservation</h3>
+          <p class="font-open-sauce leading-relaxed">
+            We use best-in-class technology as a tool for guardianship, ensuring your voice is captured with dignity and your data remains sovereign, <strong>so that</strong> your legacy is protected, not exploited.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Offers Section -->
+  <section class="bg-warm-parchment py-20 md:py-32">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <!-- StorySmith Legacy -->
+      <div class="grid md:grid-cols-2 gap-12 md:gap-20 items-center mb-24 md:mb-32">
+        <div class="bg-legacy-purple h-80 md:h-96 w-full">
+          <!-- Placeholder for an authentic image -->
+        </div>
+        <div>
+          <h4 class="font-roboto-mono uppercase tracking-widest text-brand-navy">For The Family Guardian</h4>
+          <h3 class="text-4xl md:text-5xl font-migra my-4 text-brand-black">StorySmith Legacy</h3>
+          <p class="font-open-sauce mb-6 leading-relaxed">
+            Step into the role of your family's most cherished ancestor. Through guided, voice-first conversations, our culturally-aware AI companion, Peg, helps you transform spoken memories into a timeless hardback book and audio archive. This is more than a memoir; it is a living library of your wisdom for your mokopuna to treasure forever.
+          </p>
+          <a href="/legacy" class="text-brand-navy font-bold uppercase tracking-wider font-open-sauce group">
+            Explore Legacy <span class="group-hover:ml-2 transition-all duration-300">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Premium Podcast Production -->
+      <div class="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
+        <div class="md:order-2 bg-soft-peach h-80 md:h-96 w-full">
+          <!-- Placeholder for an authentic image -->
+        </div>
+        <div class="md:order-1">
+          <h4 class="font-roboto-mono uppercase tracking-widest text-brand-navy">For The Visionary Leader</h4>
+          <h3 class="text-4xl md:text-5xl font-migra my-4 text-brand-black">Premium Podcast Production</h3>
+          <p class="font-open-sauce mb-6 leading-relaxed">
+            Step into your identity as a category-of-one thought leader. We partner with you to translate your complex vision into a world-class podcast that builds authority and inspires a movement. From strategic narrative design to end-to-end production, we handle every detail so you can focus on what you do best: sharing your truth.
+          </p>
+          <a href="/podcast" class="text-brand-navy font-bold uppercase tracking-wider font-open-sauce group">
+            Explore Podcasting <span class="group-hover:ml-2 transition-all duration-300">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Section -->
+  <section class="bg-brand-navy text-warm-parchment py-20 md:py-32 text-center">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <h2 class="text-4xl md:text-6xl font-migra mb-6">
+        Your story is waiting to do its work in the world.
+      </h2>
+      <p class="font-open-sauce text-xl mb-8 leading-relaxed">
+        Whether for an audience of millions or a family of one, the time to honor your legacy is now.
+      </p>
+      <a href="/contact" class="inline-block bg-vital-lime text-brand-black font-open-sauce uppercase tracking-wider py-4 px-8 hover:bg-opacity-90 transition-all duration-300">
+        Let's Begin
+      </a>
+    </div>
+  </section>
+</Layout>
