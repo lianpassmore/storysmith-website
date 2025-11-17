@@ -16,7 +16,7 @@ export const POST: APIRoute = async ({ request }) => {
       storytellerName,
       storytellerEmail,
       giftingType,
-      productId = 'price_1SROmLIMOgoHmS2Ca82ES1sj' // The Spoken Legacy Product
+      priceId = import.meta.env.STRIPE_PRICE_ID // The Spoken Legacy Product Price ID
     } = body;
 
     // Validate required fields (storyteller email is optional)
@@ -27,20 +27,14 @@ export const POST: APIRoute = async ({ request }) => {
       );
     }
 
-    const appUrl = import.meta.env.PUBLIC_APP_URL || 'https://storysmith.work';
-
-    // Get the default price for this product
-    const prices = await stripe.prices.list({
-      product: productId,
-      active: true,
-      limit: 1,
-    });
-
-    if (!prices.data || prices.data.length === 0) {
-      throw new Error('No active price found for this product');
+    if (!priceId) {
+      return new Response(
+        JSON.stringify({ error: 'Product price not configured. Please contact support.' }),
+        { status: 500, headers: { 'Content-Type': 'application/json' } }
+      );
     }
 
-    const priceId = prices.data[0].id;
+    const appUrl = import.meta.env.PUBLIC_APP_URL || 'https://storysmith.work';
 
     // Create Checkout Session
     const session = await stripe.checkout.sessions.create({
