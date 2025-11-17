@@ -32,10 +32,6 @@
 			"dest": "_render"
 		},
 		{
-			"src": "^/legacy-purchase/?$",
-			"dest": "_render"
-		},
-		{
 			"src": "^/purchase-success/?$",
 			"dest": "_render"
 		}
