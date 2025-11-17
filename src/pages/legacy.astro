@@ -75,8 +75,15 @@ export const prerender = true;
   <!-- [SECTION 4: THE PEG DEMO] -->
   <section class="bg-warm-parchment py-20 md:py-24 px-6">
     <div class="container mx-auto max-w-3xl text-center">
-        <h2 class="text-4xl md:text-5xl font-migra text-brand-black mb-4">Experience the Conversation</h2>
-        <p class="font-open-sauce mb-8">Chat with Peg for two minutes to feel how simple, warm, and natural the experience is.</p>
+        <h2 class="text-4xl md:text-5xl font-migra text-brand-black mb-4">Talk to Peg</h2>
+        <p class="font-open-sauce mb-8">Experience a 5-minute conversation with Peg to feel how simple, warm, and natural the experience is. Look for the chat widget in the bottom right corner of your screen.</p>
+
+        <!-- Widget Preview Image Placeholder -->
+        <div class="max-w-2xl mx-auto mb-8 bg-zinc-100 rounded-lg p-12 border-2 border-dashed border-legacy-purple">
+          <p class="font-open-sauce text-gray-600 text-center">
+            Image placeholder: Screenshot of Peg widget will go here
+          </p>
+        </div>
 
         <!-- Rate Limit Warning (hidden by default) -->
         <div id="rate-limit-warning" class="hidden mb-6 p-6 border-2 border-red-400 bg-red-50 rounded-lg">
@@ -89,36 +96,13 @@ export const prerender = true;
           </a>
         </div>
 
-        <!-- ElevenLabs Conversational AI Widget -->
-        <div id="demo-widget-container" class="border-2 border-legacy-purple rounded-xl p-8 bg-white shadow-lg relative">
-          <!-- Loading state -->
-          <div id="widget-loading" class="text-center py-12">
-            <div class="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-legacy-purple"></div>
-            <p class="mt-4 font-open-sauce text-gray-600">Loading Peg...</p>
-          </div>
-
-          <!-- Widget will load here -->
-          <div id="widget-content" class="hidden">
-            <elevenlabs-convai agent-id="agent_8601ka7fsrrwe8f815rzb5gp9nte"></elevenlabs-convai>
-          </div>
-
-          <!-- Fallback message if widget fails -->
-          <div id="widget-error" class="hidden text-center py-12">
-            <p class="font-open-sauce text-gray-700 mb-4">
-              We're having trouble loading the demo right now.
-            </p>
-            <a href="/legacy-purchase" class="inline-block bg-brand-navy text-warm-parchment font-open-sauce uppercase tracking-wider py-3 px-6 hover:bg-opacity-90 transition-colors rounded-md">
-              Skip to Purchase
-            </a>
-          </div>
-
-          <p class="text-xs mt-4 font-open-sauce text-gray-500">
-            <span id="demos-remaining"></span>
-          </p>
+        <!-- Hidden widget (loads as popup in bottom right) -->
+        <div class="hidden">
+          <elevenlabs-convai agent-id="agent_8601ka7fsrrwe8f815rzb5gp9nte"></elevenlabs-convai>
         </div>
 
         <p class="text-sm mt-6 font-open-sauce text-gray-600">
-          This is a limited 2-minute demo. <a href="/legacy-purchase" class="text-brand-navy font-bold hover:underline">Purchase the full experience</a> for unlimited conversations and the complete legacy package.
+          This is a limited 5-minute demo. <a href="/legacy-purchase" class="text-brand-navy font-bold hover:underline">Purchase the full experience</a> for 15 hours of extended conversations and the complete legacy package.
         </p>
     </div>
   </section>
@@ -146,21 +130,13 @@ export const prerender = true;
         const data = await response.json();
 
         const warningEl = document.getElementById('rate-limit-warning');
-        const containerEl = document.getElementById('demo-widget-container');
         const messageEl = document.getElementById('rate-limit-message');
-        const remainingEl = document.getElementById('demos-remaining');
 
         if (!data.allowed) {
           // Show rate limit warning
           if (warningEl) warningEl.classList.remove('hidden');
-          if (containerEl) containerEl.classList.add('hidden');
           if (messageEl && data.message) {
             messageEl.textContent = data.message;
-          }
-        } else {
-          // Show remaining demos
-          if (remainingEl && data.remaining !== undefined) {
-            remainingEl.textContent = `${data.remaining} demo${data.remaining !== 1 ? 's' : ''} remaining today`;
           }
         }
       } catch (error) {
@@ -169,29 +145,15 @@ export const prerender = true;
       }
     }
 
-    // Handle widget loading
-    function initializeWidget() {
-      const loadingEl = document.getElementById('widget-loading');
-      const contentEl = document.getElementById('widget-content');
-      const errorEl = document.getElementById('widget-error');
-
-      // Show widget after a short delay (widget should load)
-      setTimeout(() => {
-        if (loadingEl) loadingEl.classList.add('hidden');
-        if (contentEl) contentEl.classList.remove('hidden');
-
-        // Track demo start
-        trackDemoEvent('demo_started');
-      }, 2000);
-
-      // Fallback error handling
-      setTimeout(() => {
-        const widgetEl = document.querySelector('elevenlabs-convai');
-        if (!widgetEl || !widgetEl.shadowRoot) {
-          if (contentEl) contentEl.classList.add('hidden');
-          if (errorEl) errorEl.classList.remove('hidden');
+    // Track demo widget interactions
+    function trackWidgetInteractions() {
+      // Track when widget is clicked
+      document.addEventListener('click', (e) => {
+        const target = e.target as HTMLElement;
+        if (target.closest('elevenlabs-convai')) {
+          trackDemoEvent('demo_started');
         }
-      }, 10000);
+      });
     }
 
     // Track purchase link clicks
@@ -210,7 +172,7 @@ export const prerender = true;
     // Initialize everything
     function init() {
       checkDemoLimit();
-      initializeWidget();
+      trackWidgetInteractions();
       trackPurchaseClicks();
     }
 
