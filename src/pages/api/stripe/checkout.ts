@@ -16,7 +16,7 @@ export const POST: APIRoute = async ({ request }) => {
       storytellerName,
       storytellerEmail,
       giftingType,
-      productId = 'price_1SROmLIMOgoHmS2Ca82ES1sj' // StorySmith Legacy Product
+      productId = 'price_1SROmLIMOgoHmS2Ca82ES1sj' // The Spoken Legacy Product
     } = body;
 
     // Validate required fields
@@ -56,7 +56,7 @@ export const POST: APIRoute = async ({ request }) => {
       cancel_url: `${appUrl}/legacy-purchase`,
       customer_email: email,
       metadata: {
-        product: 'StorySmith Legacy Package',
+        product: 'The Spoken Legacy',
         purchaserName: yourName,
         purchaserEmail: email,
         storytellerName: storytellerName,
