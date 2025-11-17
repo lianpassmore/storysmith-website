@@ -38,7 +38,7 @@ export const POST: APIRoute = async ({ request }) => {
 
     // Create Checkout Session
     const session = await stripe.checkout.sessions.create({
-      payment_method_types: ['card'],
+      payment_method_types: ['card', 'afterpay_clearpay'],
       line_items: [
         {
           price: priceId,
