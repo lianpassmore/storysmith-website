@@ -17,7 +17,7 @@ const POST = async ({ request }) => {
       productId = "price_1SROmLIMOgoHmS2Ca82ES1sj"
       // The Spoken Legacy Product
     } = body;
-    if (!email || !yourName || !storytellerName || !storytellerEmail) {
+    if (!email || !yourName || !storytellerName) {
       return new Response(
         JSON.stringify({ error: "Missing required fields" }),
         { status: 400, headers: { "Content-Type": "application/json" } }
@@ -50,8 +50,9 @@ const POST = async ({ request }) => {
         purchaserName: yourName,
         purchaserEmail: email,
         storytellerName,
-        storytellerEmail,
-        giftingType: giftingType || "digital"
+        storytellerEmail: storytellerEmail || "Not provided",
+        giftingType: giftingType || "digital",
+        mailingAddress: body.mailingAddress || "N/A"
       },
       allow_promotion_codes: true
     });
