@@ -4,7 +4,7 @@ import vercel from "@astrojs/vercel";
 
 // https://astro.build/config
 export default defineConfig({
-  output: 'server', // Enable server mode for API routes
+  output: 'static', // Static site generation
   adapter: vercel(),
   vite: {
     plugins: [tailwindcss()]

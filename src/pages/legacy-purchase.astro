@@ -101,8 +101,9 @@ export const prerender = true;
                 <input type="text" id="storyteller_name" name="storyteller_name" class="mt-1 block w-full border border-gray-300 rounded-md p-2">
              </div>
              <div>
-                <label for="storyteller_email" class="block text-sm font-medium">Storyteller's Email Address</label>
+                <label for="storyteller_email" class="block text-sm font-medium">Storyteller's Email Address <span class="text-gray-500">(Optional)</span></label>
                 <input type="email" id="storyteller_email" name="storyteller_email" class="mt-1 block w-full border border-gray-300 rounded-md p-2">
+                <p class="text-xs text-gray-500 mt-1">If you don't have their email, you can provide it later.</p>
              </div>
         </div>
 
@@ -139,19 +140,32 @@ export const prerender = true;
     const storytellerEmail = formData.get('storyteller_email') as string;
     const giftingType = formData.get('gifting_experience') as string;
 
-    // Basic validation
-    if (!yourName || !yourEmail || !storytellerName || !storytellerEmail) {
+    // Basic validation (storyteller email is optional)
+    if (!yourName || !yourEmail || !storytellerName) {
       alert('Please fill in all required fields');
       return;
     }
 
     // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(yourEmail) || !emailRegex.test(storytellerEmail)) {
-      alert('Please enter valid email addresses');
+    if (!emailRegex.test(yourEmail)) {
+      alert('Please enter a valid email address');
       return;
     }
 
+    // Validate storyteller email only if provided
+    if (storytellerEmail && !emailRegex.test(storytellerEmail)) {
+      alert('Please enter a valid storyteller email address');
+      return;
+    }
+
+    // TODO: Stripe checkout integration coming soon
+    // For now, show a message to contact directly
+
+    alert(`Thank you for your interest!\n\nTo complete your purchase, please contact us at:\nhello@storysmith.work\n\nInclude the following information:\n• Your name: ${yourName}\n• Your email: ${yourEmail}\n• Storyteller name: ${storytellerName}\n• Storyteller email: ${storytellerEmail || 'Not provided'}\n• Gift type: ${giftingType}\n\nWe'll get back to you within 24 hours to complete your order.`);
+
+    // Uncomment below when Stripe is integrated:
+    /*
     // Disable button and show loading state
     submitButton.disabled = true;
     buttonText.classList.add('hidden');
@@ -194,5 +208,6 @@ export const prerender = true;
       buttonText.classList.remove('hidden');
       buttonSpinner.classList.add('hidden');
     }
+    */
   });
 </script>
