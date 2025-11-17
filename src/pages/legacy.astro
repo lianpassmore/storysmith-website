@@ -92,10 +92,8 @@ export const prerender = true;
           </a>
         </div>
 
-        <!-- Hidden widget (loads as popup in bottom right) -->
-        <div class="hidden">
-          <elevenlabs-convai agent-id="agent_8601ka7fsrrwe8f815rzb5gp9nte"></elevenlabs-convai>
-        </div>
+        <!-- Widget loads as popup in bottom right -->
+        <elevenlabs-convai agent-id="agent_8601ka7fsrrwe8f815rzb5gp9nte"></elevenlabs-convai>
 
         <p class="text-sm mt-8 font-open-sauce text-gray-600">
           This is a 5-minute demo. <a href="/legacy-purchase" class="text-brand-navy font-bold hover:underline">Purchase the full experience</a> for 15 hours of conversation and the complete legacy package.
@@ -106,7 +104,11 @@ export const prerender = true;
   <script is:inline src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
 
   <script>
-    // Analytics tracking
+    // Analytics and rate limiting disabled for static prerendered page
+    // Re-enable when using server-side rendering (SSR) or client-side analytics
+
+    // Uncomment below if you switch to SSR (remove prerender: true from page)
+    /*
     async function trackDemoEvent(event: string, metadata: Record<string, any> = {}) {
       try {
         await fetch('/api/demo/track', {
@@ -119,7 +121,6 @@ export const prerender = true;
       }
     }
 
-    // Check rate limit before allowing demo
     async function checkDemoLimit() {
       try {
         const response = await fetch('/api/demo/check-limit');
@@ -129,7 +130,6 @@ export const prerender = true;
         const messageEl = document.getElementById('rate-limit-message');
 
         if (!data.allowed) {
-          // Show rate limit warning
           if (warningEl) warningEl.classList.remove('hidden');
           if (messageEl && data.message) {
             messageEl.textContent = data.message;
@@ -137,47 +137,19 @@ export const prerender = true;
         }
       } catch (error) {
         console.error('Error checking demo limit:', error);
-        // Allow demo to proceed even if rate limit check fails
       }
     }
 
-    // Track demo widget interactions
-    function trackWidgetInteractions() {
-      // Track when widget is clicked
-      document.addEventListener('click', (e) => {
-        const target = e.target as HTMLElement;
-        if (target.closest('elevenlabs-convai')) {
-          trackDemoEvent('demo_started');
-        }
-      });
-    }
-
-    // Track purchase link clicks
-    function trackPurchaseClicks() {
-      const purchaseLinks = document.querySelectorAll('a[href="/legacy-purchase"]');
-      purchaseLinks.forEach(link => {
-        link.addEventListener('click', () => {
-          trackDemoEvent('demo_conversion', {
-            source: 'demo_page',
-            timestamp: new Date().toISOString(),
-          });
-        });
-      });
-    }
-
-    // Initialize everything
     function init() {
       checkDemoLimit();
-      trackWidgetInteractions();
-      trackPurchaseClicks();
     }
 
-    // Check limit when page loads
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', init);
     } else {
       init();
     }
+    */
   </script>
 
   <style>
