@@ -1,0 +1,153 @@
+---
+import Layout from '../layouts/Layout.astro';
+export const prerender = true;
+---
+
+<Layout>
+  <main class="bg-brand-white py-20 md:py-32 px-6">
+    <div class="container mx-auto max-w-4xl">
+
+      <!-- Header -->
+      <section class="text-center mb-16">
+        <h1 class="text-5xl md:text-6xl font-serif text-brand-black mb-4">
+          Privacy Policy
+        </h1>
+        <p class="text-xl font-sans text-brand-black/70">
+          StorySmith Legacy
+        </p>
+        <p class="text-sm font-sans text-brand-black/60 mt-2">
+          Effective Date: November 18, 2025
+        </p>
+      </section>
+
+      <!-- Content -->
+      <article class="prose prose-lg max-w-none">
+        <div class="bg-white p-8 md:p-12 rounded-2xl shadow-lg border border-black/10 mb-12">
+          <p class="text-lg text-brand-black/80 leading-relaxed">
+            Your story is sacred, and so is your privacy. This Privacy Policy explains how StorySmith collects, uses, and protects your personal information. Our approach is grounded in our core values of Dignity, Sovereignty, and Trust.
+          </p>
+        </div>
+
+        <!-- Our Commitment -->
+        <div class="mb-12">
+          <h2 class="text-3xl font-serif text-brand-black mb-6">Our Commitment: What We Will NEVER Do</h2>
+          <div class="bg-brand-lime/10 p-8 rounded-lg border border-brand-lime/20">
+            <ul class="space-y-3 text-brand-black/80">
+              <li class="flex items-start">
+                <span class="text-brand-lime mr-3 mt-1 font-bold">✗</span>
+                <span>We will NEVER sell or share your personal stories or data.</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-brand-lime mr-3 mt-1 font-bold">✗</span>
+                <span>We will NEVER use your conversations or data to train our own or third-party AI models.</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-brand-lime mr-3 mt-1 font-bold">✗</span>
+                <span>We will NEVER create "AI clones" or use your voice for any purpose other than providing this Service to you.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Section 1 -->
+        <div class="mb-12">
+          <h2 class="text-3xl font-serif text-brand-black mb-6">1. Information We Collect</h2>
+          <div class="bg-white p-8 rounded-lg border border-black/5">
+            <ul class="space-y-4 text-brand-black/80">
+              <li><strong>Account Information:</strong> When you (or a Gifter) create an account, we collect names and email addresses.</li>
+              <li><strong>Payment Information:</strong> All payments are processed securely by Stripe. We do not collect or store your credit card information.</li>
+              <li><strong>Conversation Data (Your Story):</strong> This is your most sensitive data. We collect the audio recordings of your conversations with Peg and the resulting text transcripts.</li>
+              <li><strong>Family Contribution Data:</strong> We collect the names, relationships, and questions submitted by family members you invite.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Section 2 -->
+        <div class="mb-12">
+          <h2 class="text-3xl font-serif text-brand-black mb-6">2. How We Use Your Information</h2>
+          <div class="bg-white p-8 rounded-lg border border-black/5">
+            <p class="text-brand-black/80 mb-4">We use your information for one purpose only: to provide the StorySmith Legacy Service to you. This includes:</p>
+            <ul class="space-y-2 text-brand-black/80 list-disc list-inside">
+              <li>Creating and managing your account.</li>
+              <li>Facilitating your conversations with Peg.</li>
+              <li>Allowing our trusted human team to access your transcripts for curation and book design.</li>
+              <li>Communicating with you about your project.</li>
+              <li>Printing and delivering your final book.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Section 3 -->
+        <div class="mb-12">
+          <h2 class="text-3xl font-serif text-brand-black mb-6">3. How We Share Your Information</h2>
+          <div class="bg-white p-8 rounded-lg border border-black/5">
+            <p class="text-brand-black/80 mb-4">We only share your information with the essential third-party partners who help us create your heirloom. We have chosen these partners for their commitment to security and privacy.</p>
+            <ul class="space-y-2 text-brand-black/80 list-disc list-inside">
+              <li><strong>Supabase:</strong> Our core infrastructure provider for database, storage, and authentication.</li>
+              <li><strong>ElevenLabs:</strong> The technology partner that powers the conversational voice of Peg.</li>
+              <li><strong>Our Printing Partner:</strong> The company that prints and binds your physical book.</li>
+              <li><strong>Your Family (With Your Control):</strong> The final book and digital files are for you to share with whomever you choose.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Section 4 -->
+        <div class="mb-12">
+          <h2 class="text-3xl font-serif text-brand-black mb-6">4. Data Sovereignty & Security</h2>
+          <div class="bg-brand-lime/10 p-8 rounded-lg border border-brand-lime/20">
+            <ul class="space-y-4 text-brand-black/80">
+              <li><strong>Data Sovereignty:</strong> In line with our values, your story is sacred. All your data, including audio files and transcripts, is stored on secure servers located in Aotearoa, New Zealand. It is governed exclusively by New Zealand's Privacy Act.</li>
+              <li><strong>Security:</strong> We use industry-standard security measures, including encryption, to protect your data both in transit and at rest.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Section 5 -->
+        <div class="mb-12">
+          <h2 class="text-3xl font-serif text-brand-black mb-6">5. Your Rights: You Are in Control</h2>
+          <div class="bg-white p-8 rounded-lg border border-black/5">
+            <p class="text-brand-black/80 mb-4">You have the right to:</p>
+            <ul class="space-y-3 text-brand-black/80">
+              <li><strong>Access Your Data:</strong> You can request a copy of all the data we hold about you at any time.</li>
+              <li><strong>Correct Your Data:</strong> You can update your personal information in your profile. For corrections to your story manuscript, this is done during the review phase.</li>
+              <li><strong>Delete Your Data:</strong> You have the right to delete your account and all associated data permanently. To do so, please contact us at support@storysmith.work.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Section 6 -->
+        <div class="mb-12">
+          <h2 class="text-3xl font-serif text-brand-black mb-6">6. Cookies & Analytics</h2>
+          <div class="bg-white p-8 rounded-lg border border-black/5">
+            <p class="text-brand-black/80">We use minimal cookies on our website to ensure basic functionality and to understand how our site is used. We do not use invasive tracking cookies for advertising purposes.</p>
+          </div>
+        </div>
+
+        <!-- Section 7 -->
+        <div class="mb-12">
+          <h2 class="text-3xl font-serif text-brand-black mb-6">7. Changes to This Policy</h2>
+          <div class="bg-white p-8 rounded-lg border border-black/5">
+            <p class="text-brand-black/80">We may update this Privacy Policy. We will notify you of any significant changes by email.</p>
+          </div>
+        </div>
+
+        <!-- Section 8 -->
+        <div class="mb-12">
+          <h2 class="text-3xl font-serif text-brand-black mb-6">8. Contact Us</h2>
+          <div class="bg-white p-8 rounded-lg border border-black/5">
+            <p class="text-brand-black/80">If you have any questions about your privacy or this policy, please contact our team at <a href="mailto:support@storysmith.work" class="text-brand-navy font-semibold hover:underline">support@storysmith.work</a>.</p>
+          </div>
+        </div>
+
+      </article>
+
+      <!-- Back Link -->
+      <div class="text-center mt-16">
+        <a href="/" class="text-brand-navy font-bold uppercase tracking-wider font-sans hover:underline">
+          ← Back to Home
+        </a>
+      </div>
+
+    </div>
+  </main>
+</Layout>
