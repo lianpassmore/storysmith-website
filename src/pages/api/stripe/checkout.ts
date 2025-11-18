@@ -38,7 +38,8 @@ export const POST: APIRoute = async ({ request }) => {
 
     // Create Checkout Session
     const session = await stripe.checkout.sessions.create({
-      payment_method_types: ['card', 'afterpay_clearpay'],
+      // Automatically enable all payment methods configured in Stripe Dashboard
+      automatic_tax: { enabled: false },
       line_items: [
         {
           price: priceId,
@@ -59,6 +60,8 @@ export const POST: APIRoute = async ({ request }) => {
         mailingAddress: body.mailingAddress || 'N/A',
       },
       allow_promotion_codes: true,
+      // Enable Link (one-click checkout)
+      payment_method_types: ['card', 'link'],
     });
 
     return new Response(
