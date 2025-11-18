@@ -5,131 +5,101 @@ export const prerender = true;
 
 <Layout>
   <!-- Hero Section -->
-  <section class="relative min-h-screen bg-brand-black text-brand-white flex items-center">
-    <div class="absolute inset-0 bg-cover bg-center opacity-40" style="background-image: url('https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1974');"></div>
-    <div class="container mx-auto relative z-10">
-      <div class="max-w-3xl">
-        <h1 class="text-6xl md:text-8xl font-serif leading-tight">
-          Go Beyond the Session.
-        </h1>
-        <p class="text-xl md:text-2xl font-sans mt-6 mb-10 leading-relaxed">
-          Transform your framework into a 24/7 AI Integration Partner, and empower your clients to live the work you teach.
-        </p>
-        <a href="/contact" class="inline-block bg-brand-white text-brand-black font-sans font-bold uppercase tracking-wider py-4 px-8 hover:bg-opacity-90 transition-all duration-300 rounded-md">
-          Book a Discovery Call
-        </a>
-      </div>
+  <section class="min-h-screen flex items-center justify-center text-center px-6 py-20 bg-brand-white text-brand-black">
+    <div class="max-w-4xl">
+      <h1 class="text-5xl md:text-7xl font-serif text-brand-black mb-4">
+        Your Wisdom is a Sacred, Lasting Asset.
+      </h1>
+      <p class="text-xl md:text-2xl font-sans mb-8">
+        StorySmith is the strategic partner for leaders and families who believe their story is worth preserving with integrity. We transform your voice and vision into a legacy that lasts for seven generations.
+      </p>
+      <a href="#offers" class="inline-block bg-brand-navy text-brand-white font-sans uppercase tracking-wider py-4 px-8 hover:bg-opacity-90 transition-all duration-300 rounded-lg">
+        Explore Our Services
+      </a>
     </div>
   </section>
 
-  <!-- Intro Section -->
-  <section class="py-20 md:py-32 bg-brand-white">
-    <div class="container mx-auto grid md:grid-cols-2 gap-12 items-center">
-      <div>
-        <h2 class="text-5xl md:text-6xl font-serif leading-tight text-brand-black">
-          Transformation doesn't happen on a schedule.
-        </h2>
-        <p class="font-sans text-lg mt-6 leading-relaxed text-brand-black/80">
-          Your sessions are powerful. Your workshops create breakthroughs. But the real work—the messy, courageous work of integration—happens at 10 PM on a Tuesday, or in the five minutes before a high-stakes meeting. It's in these moments your clients need you most.
-        </p>
-      </div>
-      <div>
-        <img src="https://images.unsplash.com/photo-1528543606781-2f6e6857f318?q=80&w=1965" alt="A person walking on a beach" class="rounded-lg w-full h-auto object-cover">
-      </div>
-    </div>
-  </section>
-
-  <!-- Pillars Section -->
-  <section class="py-20 md:py-32 bg-brand-white">
-    <div class="container mx-auto">
-        <div class="max-w-3xl mb-16">
-            <h2 class="text-5xl md:text-6xl font-serif leading-tight text-brand-black">
-                Give them a space to step into.
-            </h2>
-            <p class="font-sans text-lg mt-4 leading-relaxed text-brand-black/80">
-                Introducing the AI Integration Partner by Storysmith.
-            </p>
+  <!-- Brand Pillars Section -->
+  <section class="bg-brand-navy text-brand-white py-20 md:py-32">
+    <div class="container mx-auto px-6">
+      <h2 class="text-center font-sans uppercase tracking-widest text-lg mb-12">The StorySmith Charter</h2>
+      <div class="grid md:grid-cols-3 gap-8 text-center max-w-6xl mx-auto">
+        <!-- Pillar 1 -->
+        <div class="p-8 border border-brand-white/10 rounded-lg hover:bg-brand-white/5 transition-colors">
+          <h3 class="text-3xl font-serif mb-4">Cultural Integrity First</h3>
+          <p class="font-sans leading-relaxed">
+            We begin with relationship and deep listening, honoring the tikanga of your story's origin, so that your narrative is preserved with the respect and authenticity it deserves.
+          </p>
         </div>
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="space-y-2">
-                <h3 class="font-sans text-xl font-bold">Embody the Learnings</h3>
-                <p class="text-brand-black/70">Move from intellectually understanding a framework to viscerally knowing it through guided, daily practice.</p>
-            </div>
-            <div class="space-y-2">
-                <h3 class="font-sans text-xl font-bold">Build Real Confidence</h3>
-                <p class="text-brand-black/70">Safely rehearse difficult conversations and high-stakes scenarios until they feel unstoppable.</p>
-            </div>
-            <div class="space-y-2">
-                <h3 class="font-sans text-xl font-bold">Find In-the-Moment Clarity</h3>
-                <p class="text-brand-black/70">Access your guidance 24/7, turning moments of doubt into opportunities for growth.</p>
-            </div>
+        <!-- Pillar 2 -->
+        <div class="p-8 border border-brand-white/10 rounded-lg hover:bg-brand-white/5 transition-colors">
+          <h3 class="text-3xl font-serif mb-4">Strategic Narrative Craft</h3>
+          <p class="font-sans leading-relaxed">
+            We distill your complexity into a powerful, clear narrative, shaping it for maximum impact, so that your core message resonates across any medium, from a podcast to a family heirloom.
+          </p>
         </div>
-    </div>
-  </section>
-  
-  <!-- Testimonial Section -->
-  <section class="py-20 md:py-32 bg-gray-100">
-    <div class="container mx-auto text-center max-w-4xl">
-        <h2 class="text-5xl md:text-6xl font-serif text-brand-black">From an Hour a Week to an "Always-On" Ally</h2>
-        <blockquote class="text-2xl md:text-3xl font-serif italic my-10">
-            "It's the ultimate bridge between sessions. My clients now have a confidential space to practice my frameworks and get support the moment they need it. The level of integration and the results they're achieving are beyond anything I thought possible."
-        </blockquote>
-        <div class="flex items-center justify-center gap-4">
-            <img src="/path/to/emma-headshot.png" alt="Emma Kirkman" class="h-16 w-16 rounded-full object-cover">
-            <div>
-                <p class="font-sans font-bold">Emma Kirkman</p>
-                <p class="font-sans text-sm text-brand-black/60">Founder, Scaled Ambition</p>
-            </div>
-        </div>
-    </div>
-  </section>
-
-  <!-- Process Section -->
-  <section class="py-20 md:py-32 bg-brand-white">
-    <div class="container mx-auto">
-      <div class="text-center max-w-4xl mx-auto mb-20">
-        <h2 class="text-5xl md:text-6xl font-serif text-brand-black">We build the engine. You provide the genius.</h2>
-      </div>
-      <div class="space-y-16">
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-            <img src="https://images.unsplash.com/photo-1588196749107-45b1b30811e5?q=80&w=2070" alt="People brainstorming on a whiteboard" class="rounded-lg">
-            <div><h3 class="font-serif text-4xl mb-4">1. The Blueprint</h3><p class="font-sans text-lg text-brand-black/80">We start with a deep immersion into your unique methodology. We don't just read your content; we learn your philosophy to design an AI that is a true extension of you.</p></div>
-        </div>
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-            <div class="md:order-2"><img src="https://images.unsplash.com/photo-1555066931-4365d1469c88?q=80&w=2070" alt="Hands coding on a laptop" class="rounded-lg"></div>
-            <div class="md:order-1"><h3 class="font-serif text-4xl mb-4">2. The Build</h3><p class="font-sans text-lg text-brand-black/80">Our team builds your bespoke AI Integration Partner. It's a white-glove process where we handle all the technology, allowing you to focus on your expertise.</p></div>
-        </div>
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2084" alt="Team members looking at a laptop" class="rounded-lg">
-            <div><h3 class="font-serif text-4xl mb-4">3. The Handover</h3><p class="font-sans text-lg text-brand-black/80">We deliver a beautifully branded, ready-to-use platform for your clients. It's your world, your genius—activated.</p></div>
+        <!-- Pillar 3 -->
+        <div class="p-8 border border-brand-white/10 rounded-lg hover:bg-brand-white/5 transition-colors">
+          <h3 class="text-3xl font-serif mb-4">Ethical Preservation</h3>
+          <p class="font-sans leading-relaxed">
+            We use best-in-class technology as a tool for guardianship, ensuring your voice is captured with dignity and your data remains sovereign, so that your legacy is protected, not exploited.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Values Section -->
-  <section class="py-20 md:py-32 bg-gray-100">
-    <div class="container mx-auto text-center">
-      <h2 class="text-5xl md:text-6xl font-serif text-brand-black mb-6">Technology Built on Trust.</h2>
-      <p class="font-sans text-lg mb-12 text-brand-black/80 max-w-3xl mx-auto">In a world of extractive tech, we choose to build differently. Storysmith is a values-led company, and every integration partner we build is grounded in our public Foundation Charter—a sacred commitment to:</p>
-      <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-        <div class="space-y-2"><h3 class="font-sans text-xl font-bold">Absolute Data Sovereignty</h3><p class="text-brand-black/70">Your clients' stories are sacred and belong only to them. Period.</p></div>
-        <div class="space-y-2"><h3 class="font-sans text-xl font-bold">Ethical AI</h3><p class="text-brand-black/70">We build tools that empower human agency and connection, not diminish them.</p></div>
-        <div class="space-y-2"><h3 class="font-sans text-xl font-bold">Purposeful Partnership</h3><p class="text-brand-black/70">Your success is our success. We are deeply invested in amplifying the work of those who create positive change.</p></div>
+  <!-- Offers Section -->
+  <section id="offers" class="bg-brand-white py-20 md:py-32">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <!-- The Spoken Legacy -->
+      <div class="grid md:grid-cols-2 gap-12 md:gap-20 items-center mb-24 md:mb-32">
+        <div class="bg-brand-purple h-80 md:h-96 w-full rounded-lg">
+          <!-- Placeholder for an authentic image -->
+        </div>
+        <div>
+          <h4 class="font-sans uppercase tracking-widest text-brand-navy">For The Family Guardian</h4>
+          <h3 class="text-4xl md:text-5xl font-serif my-4 text-brand-black">The Spoken Legacy</h3>
+          <p class="font-sans mb-6 leading-relaxed">
+            Step into the role of your family's most cherished ancestor. Through guided, voice-first conversations, our culturally-aware AI companion, Peg, helps you transform spoken memories into a timeless hardback book and audio archive. This is more than a memoir; it is a living library of your wisdom for your mokopuna to treasure forever.
+          </p>
+          <a href="/legacy" class="text-brand-navy font-bold uppercase tracking-wider font-sans group">
+            Explore Legacy <span class="transition-transform duration-300 group-hover:translate-x-2">→</span>
+          </a>
+        </div>
       </div>
-      <a href="/philosophy" class="inline-block mt-12 border border-brand-black text-brand-black font-sans font-bold uppercase tracking-wider py-3 px-8 hover:bg-brand-black hover:text-brand-white transition-colors rounded-md">Read Our Foundation Charter</a>
+
+      <!-- Premium Podcast Production -->
+      <div class="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
+        <div class="md:order-2 bg-brand-peach h-80 md:h-96 w-full rounded-lg">
+          <!-- Placeholder for an authentic image -->
+        </div>
+        <div class="md:order-1">
+          <h4 class="font-sans uppercase tracking-widest text-brand-navy">For The Visionary Leader</h4>
+          <h3 class="text-4xl md:text-5xl font-serif my-4 text-brand-black">Premium Podcast Production</h3>
+          <p class="font-sans mb-6 leading-relaxed">
+            Step into your identity as a category-of-one thought leader. We partner with you to translate your complex vision into a world-class podcast that builds authority and inspires a movement. From strategic narrative design to end-to-end production, we handle every detail so you can focus on what you do best: sharing your truth.
+          </p>
+          <a href="/premium" class="text-brand-navy font-bold uppercase tracking-wider font-sans group">
+            Explore Podcasting <span class="transition-transform duration-300 group-hover:translate-x-2">→</span>
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Final CTA Section -->
-  <section class="relative py-32 md:py-48 bg-brand-black text-brand-white flex items-center justify-center">
-    <div class="absolute inset-0 bg-cover bg-center opacity-40" style="background-image: url('https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1974');"></div>
-    <div class="container mx-auto relative z-10 text-center">
-        <h2 class="text-5xl md:text-7xl font-serif leading-tight">Ready to bridge the integration gap?</h2>
-        <p class="font-sans text-xl my-8 leading-relaxed max-w-2xl mx-auto">Schedule a complimentary, 20-minute discovery call to explore how an AI Integration Partner can create deeper transformation for your clients and unlock new levels of impact for your business.</p>
-        <a href="/contact" class="inline-block bg-brand-white text-brand-black font-sans font-bold uppercase tracking-wider py-4 px-8 hover:bg-opacity-90 transition-colors rounded-md">
-          Book Your Discovery Call
-        </a>
+  <section class="bg-brand-navy text-brand-white py-20 md:py-32 text-center">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <h2 class="text-4xl md:text-6xl font-serif mb-6">
+        Your story is waiting to do its work in the world.
+      </h2>
+      <p class="font-sans text-xl mb-8 leading-relaxed">
+        Whether for an audience of millions or a family of one, the time to honor your legacy is now.
+      </p>
+      <a href="/contact" class="inline-block bg-brand-peach text-brand-black font-sans uppercase tracking-wider py-4 px-8 hover:bg-opacity-90 transition-all duration-300 rounded-lg">
+        Let's Begin
+      </a>
     </div>
   </section>
 </Layout>
