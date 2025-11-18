@@ -1,43 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StorySmith Premium Podcast Production | Your Story. Your Voice. Your Legacy.</title>
-    <meta name="description" content="Transform your expertise into a high-impact podcast that builds authority, amplifies influence, and preserves your legacy.">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+---
+import Layout from '../layouts/Layout.astro';
+export const prerender = true;
+---
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Custom Brand Styles -->
-    <script type="text/javascript">
-    // @ts-ignore
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            'brand-black': '#1a1a1a',
-            'brand-white': '#f9f7f4',
-            'brand-navy': '#1e3a78',
-            'brand-peach': '#e8e7ad',
-            'brand-lime': '#b5b741',
-          },
-          fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-            serif: ['Playfair Display', 'serif'],
-          },
-        }
-      }
-    }
-  </script>
-</head>
-<body class="font-sans bg-brand-black text-brand-white">
-
+<Layout>
     <!-- Section 1: Hero -->
     <section class="relative min-h-screen flex items-center justify-center bg-cover bg-center" style="background-image: linear-gradient(rgba(26, 26, 26, 0.85), rgba(26, 26, 26, 0.85)), url('https://images.unsplash.com/photo-1589903308904-1010c2294adc?q=80&w=2000');">
         <div class="container mx-auto px-6 py-20 text-center max-w-4xl text-brand-white">
@@ -57,7 +23,7 @@
     </section>
 
     <!-- Section 2: The Philosophy -->
-    <section class="py-20 bg-brand-black">
+    <section class="py-20 bg-brand-black text-brand-white">
         <div class="container mx-auto px-6 max-w-4xl text-center">
             <h2 class="font-serif text-3xl md:text-5xl font-bold mb-12">
                 In a World of AI-Generated Noise,<br>Your Real Edge is Your Lived Story.
@@ -83,7 +49,7 @@
     </section>
 
     <!-- Section 3: The Four Pillars -->
-    <section class="py-20 bg-brand-black">
+    <section class="py-20 bg-brand-black text-brand-white">
         <div class="container mx-auto px-6 max-w-7xl">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Pillar 1 -->
@@ -251,7 +217,7 @@
     </section>
 
     <!-- Section 7: About the Founder -->
-    <section class="py-20 bg-brand-black">
+    <section class="py-20 bg-brand-black text-brand-white">
         <div class="container mx-auto px-6 max-w-5xl">
             <h2 class="font-serif text-3xl md:text-5xl font-bold mb-16 text-center">The Voice Behind StorySmith</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -283,7 +249,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-8 bg-brand-black border-t border-brand-white/10">
+    <footer class="py-8 bg-brand-black border-t border-brand-white/10 text-brand-white">
         <div class="container mx-auto px-6 text-center text-sm text-brand-white/60">
             <p>&copy; 2025 StorySmith. All rights reserved.</p>
             <div class="mt-4 flex justify-center gap-4">
@@ -293,6 +259,4 @@
             </div>
         </div>
     </footer>
-
-</body>
-</html>
+</Layout>
