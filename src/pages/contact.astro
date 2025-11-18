@@ -1,0 +1,83 @@
+---
+import Layout from '../layouts/Layout.astro';
+export const prerender = true;
+---
+
+<Layout>
+  <main class="bg-brand-white py-20 md:py-32 px-6">
+    <div class="container mx-auto max-w-6xl">
+
+      <!-- [SECTION 1: HEADER & INVITATION] -->
+      <section class="text-center max-w-3xl mx-auto mb-16">
+        <h1 class="text-5xl md:text-7xl font-serif text-brand-black mb-4">
+          Let's Connect
+        </h1>
+        <p class="text-xl md:text-2xl font-sans text-brand-black/70">
+          Whether you have a question about preserving a family legacy, launching a world-class podcast, or just want to say hello, we would be delighted to hear from you.
+        </p>
+      </section>
+
+      <!-- [SECTION 2: FORM & CONTACT DETAILS] -->
+      <section class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+
+        <!-- Left Column: Embedded Fillout Form -->
+        <div class="bg-white p-8 rounded-2xl shadow-lg border border-black/10">
+          <h2 class="text-3xl font-serif text-brand-black mb-6">Send Us a Message</h2>
+
+          <!-- FILLOUT EMBED CODE START -->
+          <div style="width:100%;height:550px;" data-fillout-id="bu2whkBKB1us" data-fillout-embed-type="standard" data-fillout-inherit-parameters data-fillout-dynamic-resize></div>
+          <script src="https://server.fillout.com/embed/v1/" is:inline></script>
+          <!-- FILLOUT EMBED CODE END -->
+
+        </div>
+
+        <!-- Right Column: Direct Contact Details -->
+        <div class="pt-8">
+          <h3 class="text-3xl font-serif text-brand-black mb-8">Or, Reach Out Directly</h3>
+
+          <div class="space-y-10">
+            <!-- Lian's Contact Card -->
+            <div class="flex items-center gap-6">
+              <img src="/lian-headshot.png" alt="Lian Passmore, Founder of Storysmith" class="h-24 w-24 rounded-full object-cover flex-shrink-0">
+              <div>
+                <h4 class="text-xl font-bold font-sans text-brand-black">Lian Passmore</h4>
+                <p class="font-sans text-brand-black/70 mb-2">Founder, Premium Podcast Production</p>
+                <a href="mailto:hello@storysmith.work" class="text-brand-navy font-semibold hover:underline">hello@storysmith.work</a>
+              </div>
+            </div>
+
+            <!-- Tai's Contact Card -->
+            <div class="flex items-center gap-6">
+              <img src="/tai-headshot.png" alt="Tai, Guardian of The Spoken Legacy" class="h-24 w-24 rounded-full object-cover flex-shrink-0">
+              <div>
+                <h4 class="text-xl font-bold font-sans text-brand-black">Tai</h4>
+                <p class="font-sans text-brand-black/70 mb-2">Guardian, The Spoken Legacy</p>
+                <a href="mailto:support@storysmith.work" class="text-brand-navy font-semibold hover:underline">support@storysmith.work</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-12 pt-8 border-t border-black/10">
+             <div class="flex items-start gap-4 font-sans text-lg">
+                <!-- Icon -->
+                <svg class="w-6 h-6 text-brand-navy mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /></svg>
+                <div>
+                  <h4 class="font-bold text-brand-black">Location</h4>
+                  <p class="text-brand-black/80">Whangārei, Aotearoa New Zealand</p>
+                </div>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- [SECTION 3: OUR PROMISE SNIPPET] -->
+      <section class="mt-20 md:mt-32 text-center max-w-3xl mx-auto">
+        <h3 class="text-3xl font-serif text-brand-black mb-4">Our Commitment to You</h3>
+        <p class="font-sans text-lg text-brand-black/70">
+          Every conversation starts with empathy and respect. We are committed to protecting your privacy, honoring your story, and building a relationship based on trust. Your information will never be shared.
+        </p>
+      </section>
+
+    </div>
+  </main>
+</Layout>

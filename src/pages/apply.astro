@@ -1,0 +1,48 @@
+---
+import Layout from '../layouts/Layout.astro';
+export const prerender = true;
+---
+
+<Layout>
+  <main class="bg-brand-white py-20 md:py-32 px-6">
+    <div class="container mx-auto max-w-3xl">
+
+      <!-- [SECTION 1: HEADER & CONTEXT] -->
+      <section class="text-center mb-16">
+        <h1 class="text-5xl md:text-6xl font-serif text-brand-black mb-4">
+          Podcast Partnership Application
+        </h1>
+        <p class="text-xl md:text-2xl font-sans text-brand-black/70">
+          This is the first step to partnering with Storysmith. This application helps us understand your vision and ensure we are the perfect strategic fit to bring it to life.
+        </p>
+        <p class="font-sans mt-4 text-brand-black/70">
+          We personally review every submission and will be in touch within two business days with the next steps.
+        </p>
+      </section>
+
+      <!-- [SECTION 2: EMBEDDED FORM] -->
+      <section class="bg-white p-8 md:p-12 rounded-2xl shadow-lg border border-black/10">
+
+        <!-- FILLOUT EMBED CODE START -->
+        <div style="width:100%;height:700px;" data-fillout-id="c2wc6qL6Yqus" data-fillout-embed-type="standard" data-fillout-inherit-parameters data-fillout-dynamic-resize></div>
+        <script src="https://server.fillout.com/embed/v1/" is:inline></script>
+        <!-- FILLOUT EMBED CODE END -->
+
+      </section>
+
+      <!-- [SECTION 3: REASSURANCE & NEXT STEPS] -->
+      <section class="mt-16 text-center max-w-2xl mx-auto">
+        <h3 class="text-3xl font-serif text-brand-black mb-4">What Happens Next?</h3>
+        <p class="font-sans text-lg text-brand-black/70">
+          Once we've reviewed your application, you will receive a personal invitation to our unique "AI Vision Session"—a brief, guided conversation to dive deeper into your goals. This is where the magic begins.
+        </p>
+        <div class="mt-8">
+            <a href="/podcast" class="text-brand-navy font-bold uppercase tracking-wider font-sans hover:underline">
+                ← Back to the Main Page
+            </a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+</Layout>
