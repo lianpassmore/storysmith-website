@@ -5,9 +5,18 @@ export const prerender = true;
 
 <Layout>
   <!-- Hero Section -->
-  <section class="min-h-screen flex items-center justify-center text-center px-6 py-20 bg-brand-white text-brand-black">
-    <div class="max-w-4xl">
-      <h1 class="text-5xl md:text-7xl font-serif text-brand-black mb-4">
+  <section class="relative min-h-screen flex items-center justify-center text-center px-6 py-20 text-brand-white">
+    <!-- Background Image with Dark Overlay -->
+    <div class="absolute inset-0 bg-brand-black/70"></div>
+    <img 
+      src="/images/hero-background.jpg" 
+      alt="A person thoughtfully looking at a collection of old family photographs."
+      class="absolute inset-0 w-full h-full object-cover"
+    >
+
+    <!-- Content (z-10 brings it in front of the background) -->
+    <div class="max-w-4xl relative z-10">
+      <h1 class="text-5xl md:text-7xl font-serif mb-4">
         Your Wisdom is a Sacred, Lasting Asset.
       </h1>
       <p class="text-xl md:text-2xl font-sans mb-8">
@@ -22,7 +31,7 @@ export const prerender = true;
   <!-- Brand Pillars Section -->
   <section class="bg-brand-navy text-brand-white py-20 md:py-32">
     <div class="container mx-auto px-6">
-      <h2 class="text-center font-sans uppercase tracking-widest text-lg mb-12">The StorySmith Charter</h2>
+      <h2 class="text-center font-sans uppercase tracking-widest text-lg mb-12">The StorySmith Philosophy</h2>
       <div class="grid md:grid-cols-3 gap-8 text-center max-w-6xl mx-auto">
         <!-- Pillar 1 -->
         <div class="p-8 border border-brand-white/10 rounded-lg hover:bg-brand-white/5 transition-colors">
@@ -50,13 +59,15 @@ export const prerender = true;
   </section>
 
   <!-- Offers Section -->
-  <section id="offers" class="bg-brand-white py-20 md:py-32">
+  <section id="offers" class="bg-brand-peach/20 py-20 md:py-32">
     <div class="container mx-auto px-6 max-w-6xl">
       <!-- The Spoken Legacy -->
       <div class="grid md:grid-cols-2 gap-12 md:gap-20 items-center mb-24 md:mb-32">
-        <div class="bg-brand-purple h-80 md:h-96 w-full rounded-lg">
-          <!-- Placeholder for an authentic image -->
-        </div>
+        <img 
+          src="/images/spoken-legacy.jpg" 
+          alt="An elegant, custom-bound hardback book resting on a wooden table next to a pair of headphones." 
+          class="w-full h-80 md:h-96 object-cover rounded-lg shadow-lg"
+        >
         <div>
           <h4 class="font-sans uppercase tracking-widest text-brand-navy">For The Family Guardian</h4>
           <h3 class="text-4xl md:text-5xl font-serif my-4 text-brand-black">The Spoken Legacy</h3>
@@ -71,9 +82,11 @@ export const prerender = true;
 
       <!-- Premium Podcast Production -->
       <div class="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
-        <div class="md:order-2 bg-brand-peach h-80 md:h-96 w-full rounded-lg">
-          <!-- Placeholder for an authentic image -->
-        </div>
+        <img 
+          src="/images/podcast-production.jpg" 
+          alt="A professional microphone in a calm, well-lit recording studio setting." 
+          class="md:order-2 w-full h-80 md:h-96 object-cover rounded-lg shadow-lg"
+        >
         <div class="md:order-1">
           <h4 class="font-sans uppercase tracking-widest text-brand-navy">For The Visionary Leader</h4>
           <h3 class="text-4xl md:text-5xl font-serif my-4 text-brand-black">Premium Podcast Production</h3>
