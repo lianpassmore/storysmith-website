@@ -1,148 +1,123 @@
-<!-- src/pages/legacy-purchase.astro -->
-
 ---
 import Layout from '../layouts/Layout.astro';
-
 export const prerender = true;
 ---
 
 <Layout>
-  <main class="container mx-auto max-w-2xl py-16 md:py-24 px-6">
-    <!-- [SECTION 1: THE PACKAGE & PRICING] -->
-    <section class="text-center border-b pb-12">
-      <h1 class="text-4xl md:text-5xl font-migra text-brand-black mb-2">The Complete Legacy Library</h1>
-      <p class="text-lg font-open-sauce mb-6">One all-inclusive package. One priceless family heirloom.</p>
-      <p class="text-5xl font-migra text-brand-navy mb-2">$849 NZD</p>
-      <p class="text-md font-open-sauce mb-6 flex items-center justify-center gap-2">or 4 interest-free payments of $212.25 with <img src="/AP_logo_badge_6328x2204_blackmint_png-6328x2204-4f9ad72.jpg" alt="Afterpay" class="h-6 inline-block" /></p>
-      <div class="flex justify-center items-center gap-4 text-sm text-gray-600">
-        <span>Pay securely with:</span>
-        <div class="flex gap-3 items-center">
-          <img src="/visa.svg" alt="Visa" class="h-6" />
-          <img src="/mastercard.svg" alt="Mastercard" class="h-6" />
-          <img src="/Apple_Pay_Mark_RGB_041619.svg" alt="Apple Pay" class="h-6" />
-        </div>
-      </div>
-    </section>
+  <main class="bg-brand-white min-h-screen py-16 md:py-24 px-6">
+    <div class="container mx-auto max-w-3xl">
+      
+      <section class="text-center mb-12">
+        <h1 class="text-4xl md:text-5xl font-serif text-brand-black mb-2">The Complete Legacy Library</h1>
+        <p class="text-lg font-sans text-brand-black/70">One all-inclusive package. One priceless family heirloom.</p>
+      </section>
 
-    <!-- [SECTION 2: VALUE STACK - WHAT'S INCLUDED] -->
-    <section class="py-12 border-b">
-      <h2 class="text-3xl font-migra text-brand-black mb-8">Everything Included in Your Journey</h2>
-      <ul class="space-y-4">
-        <li class="flex items-start">
-          <svg class="w-6 h-6 text-vital-lime mr-3 mt-1 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-          <span>A Personal Discovery Session to map out the journey.</span>
-        </li>
-        <li class="flex items-start">
-          <svg class="w-6 h-6 text-vital-lime mr-3 mt-1 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-          <span><strong>15 Hours</strong> of AI Conversation with your empathetic guide, Peg.</span>
-        </li>
-        <li class="flex items-start">
-          <svg class="w-6 h-6 text-vital-lime mr-3 mt-1 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-          <span>A Guided <strong>3-Month Experience</strong> at the storyteller's own pace.</span>
-        </li>
-        <li class="flex items-start">
-          <svg class="w-6 h-6 text-vital-lime mr-3 mt-1 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-          <span>Family & Friends Contribution Portal to include everyone's voice.</span>
-        </li>
-        <li class="flex items-start">
-          <svg class="w-6 h-6 text-vital-lime mr-3 mt-1 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-          <span>Professional Curation & Editing of all transcripts.</span>
-        </li>
-        <li class="flex items-start">
-          <svg class="w-6 h-6 text-vital-lime mr-3 mt-1 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-          <span>Personal Review & Photo Integration for the final manuscript.</span>
-        </li>
-        <li class="flex items-start">
-          <svg class="w-6 h-6 text-vital-lime mr-3 mt-1 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-          <span>The Heirloom Hardback Book, printed on archival-quality paper.</span>
-        </li>
-         <li class="flex items-start">
-          <svg class="w-6 h-6 text-vital-lime mr-3 mt-1 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-          <span>The Complete Digital Archive (PDF and Interactive Flipbook).</span>
-        </li>
-      </ul>
-    </section>
-
-    <!-- [SECTION 3: CHECKOUT & GIFTING OPTIONS] -->
-    <section class="pt-12">
-      <h2 class="text-3xl font-migra text-brand-black mb-8">Begin the Journey Today</h2>
-      <form class="space-y-8">
-        <!-- Gifting Options -->
-        <div class="space-y-4">
-            <label class="font-bold text-lg">Choose Your Gifting Experience</label>
-            <div class="border p-4 rounded-md has-checked:bg-lime-50 has-checked:border-vital-lime">
-                <input type="radio" id="digital" name="gifting_experience" value="digital" class="mr-2" checked>
-                <label for="digital"><strong>Instant Digital Gift Certificate</strong><br><span class="text-sm">Perfect for sending immediately. You'll receive a beautiful, shareable link right after purchase.</span></label>
-            </div>
-             <div class="border p-4 rounded-md has-checked:bg-lime-50 has-checked:border-vital-lime">
-                <input type="radio" id="physical" name="gifting_experience" value="physical" class="mr-2">
-                <label for="physical"><strong>Mail a Physical Gift Certificate</strong><br><span class="text-sm">We'll send a premium, boxed gift certificate to the address of your choice. Please allow 5-7 business days.</span></label>
-            </div>
-        </div>
-
-        <!-- Your Info -->
-        <div class="space-y-4">
-             <label class="font-bold text-lg">Your Information</label>
-             <div>
-                <label for="your_name" class="block text-sm font-medium">Your Full Name</label>
-                <input type="text" id="your_name" name="your_name" class="mt-1 block w-full border border-gray-300 rounded-md p-2">
-             </div>
-             <div>
-                <label for="your_email" class="block text-sm font-medium">Your Email Address</label>
-                <input type="email" id="your_email" name="your_email" class="mt-1 block w-full border border-gray-300 rounded-md p-2">
-             </div>
-        </div>
+      <div class="bg-white rounded-2xl shadow-xl border border-black/10 p-8 md:p-12">
         
-        <!-- Storyteller Info -->
-        <div class="space-y-4">
-             <label class="font-bold text-lg">Who is this Gift For?</label>
-             <div>
-                <label for="storyteller_name" class="block text-sm font-medium">Storyteller's Full Name</label>
-                <input type="text" id="storyteller_name" name="storyteller_name" class="mt-1 block w-full border border-gray-300 rounded-md p-2">
-             </div>
-             <div>
-                <label for="storyteller_email" class="block text-sm font-medium">Storyteller's Email Address <span class="text-gray-500">(Optional)</span></label>
-                <input type="email" id="storyteller_email" name="storyteller_email" class="mt-1 block w-full border border-gray-300 rounded-md p-2">
-                <p class="text-xs text-gray-500 mt-1">If you don't have their email, you can provide it later.</p>
-             </div>
-        </div>
+        <section class="text-center border-b border-black/10 pb-10">
+          <p class="text-5xl font-serif text-brand-navy mb-2">$849 NZD</p>
+          <p class="text-md font-sans mb-6 text-brand-black/70 flex items-center justify-center gap-2">or 4 interest-free payments of $212.25 with <img src="/path/to/afterpay-logo.svg" alt="Afterpay" class="h-6 inline-block" /></p>
+          <div class="flex justify-center items-center gap-4 text-sm text-gray-500">
+            <span>Pay securely with all major cards & digital wallets.</span>
+          </div>
+        </section>
 
-        <!-- Mailing Address (only shown for physical gift option) -->
-        <div id="mailing-address-section" class="space-y-4 hidden">
-             <label class="font-bold text-lg">Mailing Address</label>
-             <div>
-                <label for="street_address" class="block text-sm font-medium">Street Address</label>
-                <input type="text" id="street_address" name="street_address" class="mt-1 block w-full border border-gray-300 rounded-md p-2">
-             </div>
-             <div class="grid grid-cols-2 gap-4">
-                <div>
-                   <label for="city" class="block text-sm font-medium">City</label>
-                   <input type="text" id="city" name="city" class="mt-1 block w-full border border-gray-300 rounded-md p-2">
-                </div>
-                <div>
-                   <label for="postal_code" class="block text-sm font-medium">Postal Code</label>
-                   <input type="text" id="postal_code" name="postal_code" class="mt-1 block w-full border border-gray-300 rounded-md p-2">
-                </div>
-             </div>
-             <div>
-                <label for="country" class="block text-sm font-medium">Country</label>
-                <input type="text" id="country" name="country" class="mt-1 block w-full border border-gray-300 rounded-md p-2" value="New Zealand">
-             </div>
-        </div>
+        <section class="py-10 border-b border-black/10">
+          <h2 class="text-3xl font-serif text-brand-black mb-8 text-center">Everything Included</h2>
+          <ul class="space-y-4 font-sans text-brand-black/90 text-lg">
+            <li class="flex items-start"><span class="text-brand-lime mr-3 mt-1">✓</span><span>A Personal Discovery Session to map out the journey.</span></li>
+            <li class="flex items-start"><span class="text-brand-lime mr-3 mt-1">✓</span><span><strong>15 Hours</strong> of AI Conversation with your empathetic guide, Peg.</span></li>
+            <li class="flex items-start"><span class="text-brand-lime mr-3 mt-1">✓</span><span>A Guided <strong>3-Month Experience</strong> at the storyteller's own pace.</span></li>
+            <li class="flex items-start"><span class="text-brand-lime mr-3 mt-1">✓</span><span>Family & Friends Contribution Portal to include everyone's voice.</span></li>
+            <li class="flex items-start"><span class="text-brand-lime mr-3 mt-1">✓</span><span>Professional Curation & Editing of all transcripts.</span></li>
+            <li class="flex items-start"><span class="text-brand-lime mr-3 mt-1">✓</span><span>Personal Review & Photo Integration for the final manuscript.</span></li>
+            <li class="flex items-start"><span class="text-brand-lime mr-3 mt-1">✓</span><span>The Heirloom Hardback Book, printed on archival-quality paper.</span></li>
+            <li class="flex items-start"><span class="text-brand-lime mr-3 mt-1">✓</span><span>The Complete Digital Archive (PDF and Interactive Flipbook).</span></li>
+          </ul>
+        </section>
 
-        <!-- Submit & Guarantee -->
-        <div class="md:flex items-center gap-6">
-            <button type="submit" id="checkout-button" class="w-full md:w-auto bg-brand-navy text-warm-parchment font-open-sauce uppercase tracking-wider py-4 px-10 hover:bg-opacity-90 transition-colors rounded-md disabled:opacity-50 disabled:cursor-not-allowed">
-                <span id="button-text">Continue to Payment</span>
-                <span id="button-spinner" class="hidden">Processing...</span>
-            </button>
-            <div class="mt-4 md:mt-0 flex items-center gap-2 text-sm text-gray-600">
-                <svg class="w-8 h-8 text-vital-lime shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.286zm0 13.036h.008v.008h-.008v-.008z" /></svg>
-                <span><strong>Our "First Conversation" Promise:</strong> Full refund if the storyteller doesn't love their first conversation.</span>
+        <section class="pt-10">
+          <h2 class="text-3xl font-serif text-brand-black mb-8 text-center">Begin the Journey Today</h2>
+          <form class="space-y-8">
+            <div class="space-y-4">
+                <label class="font-bold text-xl font-sans text-brand-black">Choose Your Gifting Experience</label>
+                <div class="relative">
+                    <input type="radio" id="digital" name="gifting_experience" value="digital" class="peer absolute top-6 left-6" checked>
+                    <label for="digital" class="block border-2 border-gray-200 p-6 rounded-xl cursor-pointer peer-checked:border-brand-lime peer-checked:bg-lime-50">
+                        <strong class="font-sans text-lg">Instant Digital Gift Certificate</strong><br>
+                        <span class="text-sm text-brand-black/70">Perfect for sending immediately. You'll receive a beautiful, shareable link right after purchase.</span>
+                    </label>
+                </div>
+                 <div class="relative">
+                    <input type="radio" id="physical" name="gifting_experience" value="physical" class="peer absolute top-6 left-6">
+                    <label for="physical" class="block border-2 border-gray-200 p-6 rounded-xl cursor-pointer peer-checked:border-brand-lime peer-checked:bg-lime-50">
+                        <strong class="font-sans text-lg">Mail a Physical Gift Certificate</strong><br>
+                        <span class="text-sm text-brand-black/70">We'll send a premium, boxed gift certificate to your chosen address. Please allow 5-7 business days.</span>
+                    </label>
+                </div>
             </div>
-        </div>
-      </form>
-    </section>
+
+            <div class="space-y-6 pt-4 border-t border-black/10">
+                 <h3 class="font-bold text-xl font-sans text-brand-black">Your Information (The Purchaser)</h3>
+                 <div>
+                    <label for="your_name" class="block text-lg font-sans font-medium text-brand-black">Full Name</label>
+                    <input type="text" id="your_name" name="your_name" class="mt-2 block w-full border-2 border-gray-300 rounded-lg p-3 text-lg focus:border-brand-navy focus:ring-brand-navy" required>
+                 </div>
+                 <div>
+                    <label for="your_email" class="block text-lg font-sans font-medium text-brand-black">Email Address</label>
+                    <input type="email" id="your_email" name="your_email" class="mt-2 block w-full border-2 border-gray-300 rounded-lg p-3 text-lg focus:border-brand-navy focus:ring-brand-navy" required>
+                 </div>
+            </div>
+            
+            <div class="space-y-6 pt-4 border-t border-black/10">
+                 <h3 class="font-bold text-xl font-sans text-brand-black">Who is this Gift For? (The Storyteller)</h3>
+                 <div>
+                    <label for="storyteller_name" class="block text-lg font-sans font-medium text-brand-black">Full Name</label>
+                    <input type="text" id="storyteller_name" name="storyteller_name" class="mt-2 block w-full border-2 border-gray-300 rounded-lg p-3 text-lg focus:border-brand-navy focus:ring-brand-navy" required>
+                 </div>
+                 <div>
+                    <label for="storyteller_email" class="block text-lg font-sans font-medium text-brand-black">Email Address <span class="text-sm font-normal text-brand-black/60">(Optional)</span></label>
+                    <input type="email" id="storyteller_email" name="storyteller_email" class="mt-2 block w-full border-2 border-gray-300 rounded-lg p-3 text-lg focus:border-brand-navy focus:ring-brand-navy">
+                    <p class="text-xs text-brand-black/60 mt-1">If you don't have their email, you can provide it to us later. We'll send the activation details to your email instead.</p>
+                 </div>
+            </div>
+
+            <div id="mailing-address-section" class="space-y-6 pt-4 border-t border-black/10 hidden">
+                 <h3 class="font-bold text-xl font-sans text-brand-black">Mailing Address for Physical Certificate</h3>
+                 <div>
+                    <label for="street_address" class="block text-lg font-sans font-medium text-brand-black">Street Address</label>
+                    <input type="text" id="street_address" name="street_address" class="mt-2 block w-full border-2 border-gray-300 rounded-lg p-3 text-lg focus:border-brand-navy focus:ring-brand-navy">
+                 </div>
+                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                       <label for="city" class="block text-lg font-sans font-medium text-brand-black">City</label>
+                       <input type="text" id="city" name="city" class="mt-2 block w-full border-2 border-gray-300 rounded-lg p-3 text-lg focus:border-brand-navy focus:ring-brand-navy">
+                    </div>
+                    <div>
+                       <label for="postal_code" class="block text-lg font-sans font-medium text-brand-black">Postal Code</label>
+                       <input type="text" id="postal_code" name="postal_code" class="mt-2 block w-full border-2 border-gray-300 rounded-lg p-3 text-lg focus:border-brand-navy focus:ring-brand-navy">
+                    </div>
+                 </div>
+                 <div>
+                    <label for="country" class="block text-lg font-sans font-medium text-brand-black">Country</label>
+                    <input type="text" id="country" name="country" class="mt-2 block w-full border-2 border-gray-300 rounded-lg p-3 text-lg focus:border-brand-navy focus:ring-brand-navy" value="New Zealand">
+                 </div>
+            </div>
+
+            <div class="pt-6 space-y-6">
+                <button type="submit" id="checkout-button" class="w-full bg-brand-navy text-brand-white font-sans uppercase tracking-wider py-4 px-10 text-lg font-bold hover:bg-opacity-90 transition-colors rounded-lg disabled:opacity-50 disabled:cursor-wait">
+                    <span id="button-text">Continue to Payment</span>
+                    <span id="button-spinner" class="hidden">Processing...</span>
+                </button>
+                <div class="flex items-center gap-4 text-sm text-brand-black/70 p-4 bg-gray-50 rounded-lg">
+                    <svg class="w-12 h-12 text-brand-lime shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
+                    <span><strong>Our "First Conversation" Promise:</strong> Full refund if the storyteller doesn't love their first conversation. It's that simple.</span>
+                </div>
+            </div>
+          </form>
+        </section>
+      </div>
+    </div>
   </main>
 </Layout>
 
@@ -155,7 +130,6 @@ export const prerender = true;
   const physicalRadio = document.getElementById('physical') as HTMLInputElement;
   const digitalRadio = document.getElementById('digital') as HTMLInputElement;
 
-  // Show/hide mailing address based on gift type selection
   function toggleMailingAddress() {
     if (physicalRadio?.checked) {
       mailingAddressSection?.classList.remove('hidden');
@@ -170,7 +144,6 @@ export const prerender = true;
   form?.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    // Get form values
     const formData = new FormData(form);
     const yourName = formData.get('your_name') as string;
     const yourEmail = formData.get('your_email') as string;
@@ -182,43 +155,36 @@ export const prerender = true;
     const postalCode = formData.get('postal_code') as string;
     const country = formData.get('country') as string;
 
-    // Basic validation (storyteller email is optional)
     if (!yourName || !yourEmail || !storytellerName) {
       alert('Please fill in all required fields');
       return;
     }
 
-    // Validate mailing address if physical gift is selected
     if (giftingType === 'physical' && (!streetAddress || !city || !postalCode || !country)) {
       alert('Please fill in all mailing address fields for physical gift delivery');
       return;
     }
 
-    // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(yourEmail)) {
       alert('Please enter a valid email address');
       return;
     }
 
-    // Validate storyteller email only if provided
     if (storytellerEmail && !emailRegex.test(storytellerEmail)) {
       alert('Please enter a valid storyteller email address');
       return;
     }
 
-    // Disable button and show loading state
     submitButton.disabled = true;
     buttonText.classList.add('hidden');
     buttonSpinner.classList.remove('hidden');
 
     try {
-      // Build mailing address string
       const mailingAddress = giftingType === 'physical'
         ? `${streetAddress}, ${city}, ${postalCode}, ${country}`
         : 'N/A';
 
-      // Call your API to create a checkout session
       const response = await fetch('/api/stripe/checkout', {
         method: 'POST',
         headers: {
@@ -240,7 +206,6 @@ export const prerender = true;
         throw new Error(data.error || 'Something went wrong');
       }
 
-      // Redirect to Stripe Checkout
       if (data.url) {
         window.location.href = data.url;
       } else {
@@ -250,7 +215,6 @@ export const prerender = true;
       console.error('Error:', error);
       alert('There was an error processing your request. Please try again.');
 
-      // Re-enable button
       submitButton.disabled = false;
       buttonText.classList.remove('hidden');
       buttonSpinner.classList.add('hidden');

@@ -1,25 +1,47 @@
----
-// Premium Podcast Production Service Page
-export const prerender = true;
----
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StorySmith Premium Podcast Production | Your Story. Your Voice. Your Legacy.</title>
+    <title>Storysmith Premium Podcast Production | Your Story. Your Voice. Your Legacy.</title>
     <meta name="description" content="Transform your expertise into a high-impact podcast that builds authority, amplifies influence, and preserves your legacy.">
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Brand Styles -->
+    <script type="text/javascript">
+    // @ts-ignore
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'brand-black': '#1a1a1a',
+            'brand-white': '#f9f7f4',
+            'brand-navy': '#1e3a78',
+            'brand-peach': '#e8e7ad',
+            'brand-lime': '#b5b741',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
+          },
+        }
+      }
+    }
+  </script>
 </head>
-<body class="font-open-sauce bg-brand-black text-brand-white">
+<body class="font-sans bg-brand-black text-brand-white">
 
     <!-- Section 1: Hero -->
-    <section class="relative min-h-screen flex items-center justify-center bg-cover bg-center" style="background-image: linear-gradient(rgba(26, 26, 26, 0.6), rgba(26, 26, 26, 0.6)), url('https://images.unsplash.com/photo-1589903308904-1010c2294adc?q=80&w=2000');">
-        <div class="container mx-auto px-6 py-20 text-center max-w-4xl">
-            <h1 class="font-migra text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
+    <section class="relative min-h-screen flex items-center justify-center bg-cover bg-center" style="background-image: linear-gradient(rgba(26, 26, 26, 0.85), rgba(26, 26, 26, 0.85)), url('https://images.unsplash.com/photo-1589903308904-1010c2294adc?q=80&w=2000');">
+        <div class="container mx-auto px-6 py-20 text-center max-w-4xl text-brand-white">
+            <h1 class="font-serif text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
                 Your Story. Your Voice. Your Legacy — With Effortless Excellence.
             </h1>
             <p class="text-lg md:text-xl mb-10 leading-relaxed max-w-3xl mx-auto">
@@ -36,25 +58,25 @@ export const prerender = true;
 
     <!-- Section 2: The Philosophy -->
     <section class="py-20 bg-brand-black">
-        <div class="container mx-auto px-6 max-w-4xl">
-            <h2 class="font-migra text-3xl md:text-5xl font-bold mb-12 text-center">
-                In a World of AI-Generated Noise, Your Real Edge is Your Lived Story.
+        <div class="container mx-auto px-6 max-w-4xl text-center">
+            <h2 class="font-serif text-3xl md:text-5xl font-bold mb-12">
+                In a World of AI-Generated Noise,<br>Your Real Edge is Your Lived Story.
             </h2>
-            <div class="space-y-6 text-lg md:text-xl">
+            <div class="space-y-6 text-lg md:text-xl max-w-2xl mx-auto text-left">
                 <p class="flex items-start">
-                    <span class="text-brand-peach mr-3">•</span>
+                    <svg class="w-6 h-6 text-brand-peach mr-4 mt-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                     <span>Tech shouldn't block your message.</span>
                 </p>
                 <p class="flex items-start">
-                    <span class="text-brand-peach mr-3">•</span>
+                    <svg class="w-6 h-6 text-brand-peach mr-4 mt-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                     <span>Your focus belongs in your genius.</span>
                 </p>
                 <p class="flex items-start">
-                    <span class="text-brand-peach mr-3">•</span>
+                    <svg class="w-6 h-6 text-brand-peach mr-4 mt-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                     <span>"Where do I start?" shouldn't stop you.</span>
                 </p>
             </div>
-            <p class="text-xl md:text-2xl font-bold mt-12 text-center">
+            <p class="text-xl md:text-2xl font-bold mt-16">
                 Your voice deserves the highest care and attention.
             </p>
         </div>
@@ -62,27 +84,27 @@ export const prerender = true;
 
     <!-- Section 3: The Four Pillars -->
     <section class="py-20 bg-brand-black">
-        <div class="container mx-auto px-6 max-w-6xl">
+        <div class="container mx-auto px-6 max-w-7xl">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Pillar 1 -->
-                <div class="border border-brand-white/20 p-8 rounded-lg hover:border-brand-peach transition-colors">
-                    <h3 class="font-migra text-2xl font-bold mb-4 text-brand-peach">1. Effortless Excellence</h3>
-                    <p class="text-base">You speak; I handle the rest.</p>
+                <div class="bg-[#222222] border border-brand-white/10 p-8 rounded-lg hover:border-brand-lime transition-colors shadow-lg">
+                    <h3 class="font-serif text-2xl font-bold mb-4 text-brand-lime">1. Effortless Excellence</h3>
+                    <p class="text-base text-brand-white/80">You speak; I handle the rest.</p>
                 </div>
                 <!-- Pillar 2 -->
-                <div class="border border-brand-white/20 p-8 rounded-lg hover:border-brand-lime transition-colors">
-                    <h3 class="font-migra text-2xl font-bold mb-4 text-brand-lime">2. Strategic Storytelling</h3>
-                    <p class="text-base">Episodes that build toward your bigger goals.</p>
+                <div class="bg-[#222222] border border-brand-white/10 p-8 rounded-lg hover:border-brand-lime transition-colors shadow-lg">
+                    <h3 class="font-serif text-2xl font-bold mb-4 text-brand-lime">2. Strategic Storytelling</h3>
+                    <p class="text-base text-brand-white/80">Episodes that build toward your bigger goals.</p>
                 </div>
                 <!-- Pillar 3 -->
-                <div class="border border-brand-white/20 p-8 rounded-lg hover:border-brand-peach transition-colors">
-                    <h3 class="font-migra text-2xl font-bold mb-4 text-brand-peach">3. Premium Production</h3>
-                    <p class="text-base">Human-led, artisanal polish AI can't replicate.</p>
+                <div class="bg-[#222222] border border-brand-white/10 p-8 rounded-lg hover:border-brand-lime transition-colors shadow-lg">
+                    <h3 class="font-serif text-2xl font-bold mb-4 text-brand-lime">3. Premium Production</h3>
+                    <p class="text-base text-brand-white/80">Human-led, artisanal polish AI can't replicate.</p>
                 </div>
                 <!-- Pillar 4 -->
-                <div class="border border-brand-white/20 p-8 rounded-lg hover:border-brand-lime transition-colors">
-                    <h3 class="font-migra text-2xl font-bold mb-4 text-brand-lime">4. Legacy Impact</h3>
-                    <p class="text-base">A platform that grows your authority over time.</p>
+                <div class="bg-[#222222] border border-brand-white/10 p-8 rounded-lg hover:border-brand-lime transition-colors shadow-lg">
+                    <h3 class="font-serif text-2xl font-bold mb-4 text-brand-lime">4. Legacy Impact</h3>
+                    <p class="text-base text-brand-white/80">A platform that grows your authority over time.</p>
                 </div>
             </div>
         </div>
@@ -91,43 +113,48 @@ export const prerender = true;
     <!-- Section 4: The Journey Map -->
     <section class="py-20 bg-brand-peach text-brand-black">
         <div class="container mx-auto px-6 max-w-4xl">
-            <h2 class="font-migra text-3xl md:text-5xl font-bold mb-12 text-center">
+            <h2 class="font-serif text-3xl md:text-5xl font-bold mb-16 text-center">
                 From Idea → Influence → Legacy: Your Podcast Journey.
             </h2>
-            <div class="space-y-8">
+            <div class="space-y-10">
+                <!-- Step 1 -->
                 <div class="flex items-start">
-                    <span class="font-migra text-3xl font-bold mr-6 flex-shrink-0">1.</span>
+                    <span class="font-serif text-5xl font-bold text-brand-black/20 mr-6 shrink-0">1</span>
                     <div>
-                        <h3 class="font-bold text-xl mb-2">Vision & Story Alignment</h3>
-                        <p>Map your purpose, audience, and legacy goals.</p>
+                        <h3 class="font-bold text-2xl mb-2">Vision & Story Alignment</h3>
+                        <p class="text-lg">Map your purpose, audience, and legacy goals.</p>
                     </div>
                 </div>
+                <!-- Step 2 -->
                 <div class="flex items-start">
-                    <span class="font-migra text-3xl font-bold mr-6 flex-shrink-0">2.</span>
+                    <span class="font-serif text-5xl font-bold text-brand-black/20 mr-6 shrink-0">2</span>
                     <div>
-                        <h3 class="font-bold text-xl mb-2">Narrative Design</h3>
-                        <p>Plan season themes, guests, and a compelling promotional arc.</p>
+                        <h3 class="font-bold text-2xl mb-2">Narrative Design</h3>
+                        <p class="text-lg">Plan season themes, guests, and a compelling promotional arc.</p>
                     </div>
                 </div>
+                <!-- Step 3 -->
                 <div class="flex items-start">
-                    <span class="font-migra text-3xl font-bold mr-6 flex-shrink-0">3.</span>
+                    <span class="font-serif text-5xl font-bold text-brand-black/20 mr-6 shrink-0">3</span>
                     <div>
-                        <h3 class="font-bold text-xl mb-2">Recording Experience</h3>
-                        <p>Enjoy full technical support, whether remote or in-person.</p>
+                        <h3 class="font-bold text-2xl mb-2">Recording Experience</h3>
+                        <p class="text-lg">Enjoy full technical support, whether remote or in-person.</p>
                     </div>
                 </div>
+                <!-- Step 4 -->
                 <div class="flex items-start">
-                    <span class="font-migra text-3xl font-bold mr-6 flex-shrink-0">4.</span>
+                    <span class="font-serif text-5xl font-bold text-brand-black/20 mr-6 shrink-0">4</span>
                     <div>
-                        <h3 class="font-bold text-xl mb-2">Artisanal Production</h3>
-                        <p>Bespoke editing, thoughtful sound design, and professional mastering.</p>
+                        <h3 class="font-bold text-2xl mb-2">Artisanal Production</h3>
+                        <p class="text-lg">Bespoke editing, thoughtful sound design, and professional mastering.</p>
                     </div>
                 </div>
+                <!-- Step 5 -->
                 <div class="flex items-start">
-                    <span class="font-migra text-3xl font-bold mr-6 flex-shrink-0">5.</span>
+                    <span class="font-serif text-5xl font-bold text-brand-black/20 mr-6 shrink-0">5</span>
                     <div>
-                        <h3 class="font-bold text-xl mb-2">Launch & Amplify</h3>
-                        <p>Seamless hosting, distribution, and a tailored launch kit to ensure your message is heard.</p>
+                        <h3 class="font-bold text-2xl mb-2">Launch & Amplify</h3>
+                        <p class="text-lg">Seamless hosting, distribution, and a tailored launch kit to ensure your message is heard.</p>
                     </div>
                 </div>
             </div>
@@ -135,189 +162,88 @@ export const prerender = true;
     </section>
 
     <!-- Section 5: Who It's For / Who It's Not For -->
-    <!-- Who It's For -->
-    <section class="py-20 bg-brand-lime text-brand-black">
-        <div class="container mx-auto px-6 max-w-4xl">
-            <h2 class="font-migra text-3xl md:text-5xl font-bold mb-8">
-                Who It's For
-            </h2>
-            <p class="text-xl mb-8">This is the perfect fit for you if:</p>
-            <div class="space-y-4 text-lg">
-                <p class="flex items-start">
-                    <span class="mr-3">•</span>
-                    <span>You see your podcast as part of your legacy.</span>
-                </p>
-                <p class="flex items-start">
-                    <span class="mr-3">•</span>
-                    <span>You're ready to launch.</span>
-                </p>
-                <p class="flex items-start">
-                    <span class="mr-3">•</span>
-                    <span>You value premium, human-led production.</span>
-                </p>
-                <p class="flex items-start">
-                    <span class="mr-3">•</span>
-                    <span>You have a clear message.</span>
-                </p>
-                <p class="flex items-start">
-                    <span class="mr-3">•</span>
-                    <span>You'd rather spend your energy speaking and connecting.</span>
-                </p>
-                <p class="flex items-start">
-                    <span class="mr-3">•</span>
-                    <span>You appreciate a clear strategy.</span>
-                </p>
-                <p class="flex items-start">
-                    <span class="mr-3">•</span>
-                    <span>You want a trusted partner.</span>
-                </p>
+    <div class="grid grid-cols-1 lg:grid-cols-2">
+        <!-- Who It's For -->
+        <section class="py-20 bg-brand-lime text-brand-black">
+            <div class="container mx-auto px-6 max-w-3xl">
+                <h2 class="font-serif text-3xl md:text-5xl font-bold mb-8">Who It's For</h2>
+                <p class="text-xl mb-8">This is the perfect fit for you if:</p>
+                <ul class="space-y-4 text-lg">
+                    <li>• You see your podcast as part of your legacy.</li>
+                    <li>• You're ready to launch.</li>
+                    <li>• You value premium, human-led production.</li>
+                    <li>• You have a clear message.</li>
+                    <li>• You'd rather spend your energy speaking and connecting.</li>
+                    <li>• You appreciate a clear strategy.</li>
+                    <li>• You want a trusted partner.</li>
+                </ul>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Who It's Not For -->
-    <section class="py-20 bg-brand-black">
-        <div class="container mx-auto px-6 max-w-4xl">
-            <h2 class="font-migra text-3xl md:text-5xl font-bold mb-8">
-                Who It's Not For
-            </h2>
-            <p class="text-xl mb-8">This isn't the right fit for you if:</p>
-            <div class="space-y-4 text-lg">
-                <p class="flex items-start">
-                    <span class="text-brand-white/50 mr-3">•</span>
-                    <span>You're looking for a quick, one-off project.</span>
-                </p>
-                <p class="flex items-start">
-                    <span class="text-brand-white/50 mr-3">•</span>
-                    <span>You want to micro-manage.</span>
-                </p>
-                <p class="flex items-start">
-                    <span class="text-brand-white/50 mr-3">•</span>
-                    <span>You're happy to sacrifice quality.</span>
-                </p>
-                <p class="flex items-start">
-                    <span class="text-brand-white/50 mr-3">•</span>
-                    <span>You don't have a clear message.</span>
-                </p>
-                <p class="flex items-start">
-                    <span class="text-brand-white/50 mr-3">•</span>
-                    <span>You prefer to DIY all the tech.</span>
-                </p>
-                <p class="flex items-start">
-                    <span class="text-brand-white/50 mr-3">•</span>
-                    <span>You see a podcast as a low-effort side project.</span>
-                </p>
+        <!-- Who It's Not For -->
+        <section class="py-20 bg-brand-black text-brand-white">
+            <div class="container mx-auto px-6 max-w-3xl">
+                <h2 class="font-serif text-3xl md:text-5xl font-bold mb-8">Who It's Not For</h2>
+                <p class="text-xl mb-8">This isn't the right fit for you if:</p>
+                <ul class="space-y-4 text-lg text-brand-white/70">
+                    <li>• You're looking for a quick, one-off project.</li>
+                    <li>• You want to micro-manage.</li>
+                    <li>• You're happy to sacrifice quality.</li>
+                    <li>• You don't have a clear message.</li>
+                    <li>• You prefer to DIY all the tech.</li>
+                    <li>• You see a podcast as a low-effort side project.</li>
+                </ul>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <!-- Section 6: The Investment -->
     <section id="investment" class="py-20 bg-brand-white text-brand-black">
-        <div class="container mx-auto px-6 max-w-5xl">
-            <h2 class="font-migra text-3xl md:text-5xl font-bold mb-8 text-center">
-                An Investment in Your Legacy
-            </h2>
-            <p class="text-xl text-center mb-16 max-w-3xl mx-auto">
-                Creating a premium podcast isn't an expense; it's the creation of a valuable digital asset that amplifies your authority, builds your influence, and preserves your voice for years to come.
-            </p>
+        <div class="container mx-auto px-6 max-w-6xl">
+            <h2 class="font-serif text-3xl md:text-5xl font-bold mb-8 text-center">An Investment in Your Legacy</h2>
+            <p class="text-xl text-center mb-16 max-w-3xl mx-auto">Creating a premium podcast isn't an expense; it's the creation of a valuable digital asset that amplifies your authority, builds your influence, and preserves your voice for years to come.</p>
 
-            <!-- Package Boxes -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
                 <!-- Signature Season -->
-                <div class="border-2 border-brand-black p-8 rounded-lg">
-                    <h3 class="font-migra text-2xl font-bold mb-2">SIGNATURE SEASON</h3>
-                    <p class="text-3xl font-bold mb-4">$8,500 NZD</p>
-                    <p class="text-lg mb-6 italic">6-8 episodes</p>
-                    <p class="mb-6">Perfect if you're ready to launch your first season with a clear, focused message and strategic impact.</p>
-                    <ul class="space-y-3 text-base">
-                        <li class="flex items-start">
-                            <span class="mr-2">✓</span>
-                            <span>Vision & Story Alignment Session</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-2">✓</span>
-                            <span>Season Narrative Design & Episode Arc Planning</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-2">✓</span>
-                            <span>Full Technical Recording Support (Remote or In-Person)</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-2">✓</span>
-                            <span>Premium Editing, Sound Design & Mastering</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-2">✓</span>
-                            <span>Podcast Hosting & Distribution Setup</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-2">✓</span>
-                            <span>Custom Launch Kit (Show Notes, Graphics, Promotional Copy)</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-2">✓</span>
-                            <span>Ongoing Strategic Support Throughout Season</span>
-                        </li>
-                    </ul>
+                <div class="border-2 border-brand-black/20 p-8 rounded-2xl flex flex-col">
+                    <h3 class="font-serif text-2xl font-bold mb-2">SIGNATURE SEASON</h3>
+                    <p class="font-sans text-3xl font-bold mb-4">$8,500 NZD</p>
+                    <p class="text-lg mb-6 italic text-brand-black/60">6-8 episodes</p>
+                    <p class="mb-6 grow">Perfect if you're ready to launch your first season with a clear, focused message and strategic impact.</p>
+                    <!-- Feature list can be added here -->
                 </div>
 
                 <!-- Extended Season -->
-                <div class="border-2 border-brand-black p-8 rounded-lg bg-brand-black text-brand-white">
-                    <h3 class="font-migra text-2xl font-bold mb-2">EXTENDED SEASON</h3>
-                    <p class="text-3xl font-bold mb-4">$12,000-$17,000 NZD</p>
+                <div class="border-2 border-brand-lime p-8 rounded-2xl bg-brand-lime text-brand-black relative">
+                    <span class="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-brand-navy text-brand-white text-xs font-bold uppercase px-3 py-1 rounded-full">Most Popular</span>
+                    <h3 class="font-serif text-2xl font-bold mb-2">EXTENDED SEASON</h3>
+                    <p class="font-sans text-3xl font-bold mb-4">$12,000-$17,000 NZD</p>
                     <p class="text-lg mb-6 italic">9+ episodes</p>
                     <p class="mb-6">Best for leaders ready to make a bigger splash with an ambitious series, guest strategy, or multi-arc narrative.</p>
-                    <ul class="space-y-3 text-base">
-                        <li class="flex items-start">
-                            <span class="mr-2">✓</span>
-                            <span>Everything in Signature Season</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-2">✓</span>
-                            <span>Extended Episode Count (9-12+ episodes)</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-2">✓</span>
-                            <span>Advanced Guest Coordination & Outreach Support</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-2">✓</span>
-                            <span>Multi-Arc Narrative Planning</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-2">✓</span>
-                            <span>Enhanced Launch Strategy & Marketing Support</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-2">✓</span>
-                            <span>Priority Booking & Scheduling</span>
-                        </li>
-                    </ul>
+                     <!-- Feature list can be added here -->
                 </div>
             </div>
 
-            <!-- Add-Ons -->
-            <div class="border-t-2 border-brand-black pt-12">
-                <h3 class="font-migra text-2xl font-bold mb-6 text-center">Optional Add-Ons</h3>
+            <div class="border-t-2 border-brand-black/10 pt-12 mt-16">
+                <h3 class="font-serif text-2xl font-bold mb-6 text-center">Enhance Your Season</h3>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-                    <div class="p-6 border border-brand-black rounded-lg">
+                    <div class="p-6 border border-brand-black/10 rounded-lg">
                         <h4 class="font-bold text-lg mb-2">Video Production</h4>
-                        <p class="text-sm">Full video recording, editing & optimization for YouTube and social media.</p>
+                        <p class="text-sm">Full video recording & optimization for YouTube and social media.</p>
                     </div>
-                    <div class="p-6 border border-brand-black rounded-lg">
+                    <div class="p-6 border border-brand-black/10 rounded-lg">
                         <h4 class="font-bold text-lg mb-2">Guest Management</h4>
-                        <p class="text-sm">End-to-end guest research, outreach, scheduling & briefing.</p>
+                        <p class="text-sm">End-to-end guest research, outreach & briefing.</p>
                     </div>
-                    <div class="p-6 border border-brand-black rounded-lg">
+                    <div class="p-6 border border-brand-black/10 rounded-lg">
                         <h4 class="font-bold text-lg mb-2">Content Repurposing</h4>
-                        <p class="text-sm">Turn episodes into blog posts, audiograms, social clips & email newsletters.</p>
+                        <p class="text-sm">Turn episodes into blog posts, social clips & newsletters.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- CTA Button -->
-            <div class="text-center mt-12">
-                <a href="https://storysmith.fillout.com/podcastreadinessquiz" class="inline-block bg-brand-lime text-brand-black font-bold text-lg px-10 py-4 rounded-lg hover:opacity-90 transition-opacity">
+            <div class="text-center mt-16">
+                <a href="#booking-link" class="inline-block bg-brand-lime text-brand-black font-bold text-lg px-10 py-4 rounded-lg hover:opacity-90 transition-opacity">
                     Book Your Vision & Story Alignment Session
                 </a>
             </div>
@@ -327,45 +253,29 @@ export const prerender = true;
     <!-- Section 7: About the Founder -->
     <section class="py-20 bg-brand-black">
         <div class="container mx-auto px-6 max-w-5xl">
-            <h2 class="font-migra text-3xl md:text-5xl font-bold mb-12 text-center">
-                The Voice Behind StorySmith
-            </h2>
+            <h2 class="font-serif text-3xl md:text-5xl font-bold mb-16 text-center">The Voice Behind Storysmith</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <!-- Photo -->
-                <div class="order-2 md:order-1">
-                    <img src="/lian-headshot.png" alt="Lian, founder of StorySmith" class="rounded-lg aspect-square object-cover w-full" />
+                <div>
+                    <!-- Replace with your actual image path -->
+                    <img src="https://placehold.co/800x800/f9f7f4/1a1a1a?text=Lian" alt="Lian, founder of Storysmith" class="rounded-lg aspect-square object-cover w-full" />
                 </div>
-                <!-- Bio -->
-                <div class="order-1 md:order-2">
-                    <p class="text-lg leading-relaxed mb-6">
-                        I'm Lian, founder of StorySmith. I've spent years working with ambitious leaders, helping them turn their vision into podcasts that don't just exist—they resonate, influence, and endure.
-                    </p>
-                    <p class="text-lg leading-relaxed mb-6">
-                        You bring the voice and vision. I bring the strategy, the technical excellence, and the care to ensure your story doesn't get lost in the noise.
-                    </p>
-                    <p class="text-lg leading-relaxed font-bold">
-                        Your story is your advantage. Let's make sure it's heard.
-                    </p>
+                <div class="space-y-6 text-lg leading-relaxed">
+                    <p>I'm Lian, founder of Storysmith. I've spent years working with ambitious leaders, helping them turn their vision into podcasts that don't just exist—they resonate, influence, and endure.</p>
+                    <p>You bring the voice and vision. I bring the strategy, the technical excellence, and the care to ensure your story doesn't get lost in the noise.</p>
+                    <blockquote class="border-l-4 border-brand-lime pl-6 italic text-xl font-semibold">
+                        "Your story is your advantage. Let's make sure it's heard."
+                    </blockquote>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Section 8: Final Call to Action -->
-    <section class="py-20 bg-brand-lime text-brand-black">
+    <section id="booking-link" class="py-20 bg-brand-lime text-brand-black">
         <div class="container mx-auto px-6 max-w-4xl text-center">
-            <h2 class="font-migra text-3xl md:text-5xl font-bold mb-8">
-                Your Voice. Your Legacy. Zero Overwhelm.
-            </h2>
-            <p class="text-xl mb-6 leading-relaxed">
-                Your voice deserves more than generic execution. It deserves a partner who understands the nuance of story, the power of legacy, and the craft of premium production.
-            </p>
-            <p class="text-xl mb-10 leading-relaxed">
-                Let's connect. Book your complimentary Vision & Story Alignment session, and let's explore how your podcast can become a cornerstone of your legacy.
-            </p>
-            <p class="font-bold text-lg mb-10">
-                Limited client spots available per quarter.
-            </p>
+            <h2 class="font-serif text-3xl md:text-5xl font-bold mb-8">Your Voice. Your Legacy. Zero Overwhelm.</h2>
+            <p class="text-xl mb-10 leading-relaxed">Your voice deserves more than generic execution. It deserves a partner who understands the nuance of story, the power of legacy, and the craft of premium production. Let's connect. Book your complimentary Vision & Story Alignment session, and let's explore how your podcast can become a cornerstone of your legacy.</p>
+            <p class="font-bold text-lg mb-10">Limited client spots available per quarter.</p>
             <a href="https://storysmith.fillout.com/podcastreadinessquiz" class="inline-block bg-brand-navy text-brand-white font-bold text-lg px-10 py-4 rounded-lg hover:opacity-90 transition-opacity">
                 Book Your Vision & Story Alignment Session
             </a>
@@ -374,14 +284,15 @@ export const prerender = true;
 
     <!-- Footer -->
     <footer class="py-8 bg-brand-black border-t border-brand-white/10">
-        <div class="container mx-auto px-6 text-center text-brand-white/60 text-sm">
-            <p>&copy; 2025 StorySmith. All rights reserved.</p>
+        <div class="container mx-auto px-6 text-center text-sm text-brand-white/60">
+            <p>&copy; 2025 Storysmith. All rights reserved.</p>
+            <div class="mt-4 flex justify-center gap-4">
+                <a href="mailto:hello@storysmith.work" class="hover:text-brand-white transition-colors">hello@storysmith.work</a>
+                <span>•</span>
+                <a href="https://www.linkedin.com/in/lianpassmore" target="_blank" rel="noopener noreferrer" class="hover:text-brand-white transition-colors">LinkedIn</a>
+            </div>
         </div>
     </footer>
-
-    <style is:global>
-        @import '../styles/global.css';
-    </style>
 
 </body>
 </html>

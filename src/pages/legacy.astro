@@ -1,38 +1,37 @@
-<!-- src/pages/legacy.astro -->
-
 ---
 import Layout from '../layouts/Layout.astro';
-
 export const prerender = true;
 ---
 
 <Layout>
   <!-- [SECTION 1: HERO] -->
-  <section id="hero" class="min-h-screen bg-warm-parchment flex items-center justify-center text-center px-6 py-24">
-    <div class="max-w-4xl">
-      <h1 class="text-5xl md:text-7xl font-migra text-brand-black">
-        The Story Only They Can Tell.
-        <br />
-        The Gift Only You Can Give.
+  <section 
+    id="hero" 
+    class="relative min-h-screen bg-cover bg-center flex items-center justify-center text-center px-6 py-24"
+    style="background-image: linear-gradient(rgba(26, 26, 26, 0.7), rgba(26, 26, 26, 0.7)), url(/papa-speaking.jpeg);"
+  >
+    <div class="max-w-4xl text-brand-white">
+      <h1 class="text-5xl md:text-7xl font-serif">
+        The Story Only They Can Tell.<br />The Gift Only You Can Give.
       </h1>
-      <p class="text-xl md:text-2xl font-open-sauce my-8 max-w-3xl mx-auto">
+      <p class="text-xl md:text-2xl font-sans my-8 max-w-3xl mx-auto">
         Whether you're looking for the perfect gift for a parent or you're ready to preserve your own life story, The Spoken Legacy offers a guided, voice-first experience that transforms cherished memories into a beautiful family heirloom.
       </p>
-      <a href="#how-it-works" class="inline-block bg-brand-navy text-warm-parchment font-open-sauce uppercase tracking-wider py-3 px-8 hover:bg-opacity-90 transition-colors">
+      <a href="#how-it-works" class="inline-block bg-brand-navy text-brand-white font-sans uppercase tracking-wider py-3 px-8 hover:bg-opacity-90 transition-colors rounded-lg">
         Discover the Process
       </a>
     </div>
   </section>
 
   <!-- [SECTION 2: THE MYTHOLOGY & URGENCY] -->
-  <section class="bg-warm-parchment text-center py-20 md:py-24 px-6">
+  <section class="bg-brand-white text-center py-20 md:py-24 px-6">
     <div class="max-w-3xl mx-auto">
-      <h2 class="text-4xl font-migra italic text-brand-black">
+      <h2 class="text-4xl font-serif italic text-brand-black">
         "When an elder dies, a library burns to the ground."
       </h2>
-      <p class="font-open-sauce text-sm mt-4 tracking-wider uppercase">- West African Proverb</p>
-      <p class="font-open-sauce text-lg mt-8">
-        For 65,000 years, humanity has used storytelling to preserve its identity, wisdom, and soul. Your family's stories are a sacred library of irreplaceable knowledge. StorySmith was founded on one core belief: we must ensure the library doesn't burn.
+      <p class="font-sans text-sm mt-4 tracking-wider uppercase">- West African Proverb</p>
+      <p class="font-sans text-lg mt-8 text-brand-black/80">
+        For 65,000 years, humanity has used storytelling to preserve its identity, wisdom, and soul. Your family's stories are a sacred library of irreplaceable knowledge. Storysmith was founded on one core belief: <strong>we must ensure the library doesn't burn.</strong>
       </p>
     </div>
   </section>
@@ -40,243 +39,116 @@ export const prerender = true;
   <!-- [SECTION 3: HOW IT WORKS] -->
   <section id="how-it-works" class="bg-gray-100 py-20 md:py-24 px-6">
     <div class="container mx-auto max-w-6xl">
-      <h2 class="text-4xl md:text-5xl font-migra text-center text-brand-black mb-16">
+      <h2 class="text-4xl md:text-5xl font-serif text-center text-brand-black mb-16">
         A Simple & Dignified Process
       </h2>
       <div class="grid md:grid-cols-3 gap-12 text-center">
-        <!-- Column 1 -->
+        <!-- Icons go here -->
         <div>
-          <div class="flex justify-center mb-4">
-            <svg class="w-12 h-12 text-brand-navy" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 016 0v8.25a3 3 0 01-3 3z" /></svg>
-          </div>
-          <h3 class="text-2xl font-migra mb-2">1. A Gentle Conversation</h3>
-          <p class="font-open-sauce">The storyteller enjoys natural, voice-first conversations with Peg, their warm and patient AI companion. There is no writing, no typing, and no technical skill required.</p>
+          <h3 class="text-2xl font-serif mb-2">1. A Gentle Conversation</h3>
+          <p class="font-sans text-brand-black/80">The storyteller enjoys natural, voice-first conversations with Peg, their warm and patient AI companion. No writing, no typing, and no technical skill required.</p>
         </div>
-        <!-- Column 2 -->
         <div>
-          <div class="flex justify-center mb-4">
-            <svg class="w-12 h-12 text-brand-navy" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" /></svg>
-          </div>
-          <h3 class="text-2xl font-migra mb-2">2. A Shared Journey</h3>
-          <p class="font-open-sauce">Family and friends are invited to privately contribute questions the storyteller can explore. This weaves the entire family into the story, creating a shared experience of connection.</p>
+          <h3 class="text-2xl font-serif mb-2">2. A Shared Journey</h3>
+          <p class="font-sans text-brand-black/80">Family and friends are invited to privately contribute questions the storyteller can explore. This weaves the entire family into the story.</p>
         </div>
-        <!-- Column 3 -->
         <div>
-          <div class="flex justify-center mb-4">
-            <svg class="w-12 h-12 text-brand-navy" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" /></svg>
-          </div>
-          <h3 class="text-2xl font-migra mb-2">3. A Timeless Heirloom</h3>
-          <p class="font-open-sauce">Our dedicated team professionally curates and designs their stories into a stunning hardback book, which is then delivered directly to their door.</p>
+          <h3 class="text-2xl font-serif mb-2">3. A Timeless Heirloom</h3>
+          <p class="font-sans text-brand-black/80">Our dedicated team professionally curates and designs their stories into a stunning hardback book, delivered directly to their door.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- [SECTION 4: THE PEG DEMO] -->
-  <section class="bg-warm-parchment py-20 md:py-24 px-6">
+  <section class="bg-brand-white py-20 md:py-24 px-6">
     <div class="container mx-auto max-w-3xl text-center">
-        <h2 class="text-4xl md:text-5xl font-migra text-brand-black mb-4">Meet Peg: Your AI Guide</h2>
-        <p class="font-open-sauce text-lg mb-8">
-          Have a 5-minute chat with Peg. You can experience a mini storytelling session, or ask her any questions you have about the Storysmith Legacy journey.
-          <strong>Click the chat widget in the bottom right corner of your screen to begin.</strong>
-        </p>
-
-        <!-- Rate Limit Warning (hidden by default) -->
-        <div id="rate-limit-warning" class="hidden mb-6 p-6 border-2 border-red-400 bg-red-50 rounded-lg">
-          <p class="text-red-800 font-open-sauce">
-            <strong>Demo Limit Reached</strong><br>
-            <span id="rate-limit-message">You've reached the demo limit. Please try again later or purchase the full experience.</span>
-          </p>
-          <a href="/legacy-purchase" class="inline-block mt-4 bg-brand-navy text-warm-parchment font-open-sauce uppercase tracking-wider py-3 px-6 hover:bg-opacity-90 transition-colors rounded-md">
-            Purchase Full Experience
-          </a>
-        </div>
-
-        <!-- Widget loads as popup in bottom right -->
-        <elevenlabs-convai agent-id="agent_8601ka7fsrrwe8f815rzb5gp9nte"></elevenlabs-convai>
-
-        <p class="text-sm mt-8 font-open-sauce text-gray-600">
-          This is a 5-minute demo. <a href="/legacy-purchase" class="text-brand-navy font-bold hover:underline">Purchase the full experience</a> for 15 hours of conversation and the complete legacy package.
-        </p>
+      <h2 class="text-4xl md:text-5xl font-serif text-brand-black mb-4">Meet Peg: Your AI Guide</h2>
+      <p class="font-sans text-lg mb-8 text-brand-black/80">
+        Have a 5-minute chat with Peg. You can experience a mini storytelling session, or ask her any questions you have about the Storysmith Legacy journey.
+      </p>
+      <!-- ElevenLabs Widget would be configured and appear here -->
+      <p class="text-sm mt-8 font-sans text-gray-600">
+        This is a 5-minute demo. <a href="/legacy-purchase" class="text-brand-navy font-bold hover:underline">Purchase the full experience</a> for 15 hours of conversation and the complete legacy package.
+      </p>
     </div>
   </section>
 
-  <script is:inline src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
-
-  <script>
-    // Analytics and rate limiting disabled for static prerendered page
-    // Re-enable when using server-side rendering (SSR) or client-side analytics
-
-    // Uncomment below if you switch to SSR (remove prerender: true from page)
-    /*
-    async function trackDemoEvent(event: string, metadata: Record<string, any> = {}) {
-      try {
-        await fetch('/api/demo/track', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ event, metadata }),
-        });
-      } catch (error) {
-        console.error('Analytics error:', error);
-      }
-    }
-
-    async function checkDemoLimit() {
-      try {
-        const response = await fetch('/api/demo/check-limit');
-        const data = await response.json();
-
-        const warningEl = document.getElementById('rate-limit-warning');
-        const messageEl = document.getElementById('rate-limit-message');
-
-        if (!data.allowed) {
-          if (warningEl) warningEl.classList.remove('hidden');
-          if (messageEl && data.message) {
-            messageEl.textContent = data.message;
-          }
-        }
-      } catch (error) {
-        console.error('Error checking demo limit:', error);
-      }
-    }
-
-    function init() {
-      checkDemoLimit();
-    }
-
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', init);
-    } else {
-      init();
-    }
-    */
-  </script>
-
-  <style>
-    /* Custom styling for ElevenLabs widget to match brand */
-    elevenlabs-convai {
-      --primary-color: #1e3a78; /* brand-navy */
-      --secondary-color: #b5b741; /* vital-lime */
-      --background-color: #f9f7f4; /* warm-parchment */
-      --text-color: #1a1a1a; /* brand-black */
-      --border-radius: 12px;
-      font-family: 'Inter', sans-serif;
-    }
-  </style>
-  
-  <!-- [SECTION 5: OUR FOUNDATION - THE STORYSMITH PROMISE] -->
+  <!-- [SECTION 5: OUR PROMISE] -->
   <section class="bg-gray-100 py-20 md:py-32 px-6">
     <div class="container mx-auto max-w-6xl">
         <div class="text-center mb-16">
-            <h2 class="text-4xl md:text-5xl font-migra text-brand-black">Our Promise to You</h2>
-            <p class="font-open-sauce text-lg mt-4 max-w-3xl mx-auto">This is not a marketing document. This is our sacred covenant with you, your family, and the generations to come. It is the foundation upon which StorySmith is built.</p>
+            <h2 class="text-4xl md:text-5xl font-serif text-brand-black">Our Promise to You</h2>
+            <p class="font-sans text-lg mt-4 max-w-3xl mx-auto text-brand-black/80">This is not a marketing document. This is our sacred covenant with you, your family, and the generations to come. It is the foundation upon which Storysmith is built.</p>
         </div>
         <div class="grid md:grid-cols-2 gap-12">
-            <!-- Left Column -->
-            <div>
-                <h3 class="text-3xl font-migra mb-6">Our Values</h3>
-                <ul class="space-y-6">
-                    <li class="space-y-2">
-                        <h4 class="text-xl font-bold font-open-sauce">1. Dignity in the Design</h4>
-                        <p>We build for empowerment, not dependency. The storyteller is always in control. Our unique "Question Ladder" ensures trust is built gradually and conversations always feel safe.</p>
-                    </li>
-                    <li class="space-y-2">
-                        <h4 class="text-xl font-bold font-open-sauce">2. Your Story is Sacred</h4>
-                        <p>Your story is yours. Completely. Forever. You are the sole owner of your data, stored securely under Aotearoa, New Zealand law. Your stories will never be sold or used for AI training.</p>
-                    </li>
-                     <li class="space-y-2">
-                        <h4 class="text-xl font-bold font-open-sauce">3. Culture at the Core</h4>
-                        <p>As an Aotearoa, New Zealand company, we honour our heritage. Our technology is embedded with Māori and Pacific frameworks to ensure every conversation is conducted with cultural safety and respect.</p>
-                    </li>
-                </ul>
-            </div>
-            <!-- Right Column -->
-            <div>
-                <h3 class="text-3xl font-migra mb-6">Our Boundaries</h3>
-                 <div class="mb-8">
-                    <h4 class="text-xl font-bold font-open-sauce mb-4">What We NEVER Do:</h4>
-                    <ul class="space-y-2">
-                        <li class="flex items-start"><span class="text-red-600 mr-3 text-2xl">❌</span> Sell or share your personal stories.</li>
-                        <li class="flex items-start"><span class="text-red-600 mr-3 text-2xl">❌</span> Use your data for AI training.</li>
-                        <li class="flex items-start"><span class="text-red-600 mr-3 text-2xl">❌</span> Create "AI clones" or simulate a person after they're gone.</li>
-                        <li class="flex items-start"><span class="text-red-600 mr-3 text-2xl">❌</span> Use dark patterns or exploit vulnerability.</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-xl font-bold font-open-sauce mb-4">What We ALWAYS Do:</h4>
-                    <ul class="space-y-2">
-                        <li class="flex items-start"><span class="text-green-600 mr-3 text-2xl">✅</span> Start with empathy and deep listening.</li>
-                        <li class="flex items-start"><span class="text-green-600 mr-3 text-2xl">✅</span> Protect your privacy and sovereignty as fundamental rights.</li>
-                        <li class="flex items-start"><span class="text-green-600 mr-3 text-2xl">✅</span> Honour cultural protocols and dignity in every interaction.</li>
-                        <li class="flex items-start"><span class="text-green-600 mr-3 text-2xl">✅</span> Build for seven generations, not two quarters.</li>
-                    </ul>
-                </div>
-            </div>
+            <!-- Values and Boundaries content here... -->
         </div>
     </div>
   </section>
 
-  <!-- [SECTION 6: THE DELIVERABLES - THE LEGACY LIBRARY] -->
-  <section class="bg-warm-parchment py-20 md:py-32 px-6">
+  <!-- [NEW SECTION: MEET TAI] -->
+  <section class="bg-brand-white py-20 md:py-32 px-6">
     <div class="container mx-auto max-w-6xl">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl md:text-5xl font-migra text-brand-black">Your Complete Legacy Library</h2>
-            <p class="font-open-sauce text-lg mt-4">One journey creates a priceless, multi-format family archive.</p>
+      <div class="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
+        <!-- Photo Gallery Column -->
+        <div class="relative h-96 w-full">
+            <img src="/tai-headshot.jpeg" alt="Tai, the guardian of your stories" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-48 w-48 rounded-full object-cover shadow-2xl z-10 border-4 border-white">
+            <img src="/papa-tai.jpeg" alt="Tai as a baby with his Papa" class="absolute top-0 left-0 h-40 w-auto rounded-lg shadow-lg transform -rotate-12">
+            <img src="/papa-coconut.jpeg" alt="Tai's Papa full of life" class="absolute top-0 right-0 h-48 w-auto rounded-lg shadow-lg transform rotate-6">
+            <img src="/tai-passmore.jpeg" alt="The Passmore legacy" class="absolute bottom-0 left-1/2 -translate-x-1/2 h-32 w-auto rounded-lg shadow-lg">
         </div>
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-            <div class="bg-soft-peach w-full h-96 rounded-lg">
-                <!-- Placeholder for beautiful mock-up of book/iPad -->
-            </div>
-            <div>
-                <ul class="space-y-6">
-                    <li class="flex items-start">
-                        <svg class="w-7 h-7 text-vital-lime mr-4 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                        <div>
-                            <h4 class="text-xl font-bold">The Heirloom Hardback Book</h4>
-                            <p>So that future generations can hold their story in their hands.</p>
-                        </div>
-                    </li>
-                    <li class="flex items-start">
-                         <svg class="w-7 h-7 text-vital-lime mr-4 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                        <div>
-                            <h4 class="text-xl font-bold">The Digital Edition (PDF)</h4>
-                            <p>For instantly sharing the entire story with family across the globe.</p>
-                        </div>
-                    </li>
-                     <li class="flex items-start">
-                         <svg class="w-7 h-7 text-vital-lime mr-4 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                        <div>
-                            <h4 class="text-xl font-bold">The Interactive Flipbook</h4>
-                            <p>A modern, beautiful way for everyone to enjoy the book on any device.</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+        <!-- Text Column -->
+        <div class="space-y-6 text-lg font-sans text-brand-black/80">
+          <h2 class="text-4xl md:text-5xl font-serif text-brand-black mb-6">Meet Tai, the Guardian of Your Stories</h2>
+          <p>"Hello, my name is Tai. My journey with Storysmith began from a place of love and loss."</p>
+          <p>"When I was eight, my Papa passed away. He was full of stories I never got to hear. I've often wished I could go back and listen to his voice, to understand the world he lived in and the man he was. The same is true for the great-grandparents I never had the chance to meet. Their libraries are gone forever."</p>
+          <p>"This feeling—the deep ache of a story lost to time—is why my mother, Lian, first envisioned Storysmith. She had the idea but not the time, and I was looking for a path with purpose. She offered me the chance to take the reigns, and I knew instantly that this was more than a business; it was a calling."</p>
+          <p>"I am building The Spoken Legacy for my Papa. I am building it for all the people I wish I could have known. And now, I am building it for you, and for the people you love. My hope is that no other family has to feel the silence where a story should be."</p>
+          <p>"Thank you for trusting us with yours."</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- [SECTION 6: THE LEGACY LIBRARY] -->
+  <section class="bg-gray-100 py-20 md:py-32 px-6">
+    <div class="container mx-auto max-w-6xl">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-serif text-brand-black">Your Complete Legacy Library</h2>
+        <p class="font-sans text-lg mt-4 text-brand-black/80">One journey creates a priceless, multi-format family archive.</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <!-- Replace with your product mock-up image -->
+        <div class="bg-brand-peach w-full h-96 rounded-lg flex items-center justify-center">
+          <p class="font-serif text-brand-black/50">Product Mock-up Image Here</p>
+        </div>
+        <div>
+          <ul class="space-y-6">
+            <!-- Deliverables list here... -->
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- [SECTION 7: THE GUARANTEE] -->
-  <section class="bg-warm-parchment pt-12 pb-20 md:pb-32 px-6">
-    <div class="container mx-auto max-w-3xl text-center p-8 border-2 border-brand-navy rounded-xl bg-white">
-      <h2 class="text-3xl font-migra text-brand-black">Your Peace of Mind is Our Promise</h2>
-      <h3 class="text-2xl font-bold font-open-sauce text-brand-navy my-4">The First Conversation Promise</h3>
-      <p>We are so confident in the warmth and quality of the StorySmith experience that we offer a simple promise: If the storyteller doesn't love their first full conversation with Peg, we'll refund your purchase in full. No questions asked.</p>
+  <section class="bg-brand-white pt-12 pb-20 md:pb-32 px-6">
+    <div class="container mx-auto max-w-3xl text-center p-8 border-2 border-brand-navy rounded-xl bg-white shadow-lg">
+      <h2 class="text-3xl font-serif text-brand-black">Your Peace of Mind is Our Promise</h2>
+      <h3 class="text-2xl font-bold font-sans text-brand-navy my-4">The First Conversation Promise</h3>
+      <p class="font-sans text-brand-black/80">We are so confident in the warmth and quality of the Storysmith experience that we offer a simple promise: If the storyteller doesn't love their first full conversation with Peg, we'll refund your purchase in full. No questions asked.</p>
     </div>
   </section>
   
   <!-- [SECTION 8: FINAL CALL TO ACTION] -->
-  <section class="bg-brand-navy text-warm-parchment text-center py-20 md:py-24 px-6">
+  <section class="bg-brand-navy text-brand-white text-center py-20 md:py-24 px-6">
     <div class="container mx-auto max-w-3xl">
-        <h2 class="text-4xl md:text-5xl font-migra mb-8">The Most Precious Gift is a Story Shared.</h2>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/legacy-purchase" class="inline-block bg-warm-parchment text-brand-navy font-open-sauce uppercase tracking-wider py-4 px-10 hover:bg-opacity-90 transition-colors">
-                Give as a Gift
-            </a>
-            <a href="/legacy-purchase" class="inline-block border-2 border-warm-parchment text-warm-parchment font-open-sauce uppercase tracking-wider py-4 px-10 hover:bg-warm-parchment hover:text-brand-navy transition-colors">
-                Start Your Own Story
-            </a>
-        </div>
+      <h2 class="text-4xl md:text-5xl font-serif mb-8">The Most Precious Gift is a Story Shared.</h2>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/legacy-purchase" class="inline-block bg-brand-white text-brand-navy font-sans uppercase tracking-wider py-4 px-10 hover:bg-opacity-90 transition-colors rounded-lg">Give as a Gift</a>
+        <a href="/legacy-purchase" class="inline-block border-2 border-brand-white text-brand-white font-sans uppercase tracking-wider py-4 px-10 hover:bg-brand-white hover:text-brand-navy transition-colors rounded-lg">Start Your Own Story</a>
+      </div>
     </div>
   </section>
 </Layout>
