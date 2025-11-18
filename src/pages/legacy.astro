@@ -70,12 +70,7 @@ export const prerender = true;
 
       <!-- Peg Image -->
       <div class="max-w-sm mx-auto mb-8">
-        <img src="/peg-legacy.png" alt="Meet Peg" class="w-full rounded-lg shadow-lg" />
-      </div>
-
-      <!-- Widget Preview Image -->
-      <div class="max-w-xs mx-auto mb-8">
-        <img src="/widget-screenshot.png" alt="Peg chat widget preview" class="w-full rounded-lg shadow-md" />
+        <img src="/peg-legacy.png" alt="Meet Peg" class="w-full" />
       </div>
 
       <!-- ElevenLabs Widget (loads as popup in bottom right) -->
@@ -95,7 +90,59 @@ export const prerender = true;
             <p class="font-sans text-lg mt-4 max-w-3xl mx-auto text-brand-black/80">This is not a marketing document. This is our sacred covenant with you, your family, and the generations to come. It is the foundation upon which StorySmith is built.</p>
         </div>
         <div class="grid md:grid-cols-2 gap-12">
-            <!-- Values and Boundaries content here... -->
+            <!-- What We Promise -->
+            <div class="bg-brand-white p-8 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-serif text-brand-black mb-6">What We Promise</h3>
+                <ul class="space-y-4 font-sans text-brand-black/80">
+                    <li class="flex items-start">
+                        <span class="text-brand-navy font-bold mr-3">✓</span>
+                        <span>Your stories will be treated with dignity, respect, and cultural sensitivity.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-brand-navy font-bold mr-3">✓</span>
+                        <span>Your data is yours. We will never sell, share, or exploit your family's stories.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-brand-navy font-bold mr-3">✓</span>
+                        <span>You maintain complete control over what is included in your final book.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-brand-navy font-bold mr-3">✓</span>
+                        <span>Our team will provide hands-on support throughout your entire journey.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-brand-navy font-bold mr-3">✓</span>
+                        <span>Your legacy will be crafted with the highest quality and attention to detail.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Our Boundaries -->
+            <div class="bg-brand-white p-8 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-serif text-brand-black mb-6">Our Boundaries</h3>
+                <ul class="space-y-4 font-sans text-brand-black/80">
+                    <li class="flex items-start">
+                        <span class="text-brand-navy font-bold mr-3">•</span>
+                        <span>We will never pressure you to share stories you're not ready to tell.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-brand-navy font-bold mr-3">•</span>
+                        <span>We will not use AI to fabricate or embellish your memories.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-brand-navy font-bold mr-3">•</span>
+                        <span>We will not share your content for marketing without explicit permission.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-brand-navy font-bold mr-3">•</span>
+                        <span>We will never rush your process. Your story deserves the time it needs.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-brand-navy font-bold mr-3">•</span>
+                        <span>We will not impose our narrative lens. This is your story, told your way.</span>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
   </section>
@@ -138,7 +185,27 @@ export const prerender = true;
         </div>
         <div>
           <ul class="space-y-6">
-            <!-- Deliverables list here... -->
+            <li class="flex items-start">
+              <svg class="w-8 h-8 text-brand-navy mr-4 mt-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+              <div>
+                <h4 class="font-bold text-xl font-serif text-brand-black mb-2">A Beautiful Hardback Book</h4>
+                <p class="font-sans text-brand-black/80">A professionally designed, printed, and bound legacy book featuring their stories, photos, and memories.</p>
+              </div>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-8 h-8 text-brand-navy mr-4 mt-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+              <div>
+                <h4 class="font-bold text-xl font-serif text-brand-black mb-2">Digital Copy</h4>
+                <p class="font-sans text-brand-black/80">A digital version of the book in PDF format, perfect for sharing with family members around the world.</p>
+              </div>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-8 h-8 text-brand-navy mr-4 mt-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              <div>
+                <h4 class="font-bold text-xl font-serif text-brand-black mb-2">Lifetime Access</h4>
+                <p class="font-sans text-brand-black/80">Secure cloud storage of all materials, accessible anytime, anywhere, for generations to come.</p>
+              </div>
+            </li>
           </ul>
         </div>
       </div>
