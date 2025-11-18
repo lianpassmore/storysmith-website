@@ -5,19 +5,18 @@ export const prerender = true;
 
 <Layout>
   <!-- [SECTION 1: HERO] -->
-  <section 
-    id="hero" 
-    class="relative min-h-screen bg-cover bg-center flex items-center justify-center text-center px-6 py-24"
-    style="background-image: linear-gradient(rgba(26, 26, 26, 0.7), rgba(26, 26, 26, 0.7)), url(/papa-speaking.jpeg);"
+  <section
+    id="hero"
+    class="relative min-h-screen flex items-center justify-center text-center px-6 py-24 bg-brand-navy"
   >
     <div class="max-w-4xl text-brand-white">
       <h1 class="text-5xl md:text-7xl font-serif">
-        The Story Only They Can Tell.<br />The Gift Only You Can Give.
+        The Story Only They Can Tell. The Gift Only You Can Give.
       </h1>
       <p class="text-xl md:text-2xl font-sans my-8 max-w-3xl mx-auto">
         Whether you're looking for the perfect gift for a parent or you're ready to preserve your own life story, The Spoken Legacy offers a guided, voice-first experience that transforms cherished memories into a beautiful family heirloom.
       </p>
-      <a href="#how-it-works" class="inline-block bg-brand-navy text-brand-white font-sans uppercase tracking-wider py-3 px-8 hover:bg-opacity-90 transition-colors rounded-lg">
+      <a href="#how-it-works" class="inline-block bg-brand-white text-brand-navy font-sans uppercase tracking-wider py-3 px-8 hover:bg-opacity-90 transition-colors rounded-lg">
         Discover the Process
       </a>
     </div>
@@ -26,12 +25,13 @@ export const prerender = true;
   <!-- [SECTION 2: THE MYTHOLOGY & URGENCY] -->
   <section class="bg-brand-white text-center py-20 md:py-24 px-6">
     <div class="max-w-3xl mx-auto">
+      <img src="/papa-speaking.jpeg" alt="Papa speaking" class="w-full max-w-2xl mx-auto rounded-lg shadow-lg mb-12" />
       <h2 class="text-4xl font-serif italic text-brand-black">
         "When an elder dies, a library burns to the ground."
       </h2>
       <p class="font-sans text-sm mt-4 tracking-wider uppercase">- West African Proverb</p>
       <p class="font-sans text-lg mt-8 text-brand-black/80">
-        For 65,000 years, humanity has used storytelling to preserve its identity, wisdom, and soul. Your family's stories are a sacred library of irreplaceable knowledge. Storysmith was founded on one core belief: <strong>we must ensure the library doesn't burn.</strong>
+        For 65,000 years, humanity has used storytelling to preserve its identity, wisdom, and soul. Your family's stories are a sacred library of irreplaceable knowledge. StorySmith was founded on one core belief: <strong>we must ensure the library doesn't burn.</strong>
       </p>
     </div>
   </section>
@@ -65,7 +65,7 @@ export const prerender = true;
     <div class="container mx-auto max-w-3xl text-center">
       <h2 class="text-4xl md:text-5xl font-serif text-brand-black mb-4">Meet Peg: Your AI Guide</h2>
       <p class="font-sans text-lg mb-8 text-brand-black/80">
-        Have a 5-minute chat with Peg. You can experience a mini storytelling session, or ask her any questions you have about the Storysmith Legacy journey.
+        Have a 5-minute chat with Peg. You can experience a mini storytelling session, or ask her any questions you have about the StorySmith Legacy journey.
       </p>
       <!-- ElevenLabs Widget would be configured and appear here -->
       <p class="text-sm mt-8 font-sans text-gray-600">
@@ -79,7 +79,7 @@ export const prerender = true;
     <div class="container mx-auto max-w-6xl">
         <div class="text-center mb-16">
             <h2 class="text-4xl md:text-5xl font-serif text-brand-black">Our Promise to You</h2>
-            <p class="font-sans text-lg mt-4 max-w-3xl mx-auto text-brand-black/80">This is not a marketing document. This is our sacred covenant with you, your family, and the generations to come. It is the foundation upon which Storysmith is built.</p>
+            <p class="font-sans text-lg mt-4 max-w-3xl mx-auto text-brand-black/80">This is not a marketing document. This is our sacred covenant with you, your family, and the generations to come. It is the foundation upon which StorySmith is built.</p>
         </div>
         <div class="grid md:grid-cols-2 gap-12">
             <!-- Values and Boundaries content here... -->
@@ -93,7 +93,7 @@ export const prerender = true;
       <div class="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
         <!-- Photo Gallery Column -->
         <div class="relative h-96 w-full">
-            <img src="/tai-headshot.jpeg" alt="Tai, the guardian of your stories" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-48 w-48 rounded-full object-cover shadow-2xl z-10 border-4 border-white">
+            <img src="/tai-headshot.png" alt="Tai, the guardian of your stories" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-48 w-48 rounded-full object-cover shadow-2xl z-10 border-4 border-white">
             <img src="/papa-tai.jpeg" alt="Tai as a baby with his Papa" class="absolute top-0 left-0 h-40 w-auto rounded-lg shadow-lg transform -rotate-12">
             <img src="/papa-coconut.jpeg" alt="Tai's Papa full of life" class="absolute top-0 right-0 h-48 w-auto rounded-lg shadow-lg transform rotate-6">
             <img src="/tai-passmore.jpeg" alt="The Passmore legacy" class="absolute bottom-0 left-1/2 -translate-x-1/2 h-32 w-auto rounded-lg shadow-lg">
@@ -101,9 +101,9 @@ export const prerender = true;
         <!-- Text Column -->
         <div class="space-y-6 text-lg font-sans text-brand-black/80">
           <h2 class="text-4xl md:text-5xl font-serif text-brand-black mb-6">Meet Tai, the Guardian of Your Stories</h2>
-          <p>"Hello, my name is Tai. My journey with Storysmith began from a place of love and loss."</p>
+          <p>"Hello, my name is Tai. My journey with StorySmith began from a place of love and loss."</p>
           <p>"When I was eight, my Papa passed away. He was full of stories I never got to hear. I've often wished I could go back and listen to his voice, to understand the world he lived in and the man he was. The same is true for the great-grandparents I never had the chance to meet. Their libraries are gone forever."</p>
-          <p>"This feeling—the deep ache of a story lost to time—is why my mother, Lian, first envisioned Storysmith. She had the idea but not the time, and I was looking for a path with purpose. She offered me the chance to take the reigns, and I knew instantly that this was more than a business; it was a calling."</p>
+          <p>"This feeling—the deep ache of a story lost to time—is why my mother, Lian, first envisioned StorySmith. She had the idea but not the time, and I was looking for a path with purpose. She offered me the chance to take the reigns, and I knew instantly that this was more than a business; it was a calling."</p>
           <p>"I am building The Spoken Legacy for my Papa. I am building it for all the people I wish I could have known. And now, I am building it for you, and for the people you love. My hope is that no other family has to feel the silence where a story should be."</p>
           <p>"Thank you for trusting us with yours."</p>
         </div>
@@ -137,7 +137,7 @@ export const prerender = true;
     <div class="container mx-auto max-w-3xl text-center p-8 border-2 border-brand-navy rounded-xl bg-white shadow-lg">
       <h2 class="text-3xl font-serif text-brand-black">Your Peace of Mind is Our Promise</h2>
       <h3 class="text-2xl font-bold font-sans text-brand-navy my-4">The First Conversation Promise</h3>
-      <p class="font-sans text-brand-black/80">We are so confident in the warmth and quality of the Storysmith experience that we offer a simple promise: If the storyteller doesn't love their first full conversation with Peg, we'll refund your purchase in full. No questions asked.</p>
+      <p class="font-sans text-brand-black/80">We are so confident in the warmth and quality of the StorySmith experience that we offer a simple promise: If the storyteller doesn't love their first full conversation with Peg, we'll refund your purchase in full. No questions asked.</p>
     </div>
   </section>
   
