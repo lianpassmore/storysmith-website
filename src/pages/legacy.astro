@@ -25,7 +25,7 @@ export const prerender = true;
   <!-- [SECTION 2: THE MYTHOLOGY & URGENCY] -->
   <section class="bg-brand-white text-center py-20 md:py-24 px-6">
     <div class="max-w-3xl mx-auto">
-      <img src="/papa-speaking.jpeg" alt="Papa speaking" class="w-full max-w-2xl mx-auto rounded-lg shadow-lg mb-12" />
+      <img src="/papa-speaking.jpeg" alt="Papa speaking" class="w-full max-w-md mx-auto rounded-lg shadow-lg mb-12 border-4 border-brand-navy" />
       <h2 class="text-4xl font-serif italic text-brand-black">
         "When an elder dies, a library burns to the ground."
       </h2>
@@ -65,9 +65,22 @@ export const prerender = true;
     <div class="container mx-auto max-w-3xl text-center">
       <h2 class="text-4xl md:text-5xl font-serif text-brand-black mb-4">Meet Peg: Your AI Guide</h2>
       <p class="font-sans text-lg mb-8 text-brand-black/80">
-        Have a 5-minute chat with Peg. You can experience a mini storytelling session, or ask her any questions you have about the StorySmith Legacy journey.
+        Have a 5-minute chat with Peg. You can experience a mini storytelling session, or ask her any questions you have about the StorySmith Legacy journey. Look for the chat widget in the bottom right corner of your screen.
       </p>
-      <!-- ElevenLabs Widget would be configured and appear here -->
+
+      <!-- Peg Image -->
+      <div class="max-w-md mx-auto mb-8">
+        <img src="/peg-legacy.png" alt="Meet Peg" class="w-full rounded-lg shadow-lg border-2 border-brand-navy" />
+      </div>
+
+      <!-- Widget Preview Image -->
+      <div class="max-w-sm mx-auto mb-8">
+        <img src="/widget-screenshot.png" alt="Peg chat widget preview" class="w-full rounded-lg shadow-md" />
+      </div>
+
+      <!-- ElevenLabs Widget (loads as popup in bottom right) -->
+      <elevenlabs-convai agent-id="agent_8601ka7fsrrwe8f815rzb5gp9nte"></elevenlabs-convai>
+
       <p class="text-sm mt-8 font-sans text-gray-600">
         This is a 5-minute demo. <a href="/legacy-purchase" class="text-brand-navy font-bold hover:underline">Purchase the full experience</a> for 15 hours of conversation and the complete legacy package.
       </p>
