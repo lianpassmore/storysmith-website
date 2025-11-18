@@ -1,126 +1,83 @@
----
-// Footer Component for Storysmith
----
+<!-- src/components/Footer.astro -->
+<footer class="bg-brand-black text-brand-white py-16">
+    <div class="container mx-auto">
+        <!-- Main Footer Content: Three Columns -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
 
-<footer class="bg-brand-black text-brand-white">
-  <!-- Main Content Area - Three Columns -->
-  <div class="container mx-auto px-6 py-16">
-    <div class="grid gap-12 md:grid-cols-3">
+            <!-- Column 1: Brand & Mission -->
+            <div>
+                <a href="/" class="block mb-6">
+                    <span class="font-serif text-3xl font-bold text-brand-white">Storysmith</span>
+                </a>
+                <p class="text-brand-white/80 leading-relaxed mb-6 font-sans">
+                    Preserving stories with integrity. We transform your voice and vision into a legacy that lasts.
+                </p>
+                <a href="https://www.linkedin.com/in/lianpassmore" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-brand-white hover:text-brand-lime transition-colors">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                    <span>LinkedIn</span>
+                </a>
+            </div>
 
-      <!-- Column 1: Brand -->
-      <div class="space-y-6">
-        <!-- Logo Placeholder - Replace with actual brand-white logo -->
-        <div class="flex items-center space-x-2">
-          <svg class="h-8 w-8 text-brand-white" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-          </svg>
-          <span class="text-2xl font-bold">Storysmith</span>
+            <!-- Column 2: Services -->
+            <div>
+                <h3 class="font-sans font-bold text-lg mb-6 uppercase tracking-wider">Our Services</h3>
+                <ul class="space-y-3 font-sans">
+                    <li>
+                        <a href="/legacy" class="text-brand-white/70 hover:text-brand-white transition-colors">
+                            The Spoken Legacy
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/podcast" class="text-brand-white/70 hover:text-brand-white transition-colors">
+                            Premium Podcast Production
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/philosophy" class="text-brand-white/70 hover:text-brand-white transition-colors">
+                            Our Philosophy
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Connect -->
+            <div>
+                <h3 class="font-sans font-bold text-lg mb-6 uppercase tracking-wider">Get in Touch</h3>
+                <ul class="space-y-3 font-sans text-brand-white/70">
+                    <li>
+                        <a href="/contact" class="hover:text-brand-white transition-colors">
+                            Contact Us
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:hello@storysmith.work" class="hover:text-brand-white transition-colors">
+                            hello@storysmith.work
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tel:+64275668803" class="hover:text-brand-white transition-colors">
+                            +64 27 566 8803
+                        </a>
+                    </li>
+                    <li class="text-brand-white/60">
+                        Whangārei, Aotearoa New Zealand
+                    </li>
+                </ul>
+            </div>
+
         </div>
 
-        <!-- Tagline -->
-        <p class="text-brand-white/80 leading-relaxed">
-          Preserving stories with integrity. We transform your voice and vision into a legacy that lasts.
-        </p>
-
-        <!-- Social Media - LinkedIn -->
-        <div class="flex space-x-4">
-          <a
-            href="https://linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-brand-white/70 hover:text-brand-white transition-colors duration-200"
-            aria-label="Follow us on LinkedIn"
-          >
-            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-            </svg>
-          </a>
+        <!-- Bottom Bar -->
+        <div class="pt-8 border-t border-brand-white/10">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-brand-white/60 font-sans">
+                <p>&copy; 2025 Storysmith. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="/terms" class="hover:text-brand-white transition-colors">Terms of Service</a>
+                    <a href="/privacy" class="hover:text-brand-white transition-colors">Privacy Policy</a>
+                </div>
+            </div>
         </div>
-      </div>
-
-      <!-- Column 2: Our Services -->
-      <div class="space-y-6">
-        <h3 class="text-sm font-bold tracking-wider">OUR SERVICES</h3>
-        <nav class="flex flex-col space-y-3">
-          <a
-            href="/the-spoken-legacy"
-            class="text-brand-white/70 hover:text-brand-white transition-colors duration-200"
-          >
-            The Spoken Legacy
-          </a>
-          <a
-            href="/premium"
-            class="text-brand-white/70 hover:text-brand-white transition-colors duration-200"
-          >
-            Premium Podcast Production
-          </a>
-          <a
-            href="/our-philosophy"
-            class="text-brand-white/70 hover:text-brand-white transition-colors duration-200"
-          >
-            Our Philosophy
-          </a>
-        </nav>
-      </div>
-
-      <!-- Column 3: Get in Touch -->
-      <div class="space-y-6">
-        <h3 class="text-sm font-bold tracking-wider">GET IN TOUCH</h3>
-        <div class="flex flex-col space-y-3">
-          <a
-            href="/contact"
-            class="text-brand-white/70 hover:text-brand-white transition-colors duration-200"
-          >
-            Contact Us
-          </a>
-          <a
-            href="mailto:info@storysmith.com"
-            class="text-brand-white/70 hover:text-brand-white transition-colors duration-200"
-          >
-            info@storysmith.com
-          </a>
-          <a
-            href="tel:+64221502335"
-            class="text-brand-white/70 hover:text-brand-white transition-colors duration-200"
-          >
-            022 150 2335
-          </a>
-          <p class="text-brand-white/70">
-            New York, NY
-          </p>
-        </div>
-      </div>
-
     </div>
-  </div>
-
-  <!-- Bottom Bar - Copyright & Legal -->
-  <div class="border-t border-brand-white/10">
-    <div class="container mx-auto px-6 py-6">
-      <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-
-        <!-- Copyright -->
-        <p class="text-brand-white/60 text-sm">
-          © 2025 Storysmith. All rights reserved.
-        </p>
-
-        <!-- Legal Links -->
-        <div class="flex space-x-6 text-sm">
-          <a
-            href="/terms"
-            class="text-brand-white/60 hover:text-brand-white transition-colors duration-200"
-          >
-            Terms of Service
-          </a>
-          <a
-            href="/privacy"
-            class="text-brand-white/60 hover:text-brand-white transition-colors duration-200"
-          >
-            Privacy Policy
-          </a>
-        </div>
-
-      </div>
-    </div>
-  </div>
 </footer>
