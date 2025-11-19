@@ -6,7 +6,6 @@ export const prerender = true;
 <Layout>
   <main class="bg-brand-white py-20 md:py-32 px-6">
     <div class="container mx-auto max-w-4xl">
-
       <!-- Header -->
       <section class="text-center mb-16">
         <h1 class="text-5xl md:text-6xl font-serif text-brand-black mb-4">
@@ -31,18 +30,15 @@ export const prerender = true;
         <!-- Our Commitment -->
         <div class="mb-12">
           <h2 class="text-3xl font-serif text-brand-black mb-6">Our Commitment: What We Will NEVER Do</h2>
-          <div class="bg-brand-lime/10 p-8 rounded-lg border border-brand-lime/20">
+          <div class="bg-white p-8 rounded-lg border border-brand-lime/20">
             <ul class="space-y-3 text-brand-black/80">
-              <li class="flex items-start">
-                <span class="text-brand-lime mr-3 mt-1 font-bold">✗</span>
+              <li class="flex items-start"><span class="text-brand-lime mr-3 mt-1 font-bold">✗</span>
                 <span>We will NEVER sell or share your personal stories or data.</span>
               </li>
-              <li class="flex items-start">
-                <span class="text-brand-lime mr-3 mt-1 font-bold">✗</span>
+              <li class="flex items-start"><span class="text-brand-lime mr-3 mt-1 font-bold">✗</span>
                 <span>We will NEVER use your conversations or data to train our own or third-party AI models.</span>
               </li>
-              <li class="flex items-start">
-                <span class="text-brand-lime mr-3 mt-1 font-bold">✗</span>
+              <li class="flex items-start"><span class="text-brand-lime mr-3 mt-1 font-bold">✗</span>
                 <span>We will NEVER create "AI clones" or use your voice for any purpose other than providing this Service to you.</span>
               </li>
             </ul>
@@ -57,7 +53,7 @@ export const prerender = true;
               <li><strong>Account Information:</strong> When you (or a Gifter) create an account, we collect names and email addresses.</li>
               <li><strong>Payment Information:</strong> All payments are processed securely by Stripe. We do not collect or store your credit card information.</li>
               <li><strong>Conversation Data (Your Story):</strong> This is your most sensitive data. We collect the audio recordings of your conversations with Peg and the resulting text transcripts.</li>
-              <li><strong>Family Contribution Data:</strong> We collect the names, relationships, and questions submitted by family members you invite.</li>
+              <li><strong>Family Contribution Data:</strong> We collect the names, relationships, and questions submitted by family members you invite. Family members can submit questions or areas of interest they would like the Storyteller to speak about by filling in a form. This information is used solely to guide the Storyteller’s conversations and shape the final book.</li>
             </ul>
           </div>
         </div>
@@ -71,6 +67,7 @@ export const prerender = true;
               <li>Creating and managing your account.</li>
               <li>Facilitating your conversations with Peg.</li>
               <li>Allowing our trusted human team to access your transcripts for curation and book design.</li>
+              <li>Preparing a digital proof of your book and managing your one included round of updates before final approval.</li>
               <li>Communicating with you about your project.</li>
               <li>Printing and delivering your final book.</li>
             </ul>
@@ -83,20 +80,21 @@ export const prerender = true;
           <div class="bg-white p-8 rounded-lg border border-black/5">
             <p class="text-brand-black/80 mb-4">We only share your information with the essential third-party partners who help us create your heirloom. We have chosen these partners for their commitment to security and privacy.</p>
             <ul class="space-y-2 text-brand-black/80 list-disc list-inside">
-              <li><strong>Supabase:</strong> Our core infrastructure provider for database, storage, and authentication.</li>
-              <li><strong>ElevenLabs:</strong> The technology partner that powers the conversational voice of Peg.</li>
-              <li><strong>Our Printing Partner:</strong> The company that prints and binds your physical book.</li>
-              <li><strong>Your Family (With Your Control):</strong> The final book and digital files are for you to share with whomever you choose.</li>
+              <li><strong>Supabase:</strong> Our core infrastructure provider for database, storage, and authentication. Your account information, conversation transcripts, and related project data are stored securely on Supabase infrastructure, which may be located outside Aotearoa New Zealand.</li>
+              <li><strong>ElevenLabs:</strong> The technology partner that powers the conversational voice of Peg and processes your audio conversations to generate transcripts. ElevenLabs may store and process your audio and transcript data on its own infrastructure, which may be located outside Aotearoa New Zealand. For more information about how ElevenLabs handles data, please refer to their published documentation and policies on their website.</li>
+              <li><strong>Our Printing Partner:</strong> The company that prints and binds your physical book. We share only the information necessary to produce and deliver your book (such as your name, delivery address, and final manuscript files).</li>
+              <li><strong>Your Family (With Your Control):</strong> The final book and digital files are for you to share with whomever you choose. We do not send your book or files to any family member unless you ask us to.</li>
             </ul>
           </div>
         </div>
 
         <!-- Section 4 -->
         <div class="mb-12">
-          <h2 class="text-3xl font-serif text-brand-black mb-6">4. Data Sovereignty & Security</h2>
-          <div class="bg-brand-lime/10 p-8 rounded-lg border border-brand-lime/20">
+          <h2 class="text-3xl font-serif text-brand-black mb-6">4. Data Location and Sovereignty</h2>
+          <div class="bg-white p-8 rounded-lg border border-brand-lime/20">
             <ul class="space-y-4 text-brand-black/80">
-              <li><strong>Data Sovereignty:</strong> In line with our values, your story is sacred. All your data, including audio files and transcripts, is stored on secure servers located in Aotearoa, New Zealand. It is governed exclusively by New Zealand's Privacy Act.</li>
+              <li><strong>Data Location and Sovereignty:</strong> At present, your data (including audio files, transcripts, and account information) is stored with our trusted partners, primarily Supabase and ElevenLabs, whose infrastructure may be located outside Aotearoa New Zealand. This means your data may be subject to the laws of those jurisdictions as well as New Zealand’s Privacy Act.</li>
+              <li>Our intention is to move the storage of your core data to secure servers located in Aotearoa New Zealand in the future. When we make this change, we will update this Privacy Policy and notify you of any material changes.</li>
               <li><strong>Security:</strong> We use industry-standard security measures, including encryption, to protect your data both in transit and at rest.</li>
             </ul>
           </div>
@@ -108,37 +106,60 @@ export const prerender = true;
           <div class="bg-white p-8 rounded-lg border border-black/5">
             <p class="text-brand-black/80 mb-4">You have the right to:</p>
             <ul class="space-y-3 text-brand-black/80">
-              <li><strong>Access Your Data:</strong> You can request a copy of all the data we hold about you at any time.</li>
-              <li><strong>Correct Your Data:</strong> You can update your personal information in your profile. For corrections to your story manuscript, this is done during the review phase.</li>
-              <li><strong>Delete Your Data:</strong> You have the right to delete your account and all associated data permanently. To do so, please contact us at support@storysmith.work.</li>
+              <li><strong>Access Your Data:</strong> You can request a copy of all the personal data we hold about you at any time.</li>
+              <li><strong>Correct Your Data:</strong> You can update your personal information in your profile. For corrections to your story manuscript, this is done during the proof review phase, where you are entitled to one included round of updates before approval.</li>
+              <li><strong>Delete Your Data:</strong> You have the right to request deletion of your account and all personal data we hold about you in our systems. If you make this request after your book has been printed, we will:
+                <ul>
+                  <li>Delete your account and associated project data from our own systems, and</li>
+                  <li>Take reasonable steps to delete or minimise any personal data we have shared with our active service providers, except where we are legally required to retain certain records (for example, payment records for tax and accounting).</li>
+                </ul>
+              </li>
             </ul>
+            <p class="text-brand-black/80 mt-4">To exercise any of these rights, please contact us at <a href="mailto:support@storysmith.work" class="text-brand-navy font-semibold hover:underline">support@storysmith.work</a>. We will respond to your request within 14 business days.</p>
           </div>
         </div>
 
         <!-- Section 6 -->
         <div class="mb-12">
-          <h2 class="text-3xl font-serif text-brand-black mb-6">6. Cookies & Analytics</h2>
+          <h2 class="text-3xl font-serif text-brand-black mb-6">6. Data Retention</h2>
           <div class="bg-white p-8 rounded-lg border border-black/5">
-            <p class="text-brand-black/80">We use minimal cookies on our website to ensure basic functionality and to understand how our site is used. We do not use invasive tracking cookies for advertising purposes.</p>
+            <p class="text-brand-black/80 mb-4">
+              We keep your data only for as long as we reasonably need it to provide the Service and to meet our legal and operational obligations.
+            </p>
+            <ul class="space-y-2 text-brand-black/80 list-disc list-inside">
+              <li><strong>Audio recordings:</strong> Retained for up to <strong>two (2) years</strong> after completion of your project.</li>
+              <li><strong>Transcripts and project data:</strong> Retained for up to <strong>seven (7) years</strong> after completion.</li>
+              <li><strong>Legal and operational requirements:</strong> In some cases, we may need to retain limited information (such as transaction records) for longer periods to comply with tax, accounting, or other legal obligations.</li>
+            </ul>
+            <p class="text-brand-black/80 mt-4">
+              When retention periods expire, or when you exercise your right to deletion, we will delete or irreversibly anonymise your personal data from our systems, except where we are legally required to keep certain records.
+            </p>
           </div>
         </div>
 
         <!-- Section 7 -->
         <div class="mb-12">
-          <h2 class="text-3xl font-serif text-brand-black mb-6">7. Changes to This Policy</h2>
+          <h2 class="text-3xl font-serif text-brand-black mb-6">7. Cookies & Analytics</h2>
           <div class="bg-white p-8 rounded-lg border border-black/5">
-            <p class="text-brand-black/80">We may update this Privacy Policy. We will notify you of any significant changes by email.</p>
+            <p class="text-brand-black/80">We use minimal cookies on our website to ensure basic functionality and to understand how our site is used. We do not use invasive tracking cookies for advertising purposes.</p>
           </div>
         </div>
 
         <!-- Section 8 -->
         <div class="mb-12">
-          <h2 class="text-3xl font-serif text-brand-black mb-6">8. Contact Us</h2>
+          <h2 class="text-3xl font-serif text-brand-black mb-6">8. Changes to This Policy</h2>
+          <div class="bg-white p-8 rounded-lg border border-black/5">
+            <p class="text-brand-black/80">We may update this Privacy Policy. We will notify you of any significant changes by email.</p>
+          </div>
+        </div>
+
+        <!-- Section 9 -->
+        <div class="mb-12">
+          <h2 class="text-3xl font-serif text-brand-black mb-6">9. Contact Us</h2>
           <div class="bg-white p-8 rounded-lg border border-black/5">
             <p class="text-brand-black/80">If you have any questions about your privacy or this policy, please contact our team at <a href="mailto:support@storysmith.work" class="text-brand-navy font-semibold hover:underline">support@storysmith.work</a>.</p>
           </div>
         </div>
-
       </article>
 
       <!-- Back Link -->
@@ -147,7 +168,6 @@ export const prerender = true;
           ← Back to Home
         </a>
       </div>
-
     </div>
   </main>
 </Layout>
