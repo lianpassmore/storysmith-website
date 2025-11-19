@@ -23,7 +23,7 @@
       </ul>
       
       <!-- Mobile Menu Button -->
-      <button id="mobile-menu-button" class="md:hidden text-white z-10" aria-label="Toggle menu">
+      <button id="mobile-menu-button" class="md:hidden text-white z-50" aria-label="Toggle menu">
         <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /></svg>
       </button>
     </div>
@@ -35,6 +35,7 @@
   <ul class="flex flex-col items-center gap-8 text-white text-2xl font-serif">
     <li><a href="/legacy">The Spoken Legacy</a></li>
     <li><a href="/premium">Premium Podcast</a></li>
+    <li><a href="/our-philosophy">Our Philosophy</a></li>
     <li><a href="/contact">Contact</a></li>
   </ul>
 </div>
@@ -51,6 +52,7 @@
   const navLinks = document.getElementById('nav-links');
   const logo = document.getElementById('header-logo');
   const mobileBtn = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
 
   // --- CONFIGURATION: FORCE WHITE HEADER ON THESE PAGES ---
   const forceWhitePages = [
@@ -68,6 +70,7 @@
   const currentPath = window.location.pathname;
   const isAlwaysWhite = forceWhitePages.some(page => currentPath.includes(page));
 
+  // --- HELPER FUNCTIONS ---
   function setWhiteHeader() {
     header?.classList.remove('bg-transparent', 'py-6');
     header?.classList.add('bg-white', 'shadow-md', 'py-3');
@@ -75,8 +78,12 @@
     navLinks?.classList.remove('text-white');
     navLinks?.classList.add('text-brand-navy');
     
-    mobileBtn?.classList.remove('text-white');
-    mobileBtn?.classList.add('text-brand-navy');
+    // Only turn button navy if the menu is CLOSED. 
+    // If menu is open, button must stay white to be visible.
+    if (mobileMenu?.classList.contains('translate-x-full')) {
+        mobileBtn?.classList.remove('text-white');
+        mobileBtn?.classList.add('text-brand-navy');
+    }
 
     logo?.classList.add('logo-dark-filter');
   }
@@ -94,24 +101,53 @@
     logo?.classList.remove('logo-dark-filter');
   }
 
-  // 1. RUN ON LOAD
-  if (isAlwaysWhite) {
-    setWhiteHeader();
-  } else {
-    // Run logic based on current scroll position (in case user refreshed halfway down)
-    if (window.scrollY > 50) setWhiteHeader();
-    else setTransparentHeader();
+  function updateHeaderState() {
+    if (isAlwaysWhite) {
+        setWhiteHeader();
+    } else {
+        if (window.scrollY > 50) setWhiteHeader();
+        else setTransparentHeader();
+    }
   }
 
-  // 2. RUN ON SCROLL
+  // --- 1. RUN ON LOAD & SCROLL ---
+  updateHeaderState();
   window.addEventListener('scroll', () => {
-    // If this is a "Force White" page, ignore scrolling logic. Keep it white.
-    if (isAlwaysWhite) return;
+    // If menu is open, don't change colors on scroll
+    if (!mobileMenu?.classList.contains('translate-x-full')) return;
+    updateHeaderState();
+  });
 
-    if (window.scrollY > 50) {
-      setWhiteHeader();
+  // --- 2. MOBILE MENU LOGIC (THE FIX) ---
+  mobileBtn?.addEventListener('click', () => {
+    // Toggle visibility (Slide in/out)
+    mobileMenu?.classList.toggle('translate-x-full');
+
+    // Check if menu is now OPEN or CLOSED
+    const isOpen = !mobileMenu?.classList.contains('translate-x-full');
+
+    if (isOpen) {
+        // MENU IS OPEN: Force button to WHITE so it shows on Navy background
+        mobileBtn?.classList.remove('text-brand-navy');
+        mobileBtn?.classList.add('text-white');
+        
+        // Optional: Lock body scroll
+        document.body.style.overflow = 'hidden';
     } else {
-      setTransparentHeader();
+        // MENU IS CLOSED: Reset button color based on page state
+        document.body.style.overflow = '';
+        updateHeaderState();
     }
   });
+
+  // Close menu if a link is clicked
+  const menuLinks = mobileMenu?.querySelectorAll('a');
+  menuLinks?.forEach(link => {
+    link.addEventListener('click', () => {
+        mobileMenu?.classList.add('translate-x-full'); // Hide menu
+        document.body.style.overflow = ''; // Unlock scroll
+        updateHeaderState(); // Reset colors
+    });
+  });
+
 </script>
