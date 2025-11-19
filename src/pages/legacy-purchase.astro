@@ -16,7 +16,7 @@ export const prerender = true;
         
         <section class="text-center border-b border-black/10 pb-10">
           <p class="text-5xl font-serif text-brand-navy mb-2">$849 NZD</p>
-          <p class="text-md font-sans mb-6 text-brand-black/70 flex items-center justify-center gap-2">or 4 interest-free payments of $212.25 with <img src="/path/to/afterpay-logo.svg" alt="Afterpay" class="h-6 inline-block" /></p>
+          <p class="text-md font-sans mb-6 text-brand-black/70 flex items-center justify-center gap-2">or 4 interest-free payments of $212.25 with <span class="font-bold">Afterpay</span></p>
           <div class="flex justify-center items-center gap-4 text-sm text-gray-500">
             <span>Pay securely with all major cards & digital wallets.</span>
           </div>
@@ -39,26 +39,55 @@ export const prerender = true;
         <section class="pt-10">
           <h2 class="text-3xl font-serif text-brand-black mb-8 text-center">Begin the Journey Today</h2>
           <form class="space-y-8">
+            
+            <!-- 1. WHO IS THIS FOR? -->
             <div class="space-y-4">
-                <label class="font-bold text-xl font-sans text-brand-black">Choose Your Gifting Experience</label>
-                <div class="relative">
-                    <input type="radio" id="digital" name="gifting_experience" value="digital" class="peer absolute top-6 left-6" checked>
-                    <label for="digital" class="block border-2 border-gray-200 p-6 rounded-xl cursor-pointer peer-checked:border-brand-lime peer-checked:bg-lime-50">
-                        <strong class="font-sans text-lg">Instant Digital Gift Certificate</strong><br>
-                        <span class="text-sm text-brand-black/70">Perfect for sending immediately. You'll receive a beautiful, shareable link right after purchase.</span>
+                <label class="font-bold text-xl font-sans text-brand-black">Who is this for?</label>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <!-- Option: A Gift -->
+                    <label class="relative flex items-center p-4 border-2 border-gray-200 rounded-xl cursor-pointer hover:bg-gray-50 peer-checked:border-brand-lime peer-checked:bg-lime-50 transition-all">
+                        <input type="radio" name="recipient_type" value="gift" class="w-5 h-5 text-brand-navy border-gray-300 focus:ring-brand-navy mr-3" checked>
+                        <span class="font-sans font-bold text-lg">A Gift for Someone Else</span>
                     </label>
-                </div>
-                 <div class="relative">
-                    <input type="radio" id="physical" name="gifting_experience" value="physical" class="peer absolute top-6 left-6">
-                    <label for="physical" class="block border-2 border-gray-200 p-6 rounded-xl cursor-pointer peer-checked:border-brand-lime peer-checked:bg-lime-50">
-                        <strong class="font-sans text-lg">Mail a Physical Gift Certificate</strong><br>
-                        <span class="text-sm text-brand-black/70">We'll send a premium, boxed gift certificate to your chosen address. Please allow 5-7 business days.</span>
+                    
+                    <!-- Option: For Me -->
+                    <label class="relative flex items-center p-4 border-2 border-gray-200 rounded-xl cursor-pointer hover:bg-gray-50 peer-checked:border-brand-lime peer-checked:bg-lime-50 transition-all">
+                        <input type="radio" name="recipient_type" value="me" class="w-5 h-5 text-brand-navy border-gray-300 focus:ring-brand-navy mr-3">
+                        <span class="font-sans font-bold text-lg">For Myself</span>
                     </label>
                 </div>
             </div>
 
+            <!-- 2. DELIVERY METHOD -->
+            <div class="space-y-4">
+                <label class="font-bold text-xl font-sans text-brand-black">Choose Your Experience</label>
+                
+                <!-- Digital Option -->
+                <label for="digital" class="flex items-start gap-4 border-2 border-gray-200 p-6 rounded-xl cursor-pointer hover:border-brand-lime/50 has-[:checked]:border-brand-lime has-[:checked]:bg-lime-50/30 transition-all">
+                    <div class="pt-1">
+                         <input type="radio" id="digital" name="gifting_experience" value="digital" class="w-5 h-5 text-brand-navy border-gray-300 focus:ring-brand-navy" checked>
+                    </div>
+                    <div>
+                        <strong class="font-sans text-lg block mb-1">Instant Digital Access</strong>
+                        <span class="text-sm text-brand-black/70 block leading-relaxed">Perfect for starting immediately. You'll receive a beautiful welcome email and access link right after purchase.</span>
+                    </div>
+                </label>
+
+                <!-- Physical Option -->
+                <label for="physical" class="flex items-start gap-4 border-2 border-gray-200 p-6 rounded-xl cursor-pointer hover:border-brand-lime/50 has-[:checked]:border-brand-lime has-[:checked]:bg-lime-50/30 transition-all">
+                    <div class="pt-1">
+                        <input type="radio" id="physical" name="gifting_experience" value="physical" class="w-5 h-5 text-brand-navy border-gray-300 focus:ring-brand-navy">
+                    </div>
+                    <div>
+                        <strong class="font-sans text-lg block mb-1" id="physical-title">Mail a Physical Gift Certificate</strong>
+                        <span class="text-sm text-brand-black/70 block leading-relaxed">We'll send a premium, boxed welcome package to the address of your choice. Please allow 5-7 business days.</span>
+                    </div>
+                </label>
+            </div>
+
+            <!-- 3. PURCHASER INFO -->
             <div class="space-y-6 pt-4 border-t border-black/10">
-                 <h3 class="font-bold text-xl font-sans text-brand-black">Your Information (The Purchaser)</h3>
+                 <h3 class="font-bold text-xl font-sans text-brand-black" id="purchaser-heading">Your Information (The Purchaser)</h3>
                  <div>
                     <label for="your_name" class="block text-lg font-sans font-medium text-brand-black">Full Name</label>
                     <input type="text" id="your_name" name="your_name" class="mt-2 block w-full border-2 border-gray-300 rounded-lg p-3 text-lg focus:border-brand-navy focus:ring-brand-navy" required>
@@ -69,21 +98,25 @@ export const prerender = true;
                  </div>
             </div>
             
-            <div class="space-y-6 pt-4 border-t border-black/10">
-                 <h3 class="font-bold text-xl font-sans text-brand-black">Who is this Gift For? (The Storyteller)</h3>
+            <!-- 4. STORYTELLER INFO (Hidden if "For Me") -->
+            <div id="storyteller-section" class="space-y-6 pt-4 border-t border-black/10 transition-all duration-300">
+                 <h3 class="font-bold text-xl font-sans text-brand-black">Who is the Storyteller?</h3>
+                 <p class="text-sm text-brand-black/60 -mt-4 mb-4">We need their name to personalize the AI experience.</p>
+                 
                  <div>
-                    <label for="storyteller_name" class="block text-lg font-sans font-medium text-brand-black">Full Name</label>
-                    <input type="text" id="storyteller_name" name="storyteller_name" class="mt-2 block w-full border-2 border-gray-300 rounded-lg p-3 text-lg focus:border-brand-navy focus:ring-brand-navy" required>
+                    <label for="storyteller_name" class="block text-lg font-sans font-medium text-brand-black">Their Full Name</label>
+                    <input type="text" id="storyteller_name" name="storyteller_name" class="mt-2 block w-full border-2 border-gray-300 rounded-lg p-3 text-lg focus:border-brand-navy focus:ring-brand-navy">
                  </div>
                  <div>
-                    <label for="storyteller_email" class="block text-lg font-sans font-medium text-brand-black">Email Address <span class="text-sm font-normal text-brand-black/60">(Optional)</span></label>
+                    <label for="storyteller_email" class="block text-lg font-sans font-medium text-brand-black">Their Email Address <span class="text-sm font-normal text-brand-black/60">(Optional)</span></label>
                     <input type="email" id="storyteller_email" name="storyteller_email" class="mt-2 block w-full border-2 border-gray-300 rounded-lg p-3 text-lg focus:border-brand-navy focus:ring-brand-navy">
-                    <p class="text-xs text-brand-black/60 mt-1">If you don't have their email, you can provide it to us later. We'll send the activation details to your email instead.</p>
+                    <p class="text-xs text-brand-black/60 mt-1">If you don't have their email right now, that's fine. We'll send the activation details to you.</p>
                  </div>
             </div>
 
+            <!-- 5. MAILING ADDRESS (Hidden by default) -->
             <div id="mailing-address-section" class="space-y-6 pt-4 border-t border-black/10 hidden">
-                 <h3 class="font-bold text-xl font-sans text-brand-black">Mailing Address for Physical Certificate</h3>
+                 <h3 class="font-bold text-xl font-sans text-brand-black">Mailing Address</h3>
                  <div>
                     <label for="street_address" class="block text-lg font-sans font-medium text-brand-black">Street Address</label>
                     <input type="text" id="street_address" name="street_address" class="mt-2 block w-full border-2 border-gray-300 rounded-lg p-3 text-lg focus:border-brand-navy focus:ring-brand-navy">
@@ -126,53 +159,108 @@ export const prerender = true;
   const submitButton = document.getElementById('checkout-button') as HTMLButtonElement;
   const buttonText = document.getElementById('button-text') as HTMLSpanElement;
   const buttonSpinner = document.getElementById('button-spinner') as HTMLSpanElement;
+  
+  // Sections & Inputs
   const mailingAddressSection = document.getElementById('mailing-address-section');
+  const storytellerSection = document.getElementById('storyteller-section');
+  const storytellerNameInput = document.getElementById('storyteller_name') as HTMLInputElement;
+  const purchaserHeading = document.getElementById('purchaser-heading') as HTMLElement;
+  const physicalTitle = document.getElementById('physical-title') as HTMLElement;
+
+  // Radio Buttons
   const physicalRadio = document.getElementById('physical') as HTMLInputElement;
   const digitalRadio = document.getElementById('digital') as HTMLInputElement;
+  const recipientRadios = document.querySelectorAll('input[name="recipient_type"]');
 
+  // Logic to Toggle Mailing Address
   function toggleMailingAddress() {
     if (physicalRadio?.checked) {
       mailingAddressSection?.classList.remove('hidden');
+      document.getElementById('street_address')?.setAttribute('required', 'true');
+      document.getElementById('city')?.setAttribute('required', 'true');
+      document.getElementById('postal_code')?.setAttribute('required', 'true');
     } else {
       mailingAddressSection?.classList.add('hidden');
+      document.getElementById('street_address')?.removeAttribute('required');
+      document.getElementById('city')?.removeAttribute('required');
+      document.getElementById('postal_code')?.removeAttribute('required');
     }
   }
 
+  // Logic to Toggle Storyteller Section (Me vs Gift)
+  function toggleRecipientMode() {
+    // Get selected value
+    const selected = document.querySelector('input[name="recipient_type"]:checked') as HTMLInputElement;
+    
+    if (selected && selected.value === 'me') {
+        // Hide Storyteller section
+        storytellerSection?.classList.add('hidden');
+        storytellerNameInput?.removeAttribute('required');
+        
+        // Update text for context
+        purchaserHeading.innerText = "Your Information (Storyteller & Purchaser)";
+        physicalTitle.innerText = "Mail Me a Physical Welcome Kit";
+    } else {
+        // Show Storyteller section
+        storytellerSection?.classList.remove('hidden');
+        storytellerNameInput?.setAttribute('required', 'true');
+        
+        // Revert text
+        purchaserHeading.innerText = "Your Information (The Purchaser)";
+        physicalTitle.innerText = "Mail a Physical Gift Certificate";
+    }
+  }
+
+  // Event Listeners
   physicalRadio?.addEventListener('change', toggleMailingAddress);
   digitalRadio?.addEventListener('change', toggleMailingAddress);
+  
+  recipientRadios.forEach(radio => {
+      radio.addEventListener('change', toggleRecipientMode);
+  });
 
+  // Run on load to set initial state
+  toggleMailingAddress();
+  toggleRecipientMode();
+
+  // Submit Handler
   form?.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const formData = new FormData(form);
     const yourName = formData.get('your_name') as string;
     const yourEmail = formData.get('your_email') as string;
-    const storytellerName = formData.get('storyteller_name') as string;
-    const storytellerEmail = formData.get('storyteller_email') as string;
+    const recipientType = formData.get('recipient_type') as string;
+    
+    // Logic: If "For Me", we copy purchaser details to storyteller details
+    let storytellerName = formData.get('storyteller_name') as string;
+    let storytellerEmail = formData.get('storyteller_email') as string;
+
+    if (recipientType === 'me') {
+        storytellerName = yourName;
+        storytellerEmail = yourEmail;
+    }
+
     const giftingType = formData.get('gifting_experience') as string;
     const streetAddress = formData.get('street_address') as string;
     const city = formData.get('city') as string;
     const postalCode = formData.get('postal_code') as string;
     const country = formData.get('country') as string;
 
-    if (!yourName || !yourEmail || !storytellerName) {
-      alert('Please fill in all required fields');
+    // Basic Validation
+    if (!yourName || !yourEmail) {
+      alert('Please fill in your details.');
       return;
     }
-
-    if (giftingType === 'physical' && (!streetAddress || !city || !postalCode || !country)) {
-      alert('Please fill in all mailing address fields for physical gift delivery');
-      return;
+    
+    if (recipientType === 'gift' && !storytellerName) {
+        alert('Please enter the Storyteller\'s name.');
+        return;
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(yourEmail)) {
       alert('Please enter a valid email address');
-      return;
-    }
-
-    if (storytellerEmail && !emailRegex.test(storytellerEmail)) {
-      alert('Please enter a valid storyteller email address');
       return;
     }
 
@@ -193,10 +281,11 @@ export const prerender = true;
         body: JSON.stringify({
           email: yourEmail,
           yourName: yourName,
-          storytellerName: storytellerName,
+          storytellerName: storytellerName, // This now contains correct name based on selection
           storytellerEmail: storytellerEmail,
           giftingType: giftingType,
           mailingAddress: mailingAddress,
+          recipientType: recipientType // Added so backend knows context if needed
         }),
       });
 
