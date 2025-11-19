@@ -8,7 +8,6 @@ export const prerender = true;
 <section class="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
   
   <!-- 1. BACKGROUND IMAGE (The key to the look) -->
-  <!-- Replace '/your-generated-image.jpg' with your new file -->
   <img 
     src="/letters-background.png" 
     alt="The StorySmith Gold Letters" 
@@ -16,18 +15,15 @@ export const prerender = true;
   />
 
   <!-- 2. THE NAVY OVERLAY -->
-  <!-- This tint ensures the text pops while keeping the moody blue vibe -->
   <div class="absolute inset-0 bg-brand-navy/90 mix-blend-multiply z-10"></div>
 
 <!-- 3. CONTENT -->
-  <!-- CHANGED: Increased max-w-5xl to max-w-7xl to allow the text to span one line -->
   <div class="container mx-auto px-6 relative z-20 text-center max-w-7xl pt-20 animate-fade-in-up">
     
     <span class="text-brand-peach font-sans uppercase tracking-[0.2em] text-sm font-bold mb-6 block">
       For The Family Guardian
     </span>
 
-    <!-- CHANGED: Removed 'text-balance'. Now it will only break line if it runs out of space. -->
     <h1 class="font-serif text-5xl md:text-7xl text-white mb-8 leading-tight">
       The Story Only They Can Tell. <br />
       <span class="text-brand-peach italic">The Gift Only You Can Give.</span>
@@ -49,12 +45,10 @@ export const prerender = true;
 
   </div>
 </section>
-</section>
 
   <!-- [SECTION 2: THE MYTHOLOGY & URGENCY] -->
 <section class="bg-brand-white text-center py-20 md:py-24 px-6">
   <div class="max-w-3xl mx-auto">
-    <!-- Added mb-12 here for the gap -->
     <img 
       src="/papa-speaking.png" 
       alt="Papa speaking" 
@@ -116,8 +110,9 @@ export const prerender = true;
         <img src="/peg-legacy.png" alt="Meet Peg" class="w-full" />
       </div>
 
-      <!-- ElevenLabs Widget (loads as popup in bottom right) -->
+      <!-- ElevenLabs Widget & REQUIRED SCRIPT -->
       <elevenlabs-convai agent-id="agent_8601ka7fsrrwe8f815rzb5gp9nte"></elevenlabs-convai>
+      <script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
 
       <p class="text-sm mt-8 font-sans text-gray-600">
         This is a 5-minute demo. <a href="/legacy-purchase" class="text-brand-navy font-bold hover:underline">Purchase the full experience</a> for 15 hours of conversation and the complete legacy package.
@@ -126,7 +121,6 @@ export const prerender = true;
   </section>
 
   <!-- [SECTION 5: OUR PROMISE] -->
- <!-- [SECTION 5: OUR PROMISE] -->
   <section class="bg-gray-100 py-20 md:py-32 px-6">
     <div class="container mx-auto max-w-6xl">
         <div class="text-center mb-16">
@@ -259,7 +253,7 @@ export const prerender = true;
       
       <div class="grid md:grid-cols-2 gap-12 items-center">
         
-        <!-- FIXED: Removed bg-brand-peach and rounded classes -->
+        <!-- Book Image -->
         <div class="w-full h-auto flex flex-col items-center justify-center">
           <img src="/book-mockup.png" alt="Book mockup" class="h-80 object-contain drop-shadow-2xl" />
           <span class="text-xs text-brand-black/60 mt-6 text-center max-w-xs italic">
@@ -410,3 +404,5 @@ export const prerender = true;
 
     </div>
   </section>
+
+</Layout>
