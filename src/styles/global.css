@@ -1,1 +1,31 @@
+/* src/styles/global.css */
 @import "tailwindcss";
+
+@theme {
+  /* --- COLORS --- */
+  --color-brand-black: #1a1a1a;
+  --color-brand-white: #f9f7f4;
+  --color-brand-navy: #1e3a78;
+  --color-brand-peach: #e8b7ad;
+  --color-brand-lime: #b5b741;
+  --colour-brand-purple: #C5a0b8
+  
+  /* This was missing before, causing the white background on pages */
+  --color-warm-parchment: #f9f7f4; 
+
+  /* --- FONTS --- */
+  --font-sans: "Inter", sans-serif;
+  --font-serif: "Playfair Display", serif;
+  
+  /* Your layout uses this class, but it wasn't defined. 
+     I've mapped it to Inter for now since you aren't importing an Open Sauce font file. */
+  --font-open-sauce: "Inter", sans-serif;
+}
+
+/* --- CUSTOM CONTAINER CONFIG --- */
+/* Tailwind v4 handles containers differently. 
+   This recreates your old centered container with padding. */
+@utility container {
+  margin-inline: auto;
+  padding-inline: 2rem;
+}

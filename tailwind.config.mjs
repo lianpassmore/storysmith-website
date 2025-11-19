@@ -8,8 +8,10 @@ export default {
         'brand-black': '#1a1a1a',
         'brand-white': '#f9f7f4', // This is your warm cream
         'brand-navy': '#1e3a78',
-        'brand-peach': '#e8e7ad',
+        'brand-peach': '#e8b7ad',
         'brand-lime': '#b5b741',
+     'warm-parchment': '#f9f7f4',
+      'brand-purple': '#C5a0b8',
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],

@@ -1,0 +1,69 @@
+---
+import Layout from '../layouts/Layout.astro';
+export const prerender = true;
+---
+
+<Layout>
+  <main class="bg-brand-white py-20 md:py-32 px-6">
+    <div class="container mx-auto max-w-4xl">
+
+      <!-- [SECTION 1: HEADER & CONTEXT] -->
+      <section class="text-center mb-16">
+        <span class="text-brand-navy font-sans uppercase tracking-widest text-sm font-bold mb-4 block">
+          Premium Podcast Production
+        </span>
+        <h1 class="text-4xl md:text-6xl font-serif text-brand-black mb-6">
+          Book Your Complimentary Discovery Call
+        </h1>
+        <p class="text-lg md:text-xl font-sans text-brand-black/70 max-w-2xl mx-auto leading-relaxed">
+          This is a 30-minute, zero-pressure strategy session to discuss your vision, explore your goals, and see if StorySmith is the right partner to help you amplify your voice.
+        </p>
+      </section>
+
+      <!-- [SECTION 2: GOOGLE CALENDAR EMBED] -->
+      <section class="bg-white p-4 md:p-8 rounded-sm shadow-2xl border border-brand-navy/10">
+        
+        <!-- Google Calendar Appointment Scheduling begin -->
+        <iframe 
+          src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3jPYKg3QQ3Kds6SPvIZvol3mdxMlaBtAzdP132FMVVxxKXt2Wnc3q1Lv0IBK-lLLWXzcxLJBFi?gv=true" 
+          style="border: 0" 
+          width="100%" 
+          height="700" 
+          frameborder="0">
+        </iframe>
+        <!-- end Google Calendar Appointment Scheduling -->
+
+      </section>
+
+      <!-- [SECTION 3: WHAT TO EXPECT] -->
+      <section class="mt-16 max-w-3xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12 items-start">
+            <!-- Column 1 -->
+            <div>
+                <h3 class="text-2xl font-serif text-brand-black mb-4">What we'll cover:</h3>
+                <ul class="space-y-3 font-sans text-brand-black/70">
+                    <li class="flex items-start"><span class="text-brand-lime mr-3">✓</span> Your current vision and goals.</li>
+                    <li class="flex items-start"><span class="text-brand-lime mr-3">✓</span> Who your ideal listener is.</li>
+                    <li class="flex items-start"><span class="text-brand-lime mr-3">✓</span> The best format for your lifestyle.</li>
+                    <li class="flex items-start"><span class="text-brand-lime mr-3">✓</span> Any technical fears or questions.</li>
+                </ul>
+            </div>
+            <!-- Column 2 -->
+            <div>
+                <h3 class="text-2xl font-serif text-brand-black mb-4">Who is this for?</h3>
+                <p class="font-sans text-brand-black/70 mb-6">
+                    This call is designed for leaders, experts, and visionaries who are serious about launching a high-quality podcast and want a strategic partner to handle the heavy lifting.
+                </p>
+            </div>
+        </div>
+        
+        <div class="mt-12 text-center border-t border-brand-navy/10 pt-12">
+            <a href="/premium" class="text-brand-navy font-bold uppercase tracking-wider font-sans hover:text-brand-lime transition-colors">
+                ← Back to Premium Podcast Services
+            </a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+</Layout>

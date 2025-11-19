@@ -4,115 +4,163 @@ export const prerender = true;
 ---
 
 <Layout>
-  <!-- Hero Section -->
-  <section class="relative min-h-screen flex items-center justify-center text-center px-6 py-20 text-brand-white">
-    <!-- Background Image with Dark Overlay -->
-    <div class="absolute inset-0 bg-brand-black/70"></div>
-    <img 
-      src="/images/hero-background.jpg" 
-      alt="A person thoughtfully looking at a collection of old family photographs."
-      class="absolute inset-0 w-full h-full object-cover"
-    >
+  <!-- [SECTION 1: HERO] -->
+<!-- [HOMEPAGE HERO: THE SACRED LIBRARY] -->
+<section class="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+  
+  <!-- 1. BACKGROUND IMAGE -->
+  <!-- Make sure your file is named 'library-background.jpg' (or .png) in the public folder -->
+  <img 
+    src="/library-background.png" 
+    alt="Sacred Library Background" 
+    class="absolute inset-0 w-full h-full object-cover z-0"
+  />
 
-    <!-- Content (z-10 brings it in front of the background) -->
-    <div class="max-w-4xl relative z-10">
-      <h1 class="text-5xl md:text-7xl font-serif mb-4">
-        Your Wisdom is a Sacred, Lasting Asset.
-      </h1>
-      <p class="text-xl md:text-2xl font-sans mb-8">
-        StorySmith is the strategic partner for leaders and families who believe their story is worth preserving with integrity. We transform your voice and vision into a legacy that lasts for seven generations.
-      </p>
-      <a href="#offers" class="inline-block bg-brand-navy text-brand-white font-sans uppercase tracking-wider py-4 px-8 hover:bg-opacity-90 transition-all duration-300 rounded-lg">
+  <!-- 2. THE NAVY OVERLAY -->
+  <!-- This sits ON TOP of the image to darken it and add the blue tint -->
+  <div class="absolute inset-0 bg-brand-navy/85 mix-blend-multiply z-10"></div>
+
+  <!-- 3. HERO CONTENT -->
+  <!-- This sits ON TOP of the overlay -->
+  <div class="container mx-auto px-6 relative z-20 text-center max-w-5xl animate-fade-in-up">
+    
+    <!-- Eyebrow -->
+    <span class="text-brand-peach font-sans uppercase tracking-[0.2em] text-sm font-bold mb-6 block">
+      Preserving The Stories That Matter
+    </span>
+
+    <!-- Main Headline -->
+    <h1 class="font-serif text-5xl md:text-7xl text-white mb-8 leading-tight">
+      Your Wisdom is a <br />
+      <span class="text-brand-peach italic">Sacred, Lasting Asset.</span>
+    </h1>
+
+    <!-- Subheadline -->
+    <p class="font-sans text-lg md:text-xl text-brand-white/90 mb-12 leading-relaxed max-w-2xl mx-auto">
+      StorySmith is the strategic partner for leaders and families who believe their story is worth preserving with integrity. We transform your voice and vision into a legacy that lasts for seven generations.
+    </p>
+
+    <!-- Buttons -->
+    <div class="flex flex-col md:flex-row gap-4 justify-center">
+      <!-- Primary CTA: Peach for high visibility -->
+      <a href="#offers" class="bg-brand-peach text-brand-navy font-sans font-bold uppercase tracking-wider px-8 py-4 hover:bg-white transition-colors duration-300 rounded-sm shadow-lg">
         Explore Our Services
       </a>
+      <!-- Secondary CTA: Transparent White Outline -->
+      <a href="/our-philosophy" class="border-2 border-brand-white/30 text-brand-white font-sans font-bold uppercase tracking-wider px-8 py-4 hover:bg-brand-white hover:text-brand-navy transition-colors duration-300 rounded-sm backdrop-blur-sm">
+        Our Philosophy
+      </a>
     </div>
-  </section>
 
-  <!-- Brand Pillars Section -->
+  </div>
+</section>
+
+<!-- Add this style block if you don't have the animation in your global css yet -->
+<style>
+  .animate-fade-in-up {
+    animation: fadeInUp 1s ease-out forwards;
+    opacity: 0; /* Start invisible */
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+
+  <!-- [SECTION 2: PHILOSOPHY] -->
   <section class="bg-brand-navy text-brand-white py-20 md:py-32">
     <div class="container mx-auto px-6">
       <h2 class="text-center font-sans uppercase tracking-widest text-lg mb-12">The StorySmith Philosophy</h2>
+      
       <div class="grid md:grid-cols-3 gap-8 text-center max-w-6xl mx-auto">
         <!-- Pillar 1 -->
         <div class="p-8 border border-brand-white/10 rounded-lg hover:bg-brand-white/5 transition-colors">
           <h3 class="text-3xl font-serif mb-4">Cultural Integrity First</h3>
-          <p class="font-sans leading-relaxed">
+          <p class="font-sans leading-relaxed text-brand-white/80">
             We begin with relationship and deep listening, honoring the tikanga of your story's origin, so that your narrative is preserved with the respect and authenticity it deserves.
           </p>
         </div>
         <!-- Pillar 2 -->
         <div class="p-8 border border-brand-white/10 rounded-lg hover:bg-brand-white/5 transition-colors">
           <h3 class="text-3xl font-serif mb-4">Strategic Narrative Craft</h3>
-          <p class="font-sans leading-relaxed">
+          <p class="font-sans leading-relaxed text-brand-white/80">
             We distill your complexity into a powerful, clear narrative, shaping it for maximum impact, so that your core message resonates across any medium, from a podcast to a family heirloom.
           </p>
         </div>
         <!-- Pillar 3 -->
         <div class="p-8 border border-brand-white/10 rounded-lg hover:bg-brand-white/5 transition-colors">
           <h3 class="text-3xl font-serif mb-4">Ethical Preservation</h3>
-          <p class="font-sans leading-relaxed">
+          <p class="font-sans leading-relaxed text-brand-white/80">
             We use best-in-class technology as a tool for guardianship, ensuring your voice is captured with dignity and your data remains sovereign, so that your legacy is protected, not exploited.
           </p>
         </div>
       </div>
+
+      <div class="text-center mt-16">
+        <a href="/our-philosophy" class="inline-block border border-brand-white px-10 py-4 text-sm font-sans uppercase tracking-widest hover:bg-brand-white hover:text-brand-navy transition-colors duration-300">
+          Read Our Full Philosophy
+        </a>
+      </div>
+
     </div>
   </section>
 
-  <!-- Offers Section -->
-  <section id="offers" class="bg-brand-peach/20 py-20 md:py-32">
+  <!-- [SECTION 3: OFFERS] -->
+  <section id="offers" class="bg-brand-white py-20 md:py-32">
     <div class="container mx-auto px-6 max-w-6xl">
+      
+      <div class="text-center max-w-3xl mx-auto mb-20 md:mb-24">
+        <span class="text-brand-navy font-sans uppercase tracking-widest text-sm font-bold">Our Services</span>
+        <h2 class="text-4xl md:text-5xl font-serif mt-4 text-brand-black">Ways to Preserve Your Voice</h2>
+        <div class="w-24 h-1 bg-brand-navy mx-auto mt-8"></div>
+      </div>
+
       <!-- The Spoken Legacy -->
       <div class="grid md:grid-cols-2 gap-12 md:gap-20 items-center mb-24 md:mb-32">
         <img 
-          src="/images/spoken-legacy.jpg" 
-          alt="An elegant, custom-bound hardback book resting on a wooden table next to a pair of headphones." 
-          class="w-full h-80 md:h-96 object-cover rounded-lg shadow-lg"
+          src="/book-mockup.png" 
+          alt="An elegant, custom-bound hardback book" 
+          class="w-full aspect-square object-cover rounded-lg shadow-xl"
         >
         <div>
           <h4 class="font-sans uppercase tracking-widest text-brand-navy">For The Family Guardian</h4>
           <h3 class="text-4xl md:text-5xl font-serif my-4 text-brand-black">The Spoken Legacy</h3>
-          <p class="font-sans mb-6 leading-relaxed">
-            Step into the role of your family's most cherished ancestor. Through guided, voice-first conversations, our culturally-aware AI companion, Peg, helps you transform spoken memories into a timeless hardback book and audio archive. This is more than a memoir; it is a living library of your wisdom for your mokopuna to treasure forever.
+          <p class="font-sans mb-6 leading-relaxed text-brand-black/80">
+            Step into the role of your family's most cherished ancestor. Through guided, voice-first conversations, our culturally-aware AI companion, Peg, helps you transform spoken memories into a timeless hardback book and audio archive.
           </p>
-          <a href="/legacy" class="text-brand-navy font-bold uppercase tracking-wider font-sans group">
-            Explore Legacy <span class="transition-transform duration-300 group-hover:translate-x-2">→</span>
+          <a href="/legacy" class="text-brand-navy font-bold uppercase tracking-wider font-sans group inline-flex items-center">
+            Explore Legacy <span class="ml-2 transition-transform duration-300 group-hover:translate-x-2">→</span>
           </a>
         </div>
       </div>
 
       <!-- Premium Podcast Production -->
+  <!-- Premium Podcast Production -->
       <div class="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
         <img 
-          src="/images/podcast-production.jpg" 
-          alt="A professional microphone in a calm, well-lit recording studio setting." 
-          class="md:order-2 w-full h-80 md:h-96 object-cover rounded-lg shadow-lg"
+          src="/podcast-image.png" 
+          alt="A professional microphone in a calm studio" 
+          class="md:order-2 w-full aspect-square object-cover rounded-lg shadow-xl"
         >
         <div class="md:order-1">
           <h4 class="font-sans uppercase tracking-widest text-brand-navy">For The Visionary Leader</h4>
           <h3 class="text-4xl md:text-5xl font-serif my-4 text-brand-black">Premium Podcast Production</h3>
-          <p class="font-sans mb-6 leading-relaxed">
-            Step into your identity as a category-of-one thought leader. We partner with you to translate your complex vision into a world-class podcast that builds authority and inspires a movement. From strategic narrative design to end-to-end production, we handle every detail so you can focus on what you do best: sharing your truth.
+          <p class="font-sans mb-6 leading-relaxed text-brand-black/80">
+            We partner with ambitious leaders to transform their expertise into a high-impact podcast that builds authority, amplifies influence, and preserves their legacy—without the tech stress or wasted time.
           </p>
-          <a href="/premium" class="text-brand-navy font-bold uppercase tracking-wider font-sans group">
-            Explore Podcasting <span class="transition-transform duration-300 group-hover:translate-x-2">→</span>
+          <a href="/premium" class="text-brand-navy font-bold uppercase tracking-wider font-sans group inline-flex items-center">
+            Explore Podcasts <span class="ml-2 transition-transform duration-300 group-hover:translate-x-2">→</span>
           </a>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- Final CTA Section -->
-  <section class="bg-brand-navy text-brand-white py-20 md:py-32 text-center">
-    <div class="container mx-auto px-6 max-w-4xl">
-      <h2 class="text-4xl md:text-6xl font-serif mb-6">
-        Your story is waiting to do its work in the world.
-      </h2>
-      <p class="font-sans text-xl mb-8 leading-relaxed">
-        Whether for an audience of millions or a family of one, the time to honor your legacy is now.
-      </p>
-      <a href="/contact" class="inline-block bg-brand-peach text-brand-black font-sans uppercase tracking-wider py-4 px-8 hover:bg-opacity-90 transition-all duration-300 rounded-lg">
-        Let's Begin
-      </a>
     </div>
   </section>
 </Layout>
