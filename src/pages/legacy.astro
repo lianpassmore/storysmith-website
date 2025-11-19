@@ -93,25 +93,31 @@ export const prerender = true;
     </div>
   </section>
 
-  <!-- [SECTION 4: THE PEG DEMO] -->
+ <!-- [SECTION 4: THE PEG DEMO] -->
   <section class="bg-brand-white py-20 md:py-24 px-6">
     <div class="container mx-auto max-w-3xl text-center">
       <h2 class="text-4xl md:text-5xl font-serif text-brand-black mb-4">Meet Peg: Your AI Guide</h2>
-   <p class="font-sans text-lg mb-4 text-brand-black/80">
-  Have a 5-minute chat with Peg. You can experience a mini storytelling session, or ask her any questions you have about the StorySmith Legacy journey.
-</p>
+      <p class="font-sans text-lg mb-4 text-brand-black/80">
+        Have a 5-minute chat with Peg. You can experience a mini storytelling session, or ask her any questions you have about the StorySmith Legacy journey.
+      </p>
 
-<p class="font-sans text-lg font-bold text-brand-navy mb-8">
-  Look for the chat widget in the bottom right corner of your screen.
-</p>
+      <p class="font-sans text-lg font-bold text-brand-navy mb-8">
+        Look for the chat widget in the bottom right corner of your screen.
+      </p>
 
       <!-- Peg Image -->
       <div class="max-w-sm mx-auto mb-8">
         <img src="/peg-legacy.png" alt="Meet Peg" class="w-full" />
       </div>
 
-      <!-- ElevenLabs Widget & REQUIRED SCRIPT -->
-      <elevenlabs-convai agent-id="agent_8601ka7fsrrwe8f815rzb5gp9nte"></elevenlabs-convai>
+      <!-- ElevenLabs Widget with Custom Text -->
+      <elevenlabs-convai 
+        agent-id="agent_8601ka7fsrrwe8f815rzb5gp9nte"
+        action-text="Chat with Peg"
+        start-call-text="Start Conversation"
+      ></elevenlabs-convai>
+      
+      <!-- Required Script -->
       <script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
 
       <p class="text-sm mt-8 font-sans text-gray-600">
