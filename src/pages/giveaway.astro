@@ -1,0 +1,218 @@
+---
+import Layout from '../layouts/Layout.astro';
+export const prerender = true;
+---
+
+<Layout>
+
+  <!-- [SECTION 1: THE HERO & PROMISE] -->
+  <section class="relative min-h-[600px] flex items-center justify-center overflow-hidden py-20">
+    
+    <!-- Background Image -->
+    <img 
+      src="/letters-background.png" 
+      alt="StorySmith Background" 
+      class="absolute inset-0 w-full h-full object-cover z-0"
+    />
+
+    <!-- Navy Overlay -->
+    <div class="absolute inset-0 bg-brand-navy/95 mix-blend-multiply z-10"></div>
+
+    <!-- Content -->
+    <div class="container mx-auto px-6 relative z-20 text-center max-w-4xl">
+      
+      <span class="inline-block bg-brand-peach text-brand-navy font-sans uppercase tracking-[0.2em] text-xs font-bold px-4 py-2 mb-8 rounded-sm shadow-lg">
+        Giveaway Ends December 1st
+      </span>
+
+      <h1 class="font-serif text-5xl md:text-7xl text-white mb-6 leading-tight">
+        Win a Legacy <br />
+        <span class="text-brand-peach italic">Worth $849.</span>
+      </h1>
+
+      <p class="font-sans text-lg md:text-xl text-brand-white/90 mb-10 leading-relaxed max-w-2xl mx-auto">
+        We are giving away one complete <strong>Spoken Legacy</strong> package. 
+        Enter your details below to win a guided voice-first journey that transforms a life story into a stunning hardback book.
+      </p>
+
+      <div class="flex flex-col md:flex-row gap-4 justify-center">
+        <a href="#enter-now" class="bg-brand-peach text-brand-navy font-sans font-bold uppercase tracking-wider px-10 py-4 hover:bg-white transition-colors duration-300 rounded-sm shadow-lg">
+          Enter The Draw
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- [SECTION 2: WHAT YOU WIN] -->
+  <section class="bg-brand-white py-16 md:py-24 px-6 relative">
+    <div class="container mx-auto max-w-5xl">
+        
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-serif text-brand-black mb-4">The Prize Package</h2>
+            <p class="font-sans text-brand-black/60">Everything needed to preserve a life story forever.</p>
+        </div>
+
+        <div class="bg-white border border-brand-navy/10 rounded-xl shadow-xl overflow-hidden flex flex-col md:flex-row">
+            
+            <!-- Image of the Book -->
+            <div class="md:w-1/2 bg-gray-50 flex items-center justify-center p-10">
+                 <!-- Using your book mockup here -->
+                <img src="/book-mockup.png" alt="StorySmith Heirloom Book" class="max-h-64 md:max-h-80 object-contain drop-shadow-2xl transform hover:scale-105 transition-transform duration-500" />
+            </div>
+
+            <!-- The List -->
+            <div class="md:w-1/2 p-10 md:p-12 flex flex-col justify-center bg-brand-white">
+                <h3 class="font-serif text-2xl text-brand-navy mb-6">The Spoken Legacy Experience</h3>
+                <ul class="space-y-4 font-sans text-brand-black/80">
+                    <li class="flex items-center gap-3">
+                        <div class="bg-brand-peach/30 p-1 rounded-full text-brand-navy">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        </div>
+                        <span><strong>15 Hours</strong> of guided interviews with Peg</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <div class="bg-brand-peach/30 p-1 rounded-full text-brand-navy">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        </div>
+                        <span>Professionally designed <strong>Hardcover Book</strong></span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <div class="bg-brand-peach/30 p-1 rounded-full text-brand-navy">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        </div>
+                        <span>Digital Audio Archives & PDF Copy</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <div class="bg-brand-peach/30 p-1 rounded-full text-brand-navy">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        </div>
+                        <span><strong>Total Value: $849 NZD</strong></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- [SECTION 3: THE ENTRY FORM] -->
+  <section id="enter-now" class="bg-brand-navy py-20 px-6 border-t border-white/10">
+    <div class="container mx-auto max-w-2xl text-center">
+        
+        <h2 class="text-3xl md:text-4xl font-serif text-white mb-6">
+          Step 1: Enter Your Details
+        </h2>
+
+        <!-- [NEW WARNING BOX] -->
+        <div class="bg-white/10 border border-brand-peach/50 rounded-lg p-4 mb-8 flex gap-4 items-start text-left mx-auto max-w-lg">
+            <!-- Icon -->
+            <svg class="w-6 h-6 text-brand-peach shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            <!-- Text -->
+            <p class="text-brand-white/90 text-sm font-sans leading-relaxed">
+                <strong>Pro Tip:</strong> If you plan to earn bonus entries on Facebook, please enter the <strong>same name here that you use on Facebook</strong> so we can verify your extra points!
+            </p>
+        </div>
+        
+        <!-- Form Wrapper -->
+        <div class="bg-brand-white rounded-xl shadow-2xl overflow-hidden p-2 md:p-4">
+            <!-- FILLOUT EMBED START -->
+            <div style="width:100%; min-height:400px;" 
+                 data-fillout-id="4kLv4GiWSqus" 
+                 data-fillout-embed-type="standard" 
+                 data-fillout-inherit-parameters 
+                 data-fillout-dynamic-resize>
+            </div>
+            <script src="https://server.fillout.com/embed/v1/"></script>
+            <!-- FILLOUT EMBED END -->
+        </div>
+        
+        <p class="text-white/50 text-xs mt-6 font-sans">
+            By entering, you agree to join the StorySmith newsletter. You can unsubscribe at any time. 
+            Winner drawn 1st December 2025 and notified via email.
+        </p>
+
+    </div>
+  </section>
+
+  <!-- [SECTION 4: HOW TO WIN / THE VIRAL SHARE] -->
+  <section class="bg-brand-peach py-20 px-6">
+    <div class="container mx-auto max-w-4xl">
+        
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-5xl font-serif text-brand-navy mb-6">
+              Step 2: Increase Your Chances
+            </h2>
+            <p class="font-sans text-brand-navy/80 text-lg max-w-2xl mx-auto">
+                We want this gift to go to someone who truly cherishes family stories. 
+                Every action below adds an <strong>extra entry</strong> next to your name in the draw.
+            </p>
+        </div>
+
+        <!-- THE POINTS TABLE -->
+        <div class="bg-white rounded-xl shadow-lg border-2 border-brand-navy/10 overflow-hidden max-w-3xl mx-auto mb-12">
+            
+            <!-- Header -->
+            <div class="bg-brand-navy p-4 flex justify-between items-center text-white font-sans font-bold uppercase tracking-wider text-sm md:text-base">
+                <span>Action</span>
+                <span>Reward</span>
+            </div>
+
+            <!-- Row 1: Form -->
+            <div class="flex justify-between items-center p-6 border-b border-gray-100">
+                <div class="flex items-center gap-4">
+                    <div class="bg-green-100 text-green-700 p-2 rounded-full shrink-0">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <div>
+                        <strong class="block text-brand-navy text-lg">Complete the Form above</strong>
+                        <span class="text-sm text-gray-500">Mandatory for entry</span>
+                    </div>
+                </div>
+                <span class="font-serif text-xl md:text-2xl text-brand-navy font-bold shrink-0 pl-4">1 Entry</span>
+            </div>
+
+            <!-- Row 2: Like Page -->
+            <div class="flex justify-between items-center p-6 border-b border-gray-100 bg-gray-50">
+                <div class="flex items-center gap-4">
+                    <div class="bg-blue-100 text-blue-700 p-2 rounded-full shrink-0">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </div>
+                    <div>
+                        <strong class="block text-brand-navy text-lg">Like "StorySmith: The Spoken Legacy"</strong>
+                        <span class="text-sm text-gray-500">On Facebook</span>
+                    </div>
+                </div>
+                <span class="font-serif text-xl md:text-2xl text-brand-navy font-bold shrink-0 pl-4">+1 Entry</span>
+            </div>
+
+            <!-- Row 3: Tag Friends -->
+            <div class="flex justify-between items-center p-6">
+                <div class="flex items-center gap-4">
+                    <div class="bg-brand-peach/50 text-brand-navy p-2 rounded-full shrink-0">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path></svg>
+                    </div>
+                    <div>
+                        <strong class="block text-brand-navy text-lg">Tag Friends in Comments</strong>
+                        <span class="text-sm text-gray-500">On our pinned Giveaway post</span>
+                    </div>
+                </div>
+                <span class="font-serif text-xl md:text-2xl text-brand-navy font-bold shrink-0 pl-4">+1 Per Tag</span>
+            </div>
+        </div>
+
+        <!-- SINGLE ACTION BUTTON -->
+        <div class="flex justify-center">
+            <a href="https://www.facebook.com/storysmithnz" target="_blank" class="flex items-center justify-center gap-3 bg-brand-navy text-white font-sans font-bold uppercase tracking-wider py-5 px-10 rounded-sm shadow-lg hover:bg-white hover:text-brand-navy transition-all transform hover:scale-105 duration-300">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                Go to the Facebook Page Now
+            </a>
+        </div>
+        
+        <p class="text-center text-brand-navy/50 text-xs mt-8 max-w-md mx-auto">
+            Note: We will verify the winner's social actions before the announcement. Please ensure your Facebook name matches the name on your entry form, or we will contact you to verify.
+        </p>
+
+    </div>
+  </section>
+
+</Layout>

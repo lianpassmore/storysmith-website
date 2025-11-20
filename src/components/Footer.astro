@@ -1,51 +1,116 @@
-<!-- src/components/Footer.astro -->
-<footer class="bg-brand-navy text-white py-16 border-t border-white/10">
-    <div class="container mx-auto px-6">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+---
+// src/components/Footer.astro
 
-            <!-- Column 1: Brand -->
-            <div>
-                <a href="/" class="block mb-6">
-                    <!-- Ensure you use the White version of the logo -->
-                    <img src="/storysmith-logo-white.png" alt="Storysmith logo" class="h-10 mb-4">
-                </a>
-                <p class="text-white/80 leading-relaxed mb-6 font-sans text-sm">
-                    Preserving stories with integrity. We transform your voice and vision into a legacy that lasts.
-                </p>
-                <!-- Social Icon (LinkedIn) -->
-                <a href="https://www.linkedin.com/in/lianpassmore" target="_blank" class="text-white hover:text-brand-peach transition-colors">
-                   <span class="font-sans font-bold uppercase tracking-wider text-xs border-b border-white/30 hover:border-brand-peach pb-1">LinkedIn</span>
-                </a>
-            </div>
+// 1. Get the current path
+const { pathname } = Astro.url;
 
-            <!-- Column 2: Navigation -->
-            <div>
-                <h3 class="font-sans font-bold text-sm mb-6 uppercase tracking-[0.2em] text-brand-peach">Our Services</h3>
-                <ul class="space-y-3 font-sans text-sm">
-                    <li><a href="/legacy" class="text-white/70 hover:text-white transition-colors">The Spoken Legacy</a></li>
-                    <li><a href="/premium" class="text-white/70 hover:text-white transition-colors">Premium Podcast Production</a></li>
-                    <li><a href="/our-philosophy" class="text-white/70 hover:text-white transition-colors">Our Philosophy</a></li>
-                </ul>
-            </div>
+// 2. List the pages where you DO NOT want the form to appear
+// Note: We check if the path "starts with" these to handle potential trailing slashes
+const hiddenPaths = [
+  '/giveaway',
+  '/contact',
+  '/premium-qualifier',
+  '/legacy-purchase',
+  '/podcast-discovery-call',
+  '/discover'
+];
 
-            <!-- Column 3: Contact -->
-            <div>
-                <h3 class="font-sans font-bold text-sm mb-6 uppercase tracking-[0.2em] text-brand-peach">Get in Touch</h3>
-                <ul class="space-y-3 font-sans text-sm text-white/70">
-                    <li><a href="mailto:hello@storysmith.work" class="hover:text-white transition-colors">hello@storysmith.work</a></li>
-                    <li><a href="tel:+64221502335" class="hover:text-white transition-colors">+64 22 150 2335</a></li>
-                    <li class="pt-2 text-white/50">Whangārei, Aotearoa New Zealand</li>
-                </ul>
+// 3. Check if current page is in the hidden list
+// We check if the current pathname starts with any of the hidden strings
+const showSubscribe = !hiddenPaths.some(path => pathname.startsWith(path));
+---
+
+<div class="flex flex-col">
+    
+    {showSubscribe && (
+    <!-- SECTION 1: SUBSCRIBE PANEL (Pre-Footer) -->
+    <!-- This section now only renders if 'showSubscribe' is true -->
+    <section class="bg-brand-peach text-brand-navy py-16">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
+                
+                <!-- Text Content -->
+                <div class="lg:w-1/2 text-center lg:text-left">
+                    <h2 class="font-serif text-3xl md:text-4xl mb-4 text-brand-navy">
+                        Join the StorySmith Community
+                    </h2>
+                    <p class="font-sans text-lg text-brand-navy/80 max-w-md mx-auto lg:mx-0 leading-relaxed">
+                        Get insights on legacy preservation and podcasting tips delivered straight to your inbox.
+                    </p>
+                </div>
+
+                <!-- Form Container -->
+                <div class="w-full lg:w-1/2 flex flex-col gap-3">
+                    <div class="bg-brand-white rounded-xl shadow-sm border border-brand-navy/10 overflow-hidden p-1">
+                        <div style="width:100%; min-height:200px;" 
+                             data-fillout-id="4kLv4GiWSqus" 
+                             data-fillout-embed-type="standard" 
+                             data-fillout-inherit-parameters 
+                             data-fillout-dynamic-resize>
+                        </div>
+                        <script src="https://server.fillout.com/embed/v1/"></script>
+                    </div>
+                    <!-- T&C Text -->
+                    <p class="text-center lg:text-right text-xs text-brand-navy/60 font-sans">
+                        We respect your privacy. No spam, just updates. <br class="hidden md:inline"/>
+                        You can <span class="underline decoration-brand-navy/30">unsubscribe at any time</span>.
+                    </p>
+                </div>
+                
             </div>
         </div>
+    </section>
+    )}
 
-        <!-- Bottom Bar -->
-        <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/40 font-sans">
-            <p>&copy; 2025 Storysmith. All rights reserved.</p>
-            <div class="flex gap-6">
-                <a href="/terms" class="hover:text-white transition-colors">Terms</a>
-                <a href="/privacy" class="hover:text-white transition-colors">Privacy</a>
+    <!-- SECTION 2: MAIN FOOTER (Navy) -->
+    <!-- This section always renders -->
+    <footer class="bg-brand-navy text-brand-white py-16 border-t border-white/10">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+
+                <!-- Column 1: Brand -->
+                <div>
+                    <a href="/" class="block mb-6">
+                        <img src="/storysmith-logo-white.png" alt="Storysmith logo" class="h-10 mb-4">
+                    </a>
+                    <p class="text-brand-white/80 leading-relaxed mb-6 font-sans text-sm">
+                        Preserving stories with integrity. We transform your voice and vision into a legacy that lasts.
+                    </p>
+                    <a href="https://www.linkedin.com/in/lianpassmore" target="_blank" class="text-brand-white hover:text-brand-peach transition-colors">
+                       <span class="font-sans font-bold uppercase tracking-wider text-xs border-b border-white/30 hover:border-brand-peach pb-1">LinkedIn</span>
+                    </a>
+                </div>
+
+                <!-- Column 2: Navigation -->
+                <div>
+                    <h3 class="font-sans font-bold text-sm mb-6 uppercase tracking-[0.2em] text-brand-peach">Our Services</h3>
+                    <ul class="space-y-3 font-sans text-sm">
+                        <li><a href="/legacy" class="text-brand-white/70 hover:text-brand-white transition-colors">The Spoken Legacy</a></li>
+                        <li><a href="/premium" class="text-brand-white/70 hover:text-brand-white transition-colors">Premium Podcast Production</a></li>
+                        <li><a href="/our-philosophy" class="text-brand-white/70 hover:text-brand-white transition-colors">Our Philosophy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Contact -->
+                <div>
+                    <h3 class="font-sans font-bold text-sm mb-6 uppercase tracking-[0.2em] text-brand-peach">Get in Touch</h3>
+                    <ul class="space-y-3 font-sans text-sm text-brand-white/70">
+                        <li><a href="mailto:hello@storysmith.work" class="hover:text-brand-white transition-colors">hello@storysmith.work</a></li>
+                        <li><a href="tel:+64221502335" class="hover:text-brand-white transition-colors">+64 22 150 2335</a></li>
+                        <li class="pt-2 text-brand-white/50">Whangārei, Aotearoa New Zealand</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-brand-white/40 font-sans">
+                <p>&copy; 2025 Storysmith. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="/terms" class="hover:text-brand-white transition-colors">Terms</a>
+                    <a href="/privacy" class="hover:text-brand-white transition-colors">Privacy</a>
+                </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
+
+</div>
