@@ -7,7 +7,6 @@ const { pathname } = Astro.url;
 // 2. List the pages where you DO NOT want the form to appear
 // Note: We check if the path "starts with" these to handle potential trailing slashes
 const hiddenPaths = [
-  '/giveaway',
   '/contact',
   '/premium-qualifier',
   '/legacy-purchase',
@@ -96,7 +95,7 @@ const showSubscribe = !hiddenPaths.some(path => pathname.startsWith(path));
                     <h3 class="font-sans font-bold text-sm mb-6 uppercase tracking-[0.2em] text-brand-peach">Get in Touch</h3>
                     <ul class="space-y-3 font-sans text-sm text-brand-white/70">
                         <li><a href="mailto:hello@storysmith.work" class="hover:text-brand-white transition-colors">hello@storysmith.work</a></li>
-                        <li><a href="tel:+64221502335" class="hover:text-brand-white transition-colors">+64 22 150 2335</a></li>
+                        <li><a href="tel:+64221725793" class="hover:text-brand-white transition-colors">+64 22 172 5793</a></li>
                         <li class="pt-2 text-brand-white/50">Whangārei, Aotearoa New Zealand</li>
                     </ul>
                 </div>
